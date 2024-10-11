@@ -1,3 +1,1 @@
-export LANGCHAIN_OPENAI_API_KEY=xxx
-export OPENAI_API_KEY=xxxx
-export OPENCAGE_API_KEY=xxx
+
