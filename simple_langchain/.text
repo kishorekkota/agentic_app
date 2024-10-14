@@ -1,0 +1,7 @@
+docker run -p 80:80  \
+     -e OPENAI_API_KEY=<Key Here> \
+     -e LANGCHAIN_API_KEY=<Key Here> \
+     -e LANGCHAIN_OPENAI_API_KEY=<Key Here> \
+     -e OPENCAGE_API_KEY=<Key Here> \
+     -e TAVILY_API_KEY=<Key Here> \
+        kishorekkota/ai_bot:v1  
