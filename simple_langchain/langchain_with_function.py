@@ -1,5 +1,4 @@
 import os, getpass
-import json
 from langchain_core.messages import HumanMessage
 from googlesearch import search
 from langchain_core.tools import tool
@@ -7,14 +6,12 @@ from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
 from typing import Literal
 from langgraph.graph import START, StateGraph, MessagesState
-from langgraph.prebuilt import tools_condition, ToolNode
+from langgraph.prebuilt import ToolNode
 from langgraph.graph import END, START, StateGraph, MessagesState
 from langgraph.checkpoint.memory import MemorySaver
 from opencage.geocoder import OpenCageGeocode
-from pprint import pprint
-from opencage.geocoder import InvalidInputError, RateLimitExceededError, UnknownError
 import requests
-import pprint
+from AIAssistantModel import AIAssistant
 
 def _set_env(var: str):
     if not os.environ.get(var):
@@ -39,6 +36,7 @@ def get_weather_by_zip(zip_code):
     print("get_weather_by_zip calling model...")
     # Get latitude and longitude from the ZIP code
     lat, lon = get_lat_lon(zip_code)
+   
     if lat is None or lon is None:
         return f"Could not get coordinates for ZIP code {zip_code}"
 
@@ -69,6 +67,7 @@ def get_weather_by_zip(zip_code):
 def get_lat_lon(zip_code):
 
     print("get_lat_lon calling model..."+zip_code)
+
     # Make a GET request to the OpenCage API
     OPENCAGE_API_KEY=os.environ.get("OPENCAGE_API_KEY")
 
@@ -87,26 +86,6 @@ def get_lat_lon(zip_code):
         print(f"Could not get coordinates for ZIP code {zip_code}")
         return None, None
 
-    # try:
-    #     print("calling opencage api...")
-    #     response = requests.get(url)
-    #     print("respone from opencage "+response)
-    #     response.raise_for_status()
-    #     data = response.json()
-        
-    #     # Extract latitude and longitude from the response
-    #     print(data['results'])
-    #     if data['results']:
-    #         lat = data['results'][0]['geometry']['lat']
-    #         lon = data['results'][0]['geometry']['lng']
-    #         return lat, lon
-    #     else:
-    #         return None, None
-
-    # except requests.exceptions.RequestException as e:
-    #     print(f"An error occurred: {e}")
-    #     return None, None
-
 
 tools = [search_google,get_weather_by_zip]
 
@@ -118,13 +97,11 @@ llm = ChatOpenAI(model="gpt-4o")
 llm_with_tools = llm.bind_tools(tools)
 
 
+# sys_msg = SystemMessage(content="You are a helpful assistant tasked with performing google search.")
 
-
-sys_msg = SystemMessage(content="You are a helpful assistant tasked with performing google search.")
-
-def assistant(state: MessagesState):
-   print("assitant calling model...")
-   return {"messages": [llm_with_tools.invoke([sys_msg] + state["messages"])]}
+# def assistant(state: MessagesState):
+#    print("assitant calling model...")
+#    return {"messages": [llm_with_tools.invoke([sys_msg] + state["messages"])]}
 
 
 
@@ -170,9 +147,32 @@ response_from_llm = app.invoke({"messages": [HumanMessage(content="Can run outsi
 print(response_from_llm["messages"][-1].content)
 
 
-def call_model(user_message: str):
+def call_model(user_message: str, new_conversation: bool):
+    
+    # Start a new Session for the conversation
+    if(new_conversation):
+        print("new_conversation calling model..." + user_message)
+        
+
+
     response_from_llm = app.invoke({"messages": [HumanMessage(content=user_message)]}, config={"configurable": {"thread_id": 42}})
 
     print(response_from_llm["messages"][-1].content)
 
-    return response_from_llm["messages"][-1].content;
+    return response_from_llm["messages"][-1].content
+
+
+def call_model(ai_assistant: AIAssistant):
+    print("call_model calling model..." + ai_assistant.user_message)
+
+    if(ai_assistant.new_conversation):
+        ai_assistant.start_new_session()
+        print("thread id has been assigned ..." + ai_assistant.thread_id)
+
+    response_from_llm = app.invoke(
+        {"messages": [HumanMessage(content=ai_assistant.user_message)]}, 
+        config={"configurable": {"thread_id": 42}})
+
+    print(response_from_llm["messages"][-1].content)
+
+    return response_from_llm["messages"][-1].content
