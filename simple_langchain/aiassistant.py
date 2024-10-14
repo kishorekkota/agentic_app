@@ -12,9 +12,13 @@ from langgraph.graph import END, START, StateGraph, MessagesState
 from langgraph.checkpoint.memory import MemorySaver
 from opencage.geocoder import OpenCageGeocode
 from pprint import pprint
+from opencage.geocoder import OpenCageGeocode
 from opencage.geocoder import InvalidInputError, RateLimitExceededError, UnknownError
 import requests
 import pprint
+
+
+
 
 def _set_env(var: str):
     if not os.environ.get(var):
@@ -26,11 +30,10 @@ _set_env("OPENAI_API_KEY")
 _set_env("LANGCHAIN_OPENAI_API_KEY")
 
 @tool
-def search_google(str):
+def search_google(string):
     """Performs a Google search and returns the top result."""
-    print("search_google calling model..." + str)
-
-    return search(str, num_results=1)    
+    print("search_google calling model...")
+    return search(string, num_results=1)    
 
 
 @tool

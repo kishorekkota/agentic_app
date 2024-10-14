@@ -1,0 +1,299 @@
+{'messages': [HumanMessage(content='Can run outside tomorrow living in 75078?', additional_kwargs={}, response_metadata={}, id='626065db-e438-478b-ba6b-75f3091f4cb0'),
+              AIMessage(content='', additional_kwargs={'tool_calls': [
+                {'id': 'call_9QtVuc8HOpfIuTyfpOjghSoR', 'function': {'arguments': '{
+                            "zip_code": "75078"
+                        }', 'name': 'get_weather_by_zip'
+                    }, 'type': 'function'
+                }
+            ], 'refusal': None
+        }, response_metadata={'token_usage': {'completion_tokens': 18, 'prompt_tokens': 84, 'total_tokens': 102, 'completion_tokens_details': {'audio_tokens': None, 'reasoning_tokens': 0
+                }, 'prompt_tokens_details': {'audio_tokens': None, 'cached_tokens': 0
+                }
+            }, 'model_name': 'gpt-4o-2024-08-06', 'system_fingerprint': 'fp_6b68a8204b', 'finish_reason': 'tool_calls', 'logprobs': None
+        }, id='run-e8acbdae-f0a6-4de2-be98-3f2c28fb7077-0', tool_calls=[
+            {'name': 'get_weather_by_zip', 'args': {'zip_code': '75078'
+                }, 'id': 'call_9QtVuc8HOpfIuTyfpOjghSoR', 'type': 'tool_call'
+            }
+        ], usage_metadata={'input_tokens': 84, 'output_tokens': 18, 'total_tokens': 102, 'input_token_details': {'cache_read': 0
+            }, 'output_token_details': {'reasoning': 0
+            }
+        }),
+              ToolMessage(content='[
+            {
+                "number": 1,
+                "name": "Tonight",
+                "startTime": "2024-10-10T19:00:00-05:00",
+                "endTime": "2024-10-11T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 64,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "SE",
+                "icon": "https://api.weather.gov/icons/land/night/few/rain_showers?size=medium",
+                "shortForecast": "Mostly Clear then Slight Chance Rain Showers",
+                "detailedForecast": "A slight chance of rain showers after 4am. Mostly clear. Low around 64, with temperatures rising to around 66 overnight. Southeast wind around 10 mph."
+            },
+            {
+                "number": 2,
+                "name": "Friday",
+                "startTime": "2024-10-11T06:00:00-05:00",
+                "endTime": "2024-10-11T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 89,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/day/rain_showers/sct?size=medium",
+                "shortForecast": "Slight Chance Rain Showers then Mostly Sunny",
+                "detailedForecast": "A slight chance of rain showers before 10am. Mostly sunny, with a high near 89. South southeast wind 10 to 15 mph, with gusts as high as 25 mph."
+            },
+            {
+                "number": 3,
+                "name": "Friday Night",
+                "startTime": "2024-10-11T18:00:00-05:00",
+                "endTime": "2024-10-12T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 67,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 67. South southeast wind 5 to 10 mph, with gusts as high as 20 mph."
+            },
+            {
+                "number": 4,
+                "name": "Saturday",
+                "startTime": "2024-10-12T06:00:00-05:00",
+                "endTime": "2024-10-12T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 93,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "SSW",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny. High near 93, with temperatures falling to around 91 in the afternoon. South southwest wind 10 to 15 mph, with gusts as high as 25 mph."
+            },
+            {
+                "number": 5,
+                "name": "Saturday Night",
+                "startTime": "2024-10-12T18:00:00-05:00",
+                "endTime": "2024-10-13T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 68,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "S",
+                "icon": "https://api.weather.gov/icons/land/night/skc?size=medium",
+                "shortForecast": "Clear",
+                "detailedForecast": "Clear. Low around 68, with temperatures rising to around 70 overnight. South wind around 10 mph, with gusts as high as 20 mph."
+            },
+            {
+                "number": 6,
+                "name": "Sunday",
+                "startTime": "2024-10-13T06:00:00-05:00",
+                "endTime": "2024-10-13T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 94,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "SW",
+                "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny. High near 94, with temperatures falling to around 91 in the afternoon. Southwest wind around 10 mph, with gusts as high as 20 mph."
+            },
+            {
+                "number": 7,
+                "name": "Sunday Night",
+                "startTime": "2024-10-13T18:00:00-05:00",
+                "endTime": "2024-10-14T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 63,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "5 to 10 mph",
+                "windDirection": "SE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 63. Southeast wind 5 to 10 mph."
+            },
+            {
+                "number": 8,
+                "name": "Columbus Day",
+                "startTime": "2024-10-14T06:00:00-05:00",
+                "endTime": "2024-10-14T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 85,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "NNE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 85. North northeast wind 10 to 15 mph."
+            },
+            {
+                "number": 9,
+                "name": "Monday Night",
+                "startTime": "2024-10-14T18:00:00-05:00",
+                "endTime": "2024-10-15T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 57,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "NE",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 57. Northeast wind around 10 mph."
+            },
+            {
+                "number": 10,
+                "name": "Tuesday",
+                "startTime": "2024-10-15T06:00:00-05:00",
+                "endTime": "2024-10-15T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 75,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "ENE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 75."
+            },
+            {
+                "number": 11,
+                "name": "Tuesday Night",
+                "startTime": "2024-10-15T18:00:00-05:00",
+                "endTime": "2024-10-16T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 52,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "E",
+                "icon": "https://api.weather.gov/icons/land/night/few?size=medium",
+                "shortForecast": "Mostly Clear",
+                "detailedForecast": "Mostly clear, with a low around 52."
+            },
+            {
+                "number": 12,
+                "name": "Wednesday",
+                "startTime": "2024-10-16T06:00:00-05:00",
+                "endTime": "2024-10-16T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 74,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "SE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 74."
+            },
+            {
+                "number": 13,
+                "name": "Wednesday Night",
+                "startTime": "2024-10-16T18:00:00-05:00",
+                "endTime": "2024-10-17T06:00:00-05:00",
+                "isDaytime": false,
+                "temperature": 52,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 mph",
+                "windDirection": "SE",
+                "icon": "https://api.weather.gov/icons/land/night/skc?size=medium",
+                "shortForecast": "Clear",
+                "detailedForecast": "Clear, with a low around 52."
+            },
+            {
+                "number": 14,
+                "name": "Thursday",
+                "startTime": "2024-10-17T06:00:00-05:00",
+                "endTime": "2024-10-17T18:00:00-05:00",
+                "isDaytime": true,
+                "temperature": 76,
+                "temperatureUnit": "F",
+                "temperatureTrend": "",
+                "probabilityOfPrecipitation": {
+                    "unitCode": "wmoUnit:percent",
+                    "value": null
+                },
+                "windSpeed": "10 to 15 mph",
+                "windDirection": "SSE",
+                "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+                "shortForecast": "Sunny",
+                "detailedForecast": "Sunny, with a high near 76."
+            }
+        ]', name='get_weather_by_zip', id='810c5272-324b-465e-a6a3-31ce0701a73c', tool_call_id='call_9QtVuc8HOpfIuTyfpOjghSoR'),
+              AIMessage(content="Tomorrow, it looks like you'll have a good day for running in the 75078 area. Here's the forecast for Friday:\n\n- **Morning**: There is a slight chance of rain showers before 10am, but it will become mostly sunny.\n- **Temperature**: High near 89°F.\n- **Wind**: South southeast wind at 10 to 15 mph, with gusts as high as 25 mph.\n\nIt should be a nice day for outdoor activities after the morning. Make sure to stay hydrated as it will be warm!", additional_kwargs={'refusal': None
+        }, response_metadata={'token_usage': {'completion_tokens': 112, 'prompt_tokens': 2643, 'total_tokens': 2755, 'completion_tokens_details': {'audio_tokens': None, 'reasoning_tokens': 0
+                }, 'prompt_tokens_details': {'audio_tokens': None, 'cached_tokens': 2560
+                }
+            }, 'model_name': 'gpt-4o-2024-08-06', 'system_fingerprint': 'fp_6b68a8204b', 'finish_reason': 'stop', 'logprobs': None
+        }, id='run-95b1291d-8344-4172-a091-a5c710bfb1ca-0', usage_metadata={'input_tokens': 2643, 'output_tokens': 112, 'total_tokens': 2755, 'input_token_details': {'cache_read': 2560
+            }, 'output_token_details': {'reasoning': 0
+            }
+        })
+    ]
+}
