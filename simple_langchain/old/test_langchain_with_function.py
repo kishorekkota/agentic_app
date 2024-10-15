@@ -3,7 +3,7 @@ from unittest.mock import patch, MagicMock
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import MessagesState
 
-from simple_langchain.langchain_with_function import (
+from simple_langchain.old.langchain_with_function import (
     search_google, get_weather_by_zip, get_lat_lon, assistant, call_model, should_continue, app
 )
 

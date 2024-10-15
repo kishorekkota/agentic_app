@@ -1,4 +1,3 @@
-
 import os, getpass
 from langchain_core.messages import HumanMessage
 from googlesearch import search
@@ -12,7 +11,7 @@ import requests
 import uuid
 from requests.exceptions import RequestException
 from tavily import TavilyClient
-
+from langgraph.checkpoint.memory import MemorySaver
 
 def _set_env(var: str):
     if not os.environ.get(var):
@@ -118,8 +117,9 @@ class AIAssistant:
         workflow.add_node("tools", tool_node)
         workflow.add_edge(START, "agent")
         workflow.add_conditional_edges("agent", should_continue)
-        workflow.add_edge("tools", "agent")
-        self.workflow = workflow.compile()
+        workflow.add_edge("tools", "agent")        
+        memory = MemorySaver()
+        self.workflow = workflow.compile(checkpointer=memory)
 
 
     def start_new_session(self):
@@ -164,7 +164,12 @@ assistant = AIAssistant()
 # print(response)
 
 
-user_input = "Where is the next KubeCon Hosted in 2025 ?"
+user_input = "I am living in 75075"
 assistant.new_conversation = True
+response = assistant.run(user_input)
+print(response)
+
+user_input = "Can I run outside tomorrow?"
+
 response = assistant.run(user_input)
 print(response)

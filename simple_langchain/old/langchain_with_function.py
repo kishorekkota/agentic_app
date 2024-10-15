@@ -11,7 +11,7 @@ from langgraph.graph import END, START, StateGraph, MessagesState
 from langgraph.checkpoint.memory import MemorySaver
 from opencage.geocoder import OpenCageGeocode
 import requests
-from AIAssistantModel import AIAssistant
+from simple_langchain.old.AIAssistantModel import AIAssistant
 
 def _set_env(var: str):
     if not os.environ.get(var):
