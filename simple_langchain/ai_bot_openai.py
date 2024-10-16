@@ -12,6 +12,7 @@ import uuid
 from requests.exceptions import RequestException
 from tavily import TavilyClient
 from langgraph.checkpoint.memory import MemorySaver
+from redis_handler import RedisStateGraph
 
 def _set_env(var: str):
     if not os.environ.get(var):
@@ -112,7 +113,7 @@ class AIAssistant:
             last_message = messages[-1]
             return "tools" if last_message.tool_calls else END
 
-        workflow = StateGraph(MessagesState)
+        workflow = RedisStateGraph(MessagesState)
         workflow.add_node("agent", call_model)
         workflow.add_node("tools", tool_node)
         workflow.add_edge(START, "agent")
@@ -138,7 +139,7 @@ class AIAssistant:
             {"messages": [HumanMessage(content=self.user_message)]},
             config={"configurable": {"thread_id": self.thread_id}}
         )
-
+       #self.workflow.save_state(self.thread_id, response)
         for message in response["messages"]:
             message.pretty_print()  # Print the response in a pretty format for readability.
 
