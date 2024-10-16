@@ -173,3 +173,9 @@ user_input = "Can I run outside tomorrow?"
 
 response = assistant.run(user_input)
 print(response)
+
+
+user_input = "Can I run outside tomorrow?"
+
+response = assistant.run(user_input)
+print(response)
