@@ -13,11 +13,22 @@ from requests.exceptions import RequestException
 from tavily import TavilyClient
 from langgraph.checkpoint.memory import MemorySaver
 from redis_handler import RedisStateGraph
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+from langgraph.prebuilt import create_react_agent
+from langgraph.checkpoint.postgres import PostgresSaver
+from langgraph.checkpoint.postgres.aio import AsyncPostgresSaver
+from psycopg_pool import ConnectionPool
+from DBConnectionPool import pool
+from langchain.globals import set_debug
+
+set_debug(True)
 
 def _set_env(var: str):
     if not os.environ.get(var):
         os.environ[var] = getpass.getpass(f"{var}: ")
 
+    
 class AIAssistant:
     def __init__(self, ai_api_key: str = None,tavily_api_key: str = None):
         self.ai_api_key = ai_api_key or os.environ.get("OPENAI_API_KEY")
@@ -113,18 +124,40 @@ class AIAssistant:
             last_message = messages[-1]
             return "tools" if last_message.tool_calls else END
 
-        workflow = RedisStateGraph(MessagesState)
+        workflow = StateGraph(MessagesState)
         workflow.add_node("agent", call_model)
         workflow.add_node("tools", tool_node)
         workflow.add_edge(START, "agent")
         workflow.add_conditional_edges("agent", should_continue)
         workflow.add_edge("tools", "agent")        
-        memory = MemorySaver()
+        
+
+    
+        memory = PostgresSaver(pool)
+
+        # NOTE: you need to call .setup() the first time you're using your checkpointer
+        memory.setup()
+        print("Workflow setup completed.")
+        print(pool.get_stats())
+
+        # graph = create_react_agent(model, tools=tools, checkpointer=memory)
+        
         self.workflow = workflow.compile(checkpointer=memory)
+
+        config = {"configurable": {"thread_id": self.thread_id,"checkpoint_ns": "test"}}
+
+        checkpoint = memory.get(config)
+
+        if checkpoint:
+            self.workflow.load_state(checkpoint)
+            print("Loaded state from checkpoint.")
+
+
+        # self.workflow = create_react_agent(self.llm, self.tools,checkpointer=memory)
 
 
     def start_new_session(self):
-        self.thread_id = uuid.uuid4()
+        self.thread_id = uuid.uuid4().hex
         self.new_conversation = False
         print(f"Started new session with thread_id: {self.thread_id}")
 
@@ -135,10 +168,10 @@ class AIAssistant:
         if self.new_conversation:
             self.start_new_session()
 
+        config={"configurable": {"thread_id": self.thread_id,"checkpoint_ns": "test"}}
         response = self.workflow.invoke(
-            {"messages": [HumanMessage(content=self.user_message)]},
-            config={"configurable": {"thread_id": self.thread_id}}
-        )
+            {"messages": [HumanMessage(content=self.user_message)]},config)
+
        #self.workflow.save_state(self.thread_id, response)
         for message in response["messages"]:
             message.pretty_print()  # Print the response in a pretty format for readability.
@@ -153,6 +186,7 @@ _set_env("TAVILY_API_KEY")
 
 #Instantiate the AIAssistant class.
 assistant = AIAssistant()
+
 
 
 # user_input = "Can I run outside tomorrow living in 75078? Also let me know next week as well."
