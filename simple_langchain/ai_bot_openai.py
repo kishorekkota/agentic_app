@@ -22,7 +22,7 @@ from psycopg_pool import ConnectionPool
 from DBConnectionPool import pool
 from langchain.globals import set_debug
 
-set_debug(True)
+# set_debug(True)
 
 def _set_env(var: str):
     if not os.environ.get(var):
@@ -144,7 +144,7 @@ class AIAssistant:
         
         self.workflow = workflow.compile(checkpointer=memory)
 
-        config = {"configurable": {"thread_id": self.thread_id,"checkpoint_ns": "test"}}
+        config = {"configurable": {"thread_id": self.thread_id}}
 
         checkpoint = memory.get(config)
 
@@ -168,11 +168,16 @@ class AIAssistant:
         if self.new_conversation:
             self.start_new_session()
 
-        config={"configurable": {"thread_id": self.thread_id,"checkpoint_ns": "test"}}
+        config={"configurable": {"thread_id": self.thread_id}}
+        
+        self.workflow.get_state(config)
+        
+
         response = self.workflow.invoke(
             {"messages": [HumanMessage(content=self.user_message)]},config)
 
-       #self.workflow.save_state(self.thread_id, response)
+        #self.workflow.save_state(self.thread_id, response)
+
         for message in response["messages"]:
             message.pretty_print()  # Print the response in a pretty format for readability.
 
@@ -199,18 +204,20 @@ assistant = AIAssistant()
 # print(response)
 
 
-user_input = "I am living in 75075"
-assistant.new_conversation = True
+user_input = "How about next week  ?"
+assistant.thread_id = "451e87e5f291464c9a235f477c0b8f0a"
+assistant.new_conversation = False
+response = assistant.run(user_input)
+print(response)
+print("******** New Conversation ************")
+
+user_input = "what is my first name ?"
+
 response = assistant.run(user_input)
 print(response)
 
-user_input = "Can I run outside tomorrow?"
 
-response = assistant.run(user_input)
-print(response)
+# user_input = "Can I run outside tomorrow?"
 
-
-user_input = "Can I run outside tomorrow?"
-
-response = assistant.run(user_input)
-print(response)
+# response = assistant.run(user_input)
+# print(response)
