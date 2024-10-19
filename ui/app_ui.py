@@ -35,10 +35,12 @@ if user_input:
     st.session_state.history.append({"message": user_input, "is_user": True})
     try:
         print("user_input: ", user_input + " new_chat: ", st.session_state.new_chat)
-        chat_response = chatbot_response(user_input, st.session_state.new_chat)
-        st.session_state.history.append({"message": chat_response, "is_user": False})
+        chat_response = chatbot_response(user_input, st.session_state.new_chat, st.session_state.thread_id if 'thread_id' in st.session_state else "")
+        st.session_state.history.append({"message": chat_response.get("response"), "is_user": False})
         st.session_state.new_chat = False
+        st.session_state.thread_id = chat_response.get("thread_id")
         print(st.session_state.new_chat)
+        print(st.session_state.thread_id)
     except requests.exceptions.RequestException as e:
         st.error(f"Error: {e}")
 

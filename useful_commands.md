@@ -15,3 +15,12 @@ export TAVILY_API_KEY=${TAVILY_API_KEY}
 
 ### API Endpoint
 
+
+### Docker Run Command
+docker run -p 80:80  \     -e OPENAI_API_KEY=<> \
+     -e LANGCHAIN_API_KEY=<> \
+     -e LANGCHAIN_OPENAI_API_KEY=<> \
+     -e OPENCAGE_API_KEY=<>  \
+     -e TAVILY_API_KEY=<> \
+     -e DB_URI=<> \
+        kishorekkota/ai_bot:v1

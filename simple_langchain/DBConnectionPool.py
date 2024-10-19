@@ -4,7 +4,7 @@ from psycopg_pool import ConnectionPool  # psycopg is a PostgreSQL adapter
 import os
 
 # Use environment variables for sensitive information
-DB_URI = os.getenv("DB_URI", "postgresql://simple_langchain:simple_langchain@localhost:5432/simple_langchain?sslmode=disable")
+DB_URI = os.getenv("DB_URI")
 
 
 connection_kwargs = {

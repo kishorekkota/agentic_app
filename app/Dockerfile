@@ -19,6 +19,8 @@ RUN export OPENCAGE_API_KEY=${OPENCAGE_API_KEY}
 
 RUN export TAVILY_API_KEY=${TAVILY_API_KEY}
 
+RUN export BD_URI=${DB_URI}
+
 # Make port 80 available to the world outside this container
 EXPOSE 80
 

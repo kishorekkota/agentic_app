@@ -8,17 +8,22 @@ from langgraph.checkpoint.postgres import PostgresSaver
 from db_connection import pool
 from typing import Literal
 from tools import search_google, get_weather_by_zip
+from chat_response import ChatBot
 
 class AIAssistant:
-    def __init__(self, ai_api_key: str = None, tavily_api_key: str = None):
-        self.ai_api_key = ai_api_key or os.environ.get("OPENAI_API_KEY")
-        self.tavily_api_key = tavily_api_key or os.environ.get("TAVILY_API_KEY")
+    def __init__(self, thread_id: str,new_conversation: bool = True):
+        self.ai_api_key = os.environ.get("OPENAI_API_KEY")
+        self.tavily_api_key =  os.environ.get("TAVILY_API_KEY")
+
         if not self.ai_api_key:
             raise ValueError("OPENAI_API_KEY environment variable not set.")
+        if not self.tavily_api_key:
+            raise ValueError("TAVILY_API_KEY environment variable not set.")
+        
         self.llm = ChatOpenAI(model="gpt-4o", temperature=0, openai_api_key=self.ai_api_key)  # Added temperature for control
-        self.thread_id = None  # Initialize thread id to None
+        self.thread_id = thread_id
         self.user_message = None
-        self.new_conversation = True
+        self.new_conversation = new_conversation
         self._setup_tools()
         self._setup_workflow()
 
@@ -58,9 +63,9 @@ class AIAssistant:
         self.workflow = workflow.compile(checkpointer=memory)
         config = {"configurable": {"thread_id": self.thread_id}}
         checkpoint = memory.get(config)
-        if checkpoint:
-            self.workflow.load_state(checkpoint)
-            print("Loaded state from checkpoint.")
+        # if checkpoint:
+        #     self.workflow.load_state(checkpoint)
+        #     print("Loaded state from checkpoint.")
 
     def start_new_session(self):
         self.thread_id = uuid.uuid4().hex
@@ -73,8 +78,13 @@ class AIAssistant:
             self.start_new_session()
         config = {"configurable": {"thread_id": self.thread_id}}
         self.workflow.get_state(config)
+        
         response = self.workflow.invoke(
             {"messages": [HumanMessage(content=self.user_message)]}, config)
-        for message in response["messages"]:
-            message.pretty_print()  # Print the response in a pretty format for readability.
-        return response["messages"][-1].content
+        
+        # for message in response["messages"]:
+        #     message.pretty_print()  # Print the response in a pretty format for readability.
+
+        response = ChatBot(user_message,response["messages"][-1].content,self.thread_id)
+
+        return response
