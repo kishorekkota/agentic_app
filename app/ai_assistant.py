@@ -61,8 +61,9 @@ class AIAssistant:
         print(pool.get_stats())
 
         self.workflow = workflow.compile(checkpointer=memory)
-        config = {"configurable": {"thread_id": self.thread_id}}
-        checkpoint = memory.get(config)
+        # config = {"configurable": {"thread_id": self.thread_id}}
+        # checkpoint = memory.get(config)
+
         # if checkpoint:
         #     self.workflow.load_state(checkpoint)
         #     print("Loaded state from checkpoint.")

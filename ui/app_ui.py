@@ -6,7 +6,6 @@ from utils import end_chat
 from utils import load_sidebar
 
 
-
 st.title("HR ChatBot")
 
 st.sidebar.header("History")
@@ -21,7 +20,7 @@ if 'new_chat' not in st.session_state:
 col1, col2, col3 = st.columns([4, 1, 1])
 with st.container():
     with col1:
-        user_input = st.chat_input(placeholder="Please enter your question here...", key="input_text")
+        user_input = st.chat_input(placeholder="Please enter your question here...")
     with col2:
         chat_button = st.button(label="Chat", key="chat_button",use_container_width=True)
     with col3:
