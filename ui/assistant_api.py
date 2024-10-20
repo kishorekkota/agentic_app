@@ -31,6 +31,8 @@ def chatbot_response(user_input,new_chat, thread_id=None):
 
     logger.debug(response.json())
 
+    print(response.json())
+
     response.raise_for_status()
     
-    return response.json()[0]
+    return response.json().get('response')

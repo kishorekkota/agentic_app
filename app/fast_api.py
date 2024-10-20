@@ -48,4 +48,4 @@ async def chat(request: ChatRequest):
 
     logger.debug("Sending response: %s ", bot_response)
 
-    return {bot_response}
+    return {"response": bot_response}

@@ -9,6 +9,9 @@ from db_connection import pool
 from typing import Literal
 from tools import search_google, get_weather_by_zip
 from chat_response import ChatBot
+import logging
+
+logger = logging.getLogger(__name__)
 
 class AIAssistant:
     def __init__(self, thread_id: str,new_conversation: bool = True):
@@ -36,11 +39,11 @@ class AIAssistant:
         llm_with_tools = self.llm.bind_tools(self.tools)
 
         def call_model(state: MessagesState):
-            print("call_model calling model...")
+            logger.info("call_model calling model...")
             messages = state["messages"]
-            print(f"call_model: {messages}")  # For debugging purposes, print the messages received.
+            logger.debug(f"call_model: {messages}")  # For debugging purposes, print the messages received.
             response = llm_with_tools.invoke(messages)
-            print(f"call_model: {response}")  # For debugging purposes, print the response received.
+            logger.debug(f"call_model: {response}")  # For debugging purposes, print the response received.
             return {"messages": [response]}
 
         def should_continue(state: MessagesState) -> Literal["tools", END]:
@@ -57,8 +60,8 @@ class AIAssistant:
 
         memory = PostgresSaver(pool)
         memory.setup()
-        print("Workflow setup completed.")
-        print(pool.get_stats())
+        logger.info("Workflow setup completed.")
+        logger.debug(pool.get_stats())
 
         self.workflow = workflow.compile(checkpointer=memory)
         # config = {"configurable": {"thread_id": self.thread_id}}
@@ -71,7 +74,7 @@ class AIAssistant:
     def start_new_session(self):
         self.thread_id = uuid.uuid4().hex
         self.new_conversation = False
-        print(f"Started new session with thread_id: {self.thread_id}")
+        logger.info(f"Started new session with thread_id: {self.thread_id}")
 
     def run(self, user_message: str):
         self.user_message = user_message

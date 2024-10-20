@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma_vector_store
+    ports:
+      - "8000:8000"
+    environment:
+      - CHROMA_DB_PATH=/data/chroma
+    volumes:
+      - chroma_data:/data/chroma
+    networks:
+      - chroma_network
+
+volumes:
+  chroma_data:
+    driver: local
+
+networks:
+  chroma_network:
+    driver: bridge
