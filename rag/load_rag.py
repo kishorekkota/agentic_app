@@ -8,7 +8,7 @@ from langchain_core.documents import Document
 import chromadb
 
 # Configure logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 def load_documents(directory: str, glob_pattern: str = "*.pdf"):
@@ -51,9 +51,15 @@ def create_chroma_client(host: str = 'localhost', port: int = 8000):
 def get_or_create_collection(client, collection_name: str):
     """Get or create a ChromaDB collection."""
     logger.info("Creating collection: %s", collection_name)
-    collection = client.get_collection(collection_name)
+    try:
+        collection = client.get_collection(name=collection_name)
+    except Exception as e:
+        logger.info("Error getting collection: %s", str(e))
+        collection = None
+    logger.info("Collection: %s", collection)
     if collection is None:
-        collection = client.create_collection(collection_name)
+        logger.info("Collection not found. Creating new collection...")
+        collection = client.create_collection(name=collection_name)
     return collection
 
 def add_documents_to_collection(collection, embedding_docs, docs):
