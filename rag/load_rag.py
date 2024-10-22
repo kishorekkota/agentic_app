@@ -1,6 +1,7 @@
 import os
 import uuid
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
@@ -24,6 +25,13 @@ def load_documents(directory: str, glob_pattern: str = "*.pdf"):
 
     return chunks
 
+def embed_document(chunk, embeddings):
+    """Embed a single document chunk using OpenAI embeddings."""
+    logger.debug("Embedding document: %s", chunk.metadata)
+    embedded_doc = embeddings.embed_documents(chunk.page_content)
+    logger.debug("Embedding size: %d", len(embedded_doc))
+    return embedded_doc
+
 def embed_documents(chunks_with_ids: list[Document]):
     """Embed documents using OpenAI embeddings."""
     logger.info("Embedding documents...")
@@ -35,10 +43,11 @@ def embed_documents(chunks_with_ids: list[Document]):
 
     embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     embedded_docs = []
-    for chunk in chunks_with_ids:
-        logger.debug("Embedding document: %s", chunk.metadata)
-        embedded_docs.append(embeddings.embed_documents(chunk.page_content))
-        logger.debug("Embedding size: %d", len(embedded_docs[-1]))
+
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(embed_document, chunk, embeddings) for chunk in chunks_with_ids]
+        for future in as_completed(futures):
+            embedded_docs.append(future.result())
 
     logger.info("Documents embedded.")
     return embedded_docs
@@ -62,14 +71,22 @@ def get_or_create_collection(client, collection_name: str):
         collection = client.create_collection(name=collection_name)
     return collection
 
+def add_document_to_collection(collection, doc, doc_id):
+    """Add a single document to the specified ChromaDB collection."""
+    logger.debug("Adding document: %s", doc.metadata)
+    collection.add(documents=[doc.page_content], metadatas=[doc.metadata], ids=[doc_id])
+    logger.debug("Document added.")
+
 def add_documents_to_collection(collection, docs):
     """Add documents to the specified ChromaDB collection."""
     logger.info("Adding documents to collection...")
     logger.debug("Number of documents: %d", len(docs))
-    ids = [str(uuid.uuid4()) for _ in range(len(docs))]
-    docs_content = [doc.page_content for doc in docs]
-    docs_metadata = [doc.metadata for doc in docs]
-    collection.add(documents=docs_content, metadatas=docs_metadata, ids=ids)
+
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(add_document_to_collection, collection, doc, str(uuid.uuid4())) for doc in docs]
+        for future in as_completed(futures):
+            future.result()
+
     logger.info("Documents added to collection.")
 
 def calculate_chunk_ids(chunks):
@@ -106,6 +123,8 @@ def main():
 
         chroma_client = create_chroma_client()
         pdf_collection = get_or_create_collection(chroma_client, collection_name)
+
+        embedded_docs = embed_documents(chunks_with_ids)
         add_documents_to_collection(pdf_collection, chunks_with_ids)
         logger.info("Documents embedded and added to ChromaDB collection.")
     except Exception as e:
