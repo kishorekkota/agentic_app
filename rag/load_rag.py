@@ -62,7 +62,7 @@ def get_or_create_collection(client, collection_name: str):
         collection = client.create_collection(name=collection_name)
     return collection
 
-def add_documents_to_collection(collection, embedding_docs, docs):
+def add_documents_to_collection(collection, docs):
     """Add documents to the specified ChromaDB collection."""
     logger.info("Adding documents to collection...")
     logger.debug("Number of documents: %d", len(docs))
@@ -106,9 +106,8 @@ def main():
 
         chroma_client = create_chroma_client()
         pdf_collection = get_or_create_collection(chroma_client, collection_name)
-
-        embedded_docs = embed_documents(chunks_with_ids)
-        add_documents_to_collection(pdf_collection, embedded_docs, chunks_with_ids)
+        add_documents_to_collection(pdf_collection, chunks_with_ids)
+        logger.info("Documents embedded and added to ChromaDB collection.")
     except Exception as e:
         logger.error("Error: %s", e)
 
