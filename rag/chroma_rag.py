@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 logger = logging.getLogger(__name__)
 
 class ChromaRAG:
-    def __init__(self, host: str = 'localhost', port: int = 8000, collection_name: str = 'stripe_collection'):
+    def __init__(self, host: str = 'localhost', port: int = 8001, collection_name: str = 'stripe_collection'):
         self.host = host
         self.port = port
         self.collection_name = collection_name

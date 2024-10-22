@@ -52,7 +52,7 @@ def embed_documents(chunks_with_ids: list[Document]):
     logger.info("Documents embedded.")
     return embedded_docs
 
-def create_chroma_client(host: str = 'localhost', port: int = 8000):
+def create_chroma_client(host: str = 'localhost', port: int = 8001):
     """Create a ChromaDB client."""
     logger.info("Creating ChromaDB client...")
     return chromadb.HttpClient(host=host, port=port)
