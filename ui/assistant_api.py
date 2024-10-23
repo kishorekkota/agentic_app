@@ -9,7 +9,7 @@ CHATBOT_API_URL = os.getenv('CHATBOT_API_URL')
 
 logger = logging.getLogger(__name__)
 
-def chatbot_response(user_input,new_chat, thread_id=None):
+def chatbot_response(user_input,new_chat,thread_id=None,scope="all",username=None):
     """
     Sends a user's input to the chatbot API and retrieves the response.
 
@@ -23,7 +23,7 @@ def chatbot_response(user_input,new_chat, thread_id=None):
     requests.exceptions.RequestException: If there is an error with the HTTP request.
     """
 
-    json_str = {"message": user_input, "new_chat": new_chat, "thread_id": thread_id}
+    json_str = {"message": user_input, "new_chat": new_chat, "thread_id": thread_id, "scope": scope, "username": username}
 
     logger.debug(json_str)
 
