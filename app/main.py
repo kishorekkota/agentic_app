@@ -1,28 +1,23 @@
-from env_setup import setup_environment
-from ai_assistant import AIAssistant
+# main.py
+from fastapi import FastAPI
+from contextlib import asynccontextmanager
+from startup import Startup
+from routes import router
 
-# Set Environment variables before instantiating the class
-setup_environment()
+app = FastAPI()
 
-# Instantiate the AIAssistant class
-assistant = AIAssistant('1234567890abcdef')
+startup = Startup()
 
-# Example usage
-user_input = "Can I run outside tomorrow living in 75078? Also let me know next week as well."
-response = assistant.run(user_input)
-print(response)
+# Lifespan context manager for startup and shutdown tasks
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup tasks
+    startup.connect_to_mongodb()
+    yield
+    # Shutdown tasks
+    startup.close_mongodb_connection()
 
-user_input = "What's the weather like in 90210 next week?"
-response = assistant.run(user_input)
-print(response)
+app = FastAPI(lifespan=lifespan)
 
-user_input = "How about next week?"
-assistant.thread_id = "451e87e5f291464c9a235f477c0b8f0a"
-assistant.new_conversation = False
-response = assistant.run(user_input)
-print(response)
-print("******** New Conversation ************")
-
-user_input = "what is my first name?"
-response = assistant.run(user_input)
-print(response)
+# Include the router
+app.include_router(router)
