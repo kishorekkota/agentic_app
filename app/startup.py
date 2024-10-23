@@ -21,3 +21,14 @@ class Startup:
         if self.db_client:
             self.db_client.close()
             self.logger.info("Closed MongoDB connection")
+    
+    def configure_envronment(self):
+        self.logger.info("Setting up environment variables")
+        self.set_env("OPENCAGE_API_KEY")
+        self.set_env("OPENAI_API_KEY")
+        self.set_env("LANGCHAIN_OPENAI_API_KEY")
+        self.set_env("TAVILY_API_KEY")
+        self.set_env("DB_URI")
+        self.set_env("LOG_LEVEL")
+        self.set_env("MONGODB_URI")
+ 
