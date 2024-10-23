@@ -5,7 +5,7 @@ from ai_assistant import AIAssistant
 setup_environment()
 
 # Instantiate the AIAssistant class
-assistant = AIAssistant()
+assistant = AIAssistant('1234567890abcdef')
 
 # Example usage
 user_input = "Can I run outside tomorrow living in 75078? Also let me know next week as well."
