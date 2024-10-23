@@ -3,6 +3,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from models import ChatRequest, ChatHistoryRequest, AdditionalInfoRequest, ChatFeedbackRequest
 from ai_assistant import AIAssistant
 from startup import Startup
+from jwt_utils import get_current_user
 
 router = APIRouter()
 startup = Startup()
@@ -11,7 +12,7 @@ def get_ai_assistant(thread_id: str, new_chat: bool):
     return AIAssistant(thread_id, new_chat)
 
 @router.post("/chat")
-async def chat(request: ChatRequest, assistant: AIAssistant = Depends(get_ai_assistant)):
+async def chat(request: ChatRequest, current_user: dict = Depends(get_current_user), assistant: AIAssistant = Depends(get_ai_assistant)):
     try:
         user_message = request.message
         startup.logger.info("Received request: %s", request)
@@ -32,7 +33,7 @@ async def chat(request: ChatRequest, assistant: AIAssistant = Depends(get_ai_ass
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @router.post("/chat/history")
-async def chat_history(request: ChatHistoryRequest, assistant: AIAssistant = Depends(get_ai_assistant)):
+async def chat_history(request: ChatHistoryRequest, current_user: dict = Depends(get_current_user), assistant: AIAssistant = Depends(get_ai_assistant)):
     try:
         username = request.username
         thread_id = request.thread_id
@@ -47,7 +48,7 @@ async def chat_history(request: ChatHistoryRequest, assistant: AIAssistant = Dep
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @router.post("/chat/additional_info")
-async def additional_info(request: AdditionalInfoRequest, assistant: AIAssistant = Depends(get_ai_assistant)):
+async def additional_info(request: AdditionalInfoRequest, current_user: dict = Depends(get_current_user), assistant: AIAssistant = Depends(get_ai_assistant)):
     try:
         username = request.username
         thread_id = request.thread_id
@@ -63,7 +64,7 @@ async def additional_info(request: AdditionalInfoRequest, assistant: AIAssistant
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 @router.post("/chat/feedback")
-async def chat_feedback(request: ChatFeedbackRequest, assistant: AIAssistant = Depends(get_ai_assistant)):
+async def chat_feedback(request: ChatFeedbackRequest, current_user: dict = Depends(get_current_user), assistant: AIAssistant = Depends(get_ai_assistant)):
     try:
         username = request.username
         thread_id = request.thread_id
