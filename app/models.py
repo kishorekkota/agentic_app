@@ -1,6 +1,13 @@
-# models.py
 from pydantic import BaseModel
 from typing import List
+
+class ChatRequest(BaseModel):
+    message: str
+    new_chat: bool = False
+    thread_id: str
+    scope: str
+    username: str 
+
 
 class ChatMessage(BaseModel):
     message_id: str
@@ -13,12 +20,6 @@ class ChatHistory(BaseModel):
     thread_id: str
     messages: List[ChatMessage]
 
-class ChatRequest(BaseModel):
-    message: str
-    new_chat: bool = False
-    thread_id: str 
-    scope: str = "all"
-    username: str = None
 
 class ChatHistoryRequest(BaseModel):
     username: str

@@ -2,6 +2,8 @@ import requests
 import os
 import env_loader
 import logging
+from ui_utils import make_authenticated_request
+import pprint
 
 env_loader.load_dotenv()
 
@@ -9,7 +11,7 @@ CHATBOT_API_URL = os.getenv('CHATBOT_API_URL')
 
 logger = logging.getLogger(__name__)
 
-def chatbot_response(user_input,new_chat,thread_id=None,scope="all",username=None):
+def chatbot_request(user_input, new_chat, thread_id: str, scope: str, username: str):
     """
     Sends a user's input to the chatbot API and retrieves the response.
 
@@ -22,16 +24,23 @@ def chatbot_response(user_input,new_chat,thread_id=None,scope="all",username=Non
     Raises:
     requests.exceptions.RequestException: If there is an error with the HTTP request.
     """
+    logger.info("Sending user input to chatbot API")
 
-    json_str = {"message": user_input, "new_chat": new_chat, "thread_id": thread_id, "scope": scope, "username": username}
+    json_str = {
+        "message": user_input,
+        "new_chat": new_chat,
+        "thread_id": thread_id,
+        "scope": scope,
+        "username": username
+    }
 
-    logger.debug(json_str)
+    logger.debug(f"Request payload: {json_str}")
 
-    response = requests.post(CHATBOT_API_URL,json=json_str)
+    pprint.pprint(json_str)
 
-    logger.debug(response.json())
+    response = make_authenticated_request(CHATBOT_API_URL, "POST", json_str, {"scope": scope, "username": username})
 
-    print(response.json())
+    logger.debug(f"Response: {response.json()}")
 
     response.raise_for_status()
     

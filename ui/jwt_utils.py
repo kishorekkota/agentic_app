@@ -6,7 +6,7 @@ from jwt import PyJWTError
 import os
 from datetime import datetime, timedelta
 
-SECRET_KEY = os.getenv("SECRET_KEY", "your_secret_key")
+SECRET_KEY = os.getenv("SECRET_KEY", "N2Y3ZTY4YzMtZDU1Zi00Y2E4LTk1YzEtY2Y2YzY1YzY2YzY2")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30  # Token expiration time
 
