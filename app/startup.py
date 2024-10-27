@@ -12,7 +12,7 @@ class Startup:
 
     def set_env(self, var: str):
         if not os.environ.get(var):
-            os.environ[var] = getpass.getpass(f"{var}: ")
+            os.environ[var] = "<Missing>"
 
     def configure_logging(self):
         logging.basicConfig(level=config.LOG_LEVEL)
