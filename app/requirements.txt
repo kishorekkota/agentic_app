@@ -5,13 +5,12 @@ langchain
 langchain_openai
 langgraph
 langgraph-checkpoint
+psycopg 
+psycopg-pool  
 langgraph-checkpoint-postgres
-psycog==0.0.1
-psycopg==3.2.3
-psycopg-binary==3.2.3
-psycopg-pool==3.2.3
+psycog
 pyjwt
-
+numpy==1.26.4
 #Wont be needed later
 opencage==3.0.2
 tavily-python==0.5.0

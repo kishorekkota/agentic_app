@@ -1,5 +1,5 @@
 # Use the official Python image as a parent image
-FROM python:3.14-rc-slim-bullseye
+FROM python:3.12-slim
 
 # Set the working directory in the container
 WORKDIR /app
