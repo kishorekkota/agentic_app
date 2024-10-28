@@ -4,6 +4,7 @@ import env_loader
 import logging
 from ui_utils import make_authenticated_request
 import pprint
+import json
 
 env_loader.load_dotenv()
 
@@ -34,6 +35,14 @@ def chatbot_request(user_input, new_chat, thread_id: str, scope: str, username: 
         "username": username
     }
 
+
+    # json_str = json.dumps({
+    #     "message": user_input,
+    #     "new_chat": new_chat,
+    #     "thread_id": thread_id,
+    #     "scope": scope,
+    #     "username": username
+    # })
     logger.debug(f"Request payload: {json_str}")
 
     pprint.pprint(json_str)
