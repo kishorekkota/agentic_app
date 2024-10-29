@@ -24,3 +24,7 @@ docker run -p 80:80  \     -e OPENAI_API_KEY=<> \
      -e TAVILY_API_KEY=<> \
      -e DB_URI=<> \
         kishorekkota/ai_bot:v1
+
+
+
+https://github.com/Azure-Samples/azure-search-python-samples/blob/main/Tutorial-RAG/Tutorial-rag.ipynb
