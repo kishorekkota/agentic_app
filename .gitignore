@@ -24,7 +24,8 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-*.kishore
+*.secrets
+
 MANIFEST
 
 # PyInstaller
