@@ -28,3 +28,6 @@ docker run -p 80:80  \     -e OPENAI_API_KEY=<> \
 
 
 https://github.com/Azure-Samples/azure-search-python-samples/blob/main/Tutorial-RAG/Tutorial-rag.ipynb
+
+
+https://github.com/etienne113/Chatbot/blob/48baa52f1eca85d1c09e8367bb7cc514409c5998/backend/tools/tools.py
