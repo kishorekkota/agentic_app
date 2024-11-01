@@ -71,7 +71,7 @@ def create_vector_store_tool(vector_store: AzureSearch):
         retriever_tool = create_retriever_tool(
             retriever,
             name="retrieval_tool",
-            description="Knowledge base about earth, ocean and boundaries.",
+            description="Search Knowledge base about earth, ocean and boundaries for providing context to LLM.",
         )
         logger.info("Retriever tool created successfully.")
         return retriever_tool

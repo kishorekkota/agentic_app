@@ -5,101 +5,69 @@ import uuid
 import logging
 from typing import Literal
 
-from langchain_openai import AzureChatOpenAI 
-from langgraph.graph import START, END, StateGraph, MessagesState
-from langgraph.prebuilt import ToolNode
+from langchain_openai import AzureChatOpenAI
 from langchain.schema import HumanMessage
-# from langchain_openai import AzureChatOpenAI
+from langgraph.graph import START, END, StateGraph, MessagesState
+from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.postgres import PostgresSaver
+from langchain_core.output_parsers import StrOutputParser
+from langchain.prompts import PromptTemplate
+from langchain import hub
+
 from db_connection import pool
 from chat_response import ChatBot
-from azure_search import create_vector_store_tool,create_vector_store
+from azure_search import create_vector_store, create_vector_store_tool
 from agent_state import AgentState
-# from node_processor import NodeProcessor
-from langgraph.prebuilt import tools_condition
-import azure_search 
+import prettyprinter as pp
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 class RAGAIAssistant:
     def __init__(self, thread_id: str, new_conversation: bool = True):
+        self.azure_openai_api_key = os.environ.get("AZURE_OPENAI_API_KEY")
+        self.azure_openai_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
 
-        self.azure_ai_api_key = os.environ.get("AZURE_OPENAI_API_KEY")
-        self.azure_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
+        if not self.azure_openai_api_key:
+            raise ValueError("AZURE_OPENAI_API_KEY environment variable not set.")
+        if not self.azure_openai_endpoint:
+            raise ValueError("AZURE_OPENAI_ENDPOINT environment variable not set.")
 
-        if not self.azure_ai_api_key:
-            raise ValueError("OPENAI_API_KEY environment variable not set.")
-
-        # https://azure-open-ai-kishore.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2023-05-15
-
-        GROUNDED_PROMPT="""
-        You are an AI assistant that helps users learn from the information found in the source material.
-        Answer the query using only the sources provided below.
-        Use bullets if the answer has multiple points.
-        If the answer is longer than 3 sentences, provide a summary.
-        Answer ONLY with the facts listed in the list of sources below. Cite your source when you answer the question
-        If there isn't enough information below, say you don't know.
-        Do not generate answers that don't use the sources below.
-        Query: {query}
-        Sources:\n{sources}
-        """
-        self.llm = AzureChatOpenAI(model="gpt-4", temperature=0, openai_api_key=self.azure_ai_api_key,azure_endpoint=self.azure_endpoint,api_version="2024-08-01-preview",azure_deployment='gpt-35-turbo')
         self.thread_id = thread_id
         self.user_message = None
         self.new_conversation = new_conversation
-        vector_store = azure_search.create_vector_store()
-        retriever_tool = azure_search.create_vector_store_tool(vector_store)
 
-        #model = AzureChatOpenAI(temperature=0, streaming=True, model="gpt-4-turbo",api_version="2024-08-01-preview",azure_deployment='gpt-35-turbo',azure_endpoint=os.environ.get("AZURE_ENDPOINT"),openai_api_key=os.environ.get("AZURE_API_KEY"))
+        # Initialize the language model
+        self.llm = AzureChatOpenAI(
+            deployment_name='gpt-35-turbo',
+            openai_api_key=self.azure_openai_api_key,
+            openai_api_version="2024-05-01-preview",
+            openai_api_type="azure",
+            azure_endpoint=self.azure_openai_endpoint,
+            temperature=0
+        )
 
-        self.model_tool = self.llm.bind_tools([retriever_tool])  # Bind the tools to the model
+        # Create vector store and retriever tool
+        vector_store = create_vector_store()
+        self.retriever_tool = create_vector_store_tool(vector_store)
+
+        # Bind the retriever tool to the LLM
+        self.model_tool = self.llm.bind_tools([self.retriever_tool])
+
+        # Set up the workflow
         self._setup_workflow()
-
-
 
     def _setup_workflow(self):
         logger.info("Setting up workflow...")
-        
-        #tool_node = ToolNode(self.tools)
-        
-        #llm_with_tools = self.llm.bind_tools(self.tools)
 
-        # Define functions used in the workflow
-        # def call_model(state: MessagesState):
-        #     logger.info("call_model invoking model...")
-        #     messages = state["messages"]
-        #     logger.debug(f"call_model messages: {messages}")
-        #     response = self.llm.invoke(messages)
-        #     logger.debug(f"call_model response: {response}")
-        #     return {"messages": [response]}
-
-        # def should_continue(state: MessagesState) -> Literal["tools", END]:
-        #     messages = state['messages']
-        #     last_message = messages[-1]
-        #     if last_message.tool_calls:
-        #         return "tools"
-        #     else:
-        #         return END
-
-        # def grade_documents(state: MessagesState) -> Literal["generate", "rewrite"]:
-        #     # Implement your logic to grade documents here
-        #     # For illustration, we'll assume all documents are relevant
-        #     logger.info("Grading documents...")
-        #     return "generate"
-
-        # Define your workflow graph
+        # Initialize the StateGraph with AgentState
         workflow = StateGraph(AgentState)
-
-        # node_processor = NodeProcessor()
 
         # Add nodes to the workflow
         workflow.add_node("agent", self.agent)
-        retriever_tool = create_vector_store_tool(create_vector_store())
-        retrieve_node = ToolNode([retriever_tool])
+        retrieve_node = ToolNode([self.retriever_tool])
         workflow.add_node("retrieve", retrieve_node)
         workflow.add_node("rewrite", self.rewrite)
-        # Generating a response after we know the documents are relevant
-        # Call agent node to decide to retrieve or not
         workflow.add_node("generate", self.generate)
 
         # Define the workflow edges
@@ -127,18 +95,13 @@ class RAGAIAssistant:
 
         workflow.add_edge("generate", END)
         workflow.add_edge("rewrite", "agent")
-        
 
         # Set up memory with PostgresSaver
         memory = PostgresSaver(pool)
         memory.setup()
         logger.info("Workflow setup completed.")
-        logger.debug(f"Database pool stats: {pool.get_stats()}")
 
-        self.workflow = workflow.compile()
-
-        print("Workflow setup completed..............")
-
+        self.workflow = workflow.compile(checkpointer=memory)
 
     def start_new_session(self):
         self.thread_id = uuid.uuid4().hex
@@ -150,46 +113,44 @@ class RAGAIAssistant:
         if self.new_conversation:
             self.start_new_session()
         config = {"configurable": {"thread_id": self.thread_id}}
-        #self.workflow.get_state(config)
 
         logger.info(f"Running workflow for message: {user_message}")
         response_state = self.workflow.invoke(
-            {"messages": [HumanMessage(content=self.user_message)]}, config
+            {"messages": [HumanMessage(content=self.user_message)]},
+            config=config
         )
 
-        logger.debug(f"Workflow response state: {response_state}")
+        messages = response_state.get("messages", [])
+        if messages:
+            last_message = messages[-1].content
+        else:
+            last_message = ""
 
-        last_message = response_state["messages"][-1].content if response_state["messages"] else ""
         response = ChatBot(self.user_message, last_message, self.thread_id)
 
         return response
-    def grade_documents(self, state) -> Literal["generate", "rewrite"]:
-        """
-        Determines whether the retrieved documents are relevant to the question.
 
-        Args:
-            state (dict): The current state containing messages.
-
-        Returns:
-            str: A decision for whether to 'generate' or 'rewrite'.
-        """
+    def grade_documents(self, state: MessagesState) -> Literal["generate", "rewrite"]:
         logger.info("Starting document grading process.")
 
-        # Data model
         class Grade(BaseModel):
-            """Binary score for relevance check."""
             binary_score: str = Field(description="Relevance score 'yes' or 'no'.")
 
         try:
-            # Initialize LLM
-            model = AzureChatOpenAI(temperature=0, model="gpt-4-0125-preview", streaming=True)
+            model = AzureChatOpenAI(
+                deployment_name='gpt-35-turbo',
+                openai_api_key=self.azure_openai_api_key,
+                openai_api_base=self.azure_openai_endpoint,
+                openai_api_version="2024-05-01-preview",
+                openai_api_type="azure",
+                temperature=0
+            )
             llm_with_tool = model.with_structured_output(Grade)
 
-            # Prompt
             prompt = PromptTemplate(
                 template=(
                     "You are a grader assessing relevance of a retrieved document to a user question.\n"
-                    "Here is the retrieved document:\n\n{context}\n\n"
+                    "Here is the retrieved document:\n{context}\n\n"
                     "Here is the user question: {question}\n"
                     "If the document contains keyword(s) or semantic meaning related to the user question, grade it as relevant.\n"
                     "Give a binary 'yes' or 'no' score to indicate whether the document is relevant to the question."
@@ -197,10 +158,9 @@ class RAGAIAssistant:
                 input_variables=["context", "question"],
             )
 
-            # Chain
             chain = prompt | llm_with_tool
 
-            messages = state.get("messages", [])
+            messages = state["messages"]
             if not messages:
                 logger.error("No messages found in state.")
                 return "rewrite"
@@ -209,10 +169,6 @@ class RAGAIAssistant:
             question = messages[0].content
             docs = last_message.content
 
-            logger.debug(f"Question: {question}")
-            logger.debug(f"Document: {docs}")
-
-            # Run the chain
             scored_result = chain.invoke({"question": question, "context": docs})
             score = scored_result.binary_score.strip().lower()
 
@@ -229,30 +185,27 @@ class RAGAIAssistant:
             logger.error(f"An error occurred during document grading: {e}")
             return "rewrite"
 
-    def agent(self, state):
+    def agent(self, state: MessagesState):
         """
-        Invokes the agent model to generate a response based on the current state.
-        Given the question, it will decide to retrieve using the retriever tool, or simply end.
+        Invokes the agent model to generate a response based on the current state. Given
+        the question, it will decide to retrieve using the retriever tool, or simply end.
 
         Args:
-            state (dict): The current state containing messages.
+            state (messages): The current state
 
         Returns:
-            dict: The updated state with the agent response appended to messages.
+            dict: The updated state with the agent response appended to messages
         """
-        logger.info("--------Invoking agent.")
+        logger.info("Invoking agent.")
         try:
             messages = state["messages"]
-            print(messages)
             if not messages:
                 logger.error("No messages found in state.")
                 return {"messages": []}
-
+      
+            pp.pprint(self.model_tool)
             response = self.model_tool.invoke(messages)
             logger.info("Agent invoked successfully.")
-
-            print(response.pretty_print())
-            print("----------------------------------------------------------------")
 
             return {"messages": [response]}
 
@@ -260,20 +213,11 @@ class RAGAIAssistant:
             logger.error(f"An error occurred in agent: {e}")
             return {"messages": []}
 
-    def rewrite(self, state):
-        """
-        Transform the query to produce a better question.
-
-        Args:
-            state (dict): The current state containing messages.
-
-        Returns:
-            dict: The updated state with the rephrased question.
-        """
+    def rewrite(self, state: MessagesState):
         logger.info("Starting query rewrite process.")
 
         try:
-            messages = state.get("messages", [])
+            messages = state["messages"]
             if not messages:
                 logger.error("No messages found in state.")
                 return {"messages": []}
@@ -293,8 +237,14 @@ class RAGAIAssistant:
                 )
             ]
 
-            # Initialize LLM
-            model = AzureChatOpenAI(temperature=0, model="gpt-4-0125-preview", streaming=True)
+            model = AzureChatOpenAI(
+                deployment_name='gpt-35-turbo',
+                openai_api_key=self.azure_openai_api_key,
+                openai_api_base=self.azure_openai_endpoint,
+                openai_api_version="2024-05-01-preview",
+                openai_api_type="azure",
+                temperature=0
+            )
             response = model.invoke(msg)
             logger.info("Query rewritten successfully.")
 
@@ -304,20 +254,11 @@ class RAGAIAssistant:
             logger.error(f"An error occurred during query rewrite: {e}")
             return {"messages": []}
 
-    def generate(self, state):
-        """
-        Generate an answer based on the context and question.
-
-        Args:
-            state (dict): The current state containing messages.
-
-        Returns:
-            dict: The updated state with the generated response.
-        """
+    def generate(self, state: MessagesState):
         logger.info("Starting answer generation process.")
 
         try:
-            messages = state.get("messages", [])
+            messages = state["messages"]
             if not messages:
                 logger.error("No messages found in state.")
                 return {"messages": []}
@@ -326,18 +267,20 @@ class RAGAIAssistant:
             last_message = messages[-1]
             docs = last_message.content
 
-            # Pull prompt from hub
             prompt = hub.pull("rlm/rag-prompt")
-            print(prompt.pretty_print())
             logger.debug("Prompt pulled from hub.")
 
-            # Initialize LLM
-            llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, streaming=True)
+            model = AzureChatOpenAI(
+                deployment_name='gpt-35-turbo',
+                openai_api_key=self.azure_openai_api_key,
+                openai_api_base=self.azure_openai_endpoint,
+                openai_api_version="2024-05-01-preview",
+                openai_api_type="azure",
+                temperature=0
+            )
 
-            # Chain
-            rag_chain = prompt | llm | StrOutputParser()
+            rag_chain = prompt | model | StrOutputParser()
 
-            # Run the chain
             response = rag_chain.invoke({"context": docs, "question": question})
             logger.info("Answer generated successfully.")
 
@@ -348,9 +291,7 @@ class RAGAIAssistant:
             return {"messages": []}
 
 if __name__ == "__main__":
-    print("Testing RAGAIAssistant...")
-    rag_assistant = RAGAIAssistant(thread_id="test_thread_id", new_conversation=True)   
+    logging.basicConfig(level=logging.INFO)
+    rag_assistant = RAGAIAssistant(thread_id="test_thread_id", new_conversation=True)
     response = rag_assistant.run("Are there any cloud formations specific to oceans and large bodies of water?")
-    print(response.get_response())
-    # response = rag_assistant.run("What is the mission of NASA")
-    # print(response.get_response())
+    print(f"Assistant: {response}")
