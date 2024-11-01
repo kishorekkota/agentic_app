@@ -2,9 +2,11 @@
 
 import os
 import logging
-from langchain.vectorstores import AzureSearch
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.tools import create_retriever_tool
+from langchain_community.vectorstores import AzureSearch
+from langchain_openai import OpenAIEmbeddings
+from langchain.tools.retriever import create_retriever_tool
+from azure.identity import DefaultAzureCredential
+from langchain_core.tools import tool
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -20,11 +22,14 @@ def create_vector_store() -> AzureSearch:
     Raises:
         ValueError: If required environment variables are missing.
     """
+    print("Creating AzureSearch vector store...")
     # Retrieve environment variables
     azure_search_endpoint = os.getenv('AZURE_SEARCH_ENDPOINT')
     azure_search_key = os.getenv('AZURE_SEARCH_KEY')
     search_index_name = os.getenv('SEARCH_INDEX_NAME')
     embedding_model_name = os.getenv('EMBEDDING_MODEL_NAME', 'text-embedding-ada-002')
+
+    print(azure_search_endpoint, azure_search_key, search_index_name, embedding_model_name)
 
     if not azure_search_endpoint or not azure_search_key or not search_index_name:
         logger.error("Missing Azure Search configuration environment variables.")
@@ -49,6 +54,7 @@ def create_vector_store() -> AzureSearch:
         logger.error(f"An error occurred while creating the vector store: {e}")
         raise
 
+
 def create_vector_store_tool(vector_store: AzureSearch):
     """
     Creates and returns a retriever tool from the provided vector store.
@@ -59,12 +65,13 @@ def create_vector_store_tool(vector_store: AzureSearch):
     Returns:
         Tool: A retriever tool instance.
     """
+    print("Retrieving documents for query: {query}")
     try:
         retriever = vector_store.as_retriever()
         retriever_tool = create_retriever_tool(
             retriever,
             name="retrieval_tool",
-            description="Search HR Knowledge base and provide information related to the query.",
+            description="Knowledge base about earth, ocean and boundaries.",
         )
         logger.info("Retriever tool created successfully.")
         return retriever_tool
@@ -75,6 +82,7 @@ def create_vector_store_tool(vector_store: AzureSearch):
 
 # Example usage
 if __name__ == "__main__":
+    print("Starting the main execution azure search...")
     try:
         vector_store = create_vector_store()
         retriever_tool = create_vector_store_tool(vector_store)

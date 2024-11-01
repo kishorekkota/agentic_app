@@ -16,7 +16,7 @@ class AzureSearchClient:
         # Use provided values or fall back to environment variables
         self.service_endpoint = service_endpoint or os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
         self.index_name = index_name or os.getenv("AZURE_SEARCH_INDEX_NAME")
-        api_key = api_key or os.getenv("AZURE_SEARCH_API_KEY")
+        api_key = api_key or os.getenv("AZURE_SEARCH_KEY")
 
         if not self.service_endpoint or not self.index_name or not api_key:
             raise ValueError("Missing required Azure Cognitive Search configurations.")

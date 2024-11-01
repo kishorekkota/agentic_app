@@ -38,3 +38,7 @@ workflow.add_edge("rewrite", "agent")
 
 # Compile
 graph = workflow.compile()
+
+
+def invoke_graph(state):
+    return graph.invoke(state)
