@@ -3,6 +3,11 @@
 import os
 import uuid
 import logging
+
+os.environ["AZURESEARCH_FIELDS_ID"] = "chunk_id"
+os.environ["AZURESEARCH_FIELDS_CONTENT"] = "chunk"
+os.environ["AZURESEARCH_FIELDS_CONTENT_VECTOR"] = "text_vector"
+
 from typing import Literal
 
 from langchain_openai import AzureChatOpenAI
@@ -21,7 +26,8 @@ from agent_state import AgentState
 import prettyprinter as pp
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.ERROR)
+
 
 class RAGAIAssistant:
     def __init__(self, thread_id: str, new_conversation: bool = True):
@@ -49,10 +55,10 @@ class RAGAIAssistant:
 
         # Create vector store and retriever tool
         vector_store = create_vector_store()
-        self.retriever_tool = create_vector_store_tool(vector_store)
+        self.retrieval_tool = create_vector_store_tool(vector_store)
 
         # Bind the retriever tool to the LLM
-        self.model_tool = self.llm.bind_tools([self.retriever_tool])
+        self.model_tool = self.llm.bind_tools([self.retrieval_tool])
 
         # Set up the workflow
         self._setup_workflow()
@@ -65,7 +71,7 @@ class RAGAIAssistant:
 
         # Add nodes to the workflow
         workflow.add_node("agent", self.agent)
-        retrieve_node = ToolNode([self.retriever_tool])
+        retrieve_node = ToolNode([self.retrieval_tool])
         workflow.add_node("retrieve", retrieve_node)
         workflow.add_node("rewrite", self.rewrite)
         workflow.add_node("generate", self.generate)
@@ -207,6 +213,8 @@ class RAGAIAssistant:
             response = self.model_tool.invoke(messages)
             logger.info("Agent invoked successfully.")
 
+            print(response.pretty_print())
+
             return {"messages": [response]}
 
         except Exception as e:
@@ -292,6 +300,10 @@ class RAGAIAssistant:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
+
+    
     rag_assistant = RAGAIAssistant(thread_id="test_thread_id", new_conversation=True)
-    response = rag_assistant.run("Are there any cloud formations specific to oceans and large bodies of water?")
+    #rag_assistant.retriever_tool(" What is the leave policy ? ")
+    create_vector_store().search(" What is the leave policy ? ",search_type='similarity')
+    response = rag_assistant.run("What is process for taking extended leave in New York?")
     print(f"Assistant: {response}")

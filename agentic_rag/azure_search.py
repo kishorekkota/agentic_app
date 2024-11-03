@@ -2,11 +2,17 @@
 
 import os
 import logging
-from langchain_community.vectorstores import AzureSearch
-from langchain_openai import OpenAIEmbeddings
+
+os.environ["AZURESEARCH_FIELDS_ID"] = "chunk_id"
+os.environ["AZURESEARCH_FIELDS_CONTENT"] = "chunk"
+os.environ["AZURESEARCH_FIELDS_CONTENT_VECTOR"] = "text_vector"
+
+from langchain_community.vectorstores.azuresearch import AzureSearch
+from langchain_openai import AzureOpenAIEmbeddings
 from langchain.tools.retriever import create_retriever_tool
 from azure.identity import DefaultAzureCredential
 from langchain_core.tools import tool
+from azure.search.documents.indexes.models import SimpleField
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -14,30 +20,39 @@ logger = logging.getLogger(__name__)
 
 def create_vector_store() -> AzureSearch:
     """
-    Creates and returns an AzureSearch vector store instance.
+    Creates and returns an AzureCognitiveSearch vector store instance.
 
     Returns:
-        AzureSearch: An instance of the AzureSearch vector store.
+        AzureCognitiveSearch: An instance of the AzureCognitiveSearch vector store.
 
     Raises:
         ValueError: If required environment variables are missing.
     """
-    print("Creating AzureSearch vector store...")
-    # Retrieve environment variables
+    logger.info("Creating AzureCognitiveSearch vector store...")
+    
+    # Retrieve environment variables for Azure Search
     azure_search_endpoint = os.getenv('AZURE_SEARCH_ENDPOINT')
     azure_search_key = os.getenv('AZURE_SEARCH_KEY')
     search_index_name = os.getenv('SEARCH_INDEX_NAME')
-    embedding_model_name = os.getenv('EMBEDDING_MODEL_NAME', 'text-embedding-ada-002')
+    
+    # Retrieve environment variables for Azure OpenAI Embeddings
+    azure_openai_api_key = os.getenv('AZURE_OPENAI_API_KEY')
+    azure_openai_endpoint = os.getenv('AZURE_OPENAI_ENDPOINT')
+    azure_openai_embedding_deployment = os.getenv('AZURE_OPENAI_EMBEDDING_DEPLOYMENT','text-embedding-3-large')
+    azure_openai_api_version = os.getenv('AZURE_OPENAI_API_VERSION', '2023-05-15')
+    embedding_model_name = os.getenv('EMBEDDING_MODEL_NAME', 'text-embedding-3-large')
 
-    print(azure_search_endpoint, azure_search_key, search_index_name, embedding_model_name)
 
-    if not azure_search_endpoint or not azure_search_key or not search_index_name:
-        logger.error("Missing Azure Search configuration environment variables.")
-        raise ValueError("Missing Azure Search configuration environment variables.")
+    print(azure_openai_api_version, azure_openai_api_key, azure_openai_endpoint, azure_openai_embedding_deployment)
+
+    if not all([azure_search_endpoint, azure_search_key, search_index_name,
+                azure_openai_api_key, azure_openai_endpoint, azure_openai_embedding_deployment]):
+        logger.error("Missing Azure configuration environment variables.")
+        raise ValueError("Missing Azure configuration environment variables.")
 
     try:
-        # Initialize embeddings
-        embeddings = OpenAIEmbeddings(model=embedding_model_name)
+
+        embeddings = AzureOpenAIEmbeddings(model=embedding_model_name,azure_deployment="text-embedding-3-large")
 
         # Create the vector store
         vector_store = AzureSearch(
@@ -47,51 +62,68 @@ def create_vector_store() -> AzureSearch:
             embedding_function=embeddings.embed_query,
         )
 
-        logger.info("AzureSearch vector store created successfully.")
+        logger.info("AzureCognitiveSearch vector store created successfully.")
         return vector_store
 
     except Exception as e:
         logger.error(f"An error occurred while creating the vector store: {e}")
         raise
 
-
 def create_vector_store_tool(vector_store: AzureSearch):
     """
     Creates and returns a retriever tool from the provided vector store.
 
     Args:
-        vector_store (AzureSearch): The vector store instance.
+        vector_store (AzureCognitiveSearch): The vector store instance.
 
     Returns:
         Tool: A retriever tool instance.
     """
-    print("Retrieving documents for query: {query}")
+    logger.info("Creating retriever tool...")
     try:
-        retriever = vector_store.as_retriever()
-        retriever_tool = create_retriever_tool(
-            retriever,
-            name="retrieval_tool",
-            description="Search Knowledge base about earth, ocean and boundaries for providing context to LLM.",
+
+        retriever_ = vector_store.as_retriever()
+
+
+        retrieve_policy_document = create_retriever_tool(
+        retriever=retriever_,
+        name="retriever",
+        description="Search and Return  tool for HR Related questions and Leave Policy in NewYork.",
+        
         )
         logger.info("Retriever tool created successfully.")
-        return retriever_tool
+        return retrieve_policy_document
 
     except Exception as e:
         logger.error(f"An error occurred while creating the retriever tool: {e}")
         raise
 
-# Example usage
-if __name__ == "__main__":
-    print("Starting the main execution azure search...")
+def test_retriever_tool():
+    """
+    Tests the retriever tool created from the vector store.
+    """
+    logger.info("Testing the retriever tool...")
     try:
-        vector_store = create_vector_store()
+
+        vector_store = create_vector_store() 
+        # Create the retriever tool
         retriever_tool = create_vector_store_tool(vector_store)
 
-        # Now you can use retriever_tool in your application
-        # For example:
-        # query = "What is Tesla's revenue forecast for next year?"
-        # result = retriever_tool.run(query)
-        # print(result)
+        # Define a test query
+        test_query = "What is the company's leave policy?"
+
+        logger.info(f"Running test query using the retriever tool: {test_query}")
+
+        # Use the retriever tool to retrieve relevant documents
+        results = retriever_tool.run(test_query)
+
+        # Print the results
+        print("Retriever Tool Results:")
+        print(results)
 
     except Exception as e:
-        logger.error(f"An error occurred in the main execution: {e}")
+        logger.error(f"An error occurred during the retriever tool test: {e}")
+
+if __name__ == "__main__":
+    logger.info("Starting test execution for azure_search.py...")
+    test_retriever_tool()
