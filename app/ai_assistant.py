@@ -7,7 +7,7 @@ from langchain_core.messages import HumanMessage
 from langgraph.checkpoint.postgres import PostgresSaver
 from db_connection import pool
 from typing import Literal
-from tools import search_google, get_weather_by_zip
+from tools import search_google, get_weather_by_zip,search_azure_rag
 from chat_response import ChatBot
 import logging
 
@@ -31,7 +31,7 @@ class AIAssistant:
         self._setup_workflow()
 
     def _setup_tools(self):
-        self.tools = [search_google, get_weather_by_zip]
+        self.tools = [search_azure_rag]
 
     def _setup_workflow(self):
         print("Setting up workflow... __setup_workflow__")
@@ -47,6 +47,7 @@ class AIAssistant:
             return {"messages": [response]}
 
         def should_continue(state: MessagesState) -> Literal["tools", END]:
+            print("should_continue called...")
             messages = state['messages']
             last_message = messages[-1]
             return "tools" if last_message.tool_calls else END

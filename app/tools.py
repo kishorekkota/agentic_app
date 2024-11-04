@@ -6,12 +6,44 @@ from opencage.geocoder import OpenCageGeocode
 from tavily import TavilyClient
 from langchain_core.tools import tool
 import logging
-
+from azure_search import create_vector_store
 
 tavily_api_key = os.environ.get("TAVILY_API_KEY")
 opencage_api_key = os.environ.get("OPENCAGE_API_KEY")
 
 logger = logging.getLogger(__name__)
+
+search = create_vector_store()
+
+@tool
+def search_azure_rag(query: str) -> Union[str, dict]:
+    """
+    Performs a Azure Search and returns the top result.
+
+    Parameters:
+    query (str): The search query to be executed.
+
+    Returns:
+    Union[str, dict]: If the search is successful, it returns a dictionary containing the search results.
+                      If there is an error during the search, it returns a string describing the error.
+    """
+    logger.info("search_azure_rag calling model..." + query)
+    try:
+        documents = search.search(query,search_type="similarity")
+
+        for doc in documents:
+            print(doc)
+
+        response = {
+            "query": query,
+            "documents": documents
+        }
+
+        return response
+    except Exception as e:
+        logger.error(f"Azure Search Error: {e}")
+        return f"Azure Search Error: {e}"
+
 
 @tool
 def search_google(query: str) -> Union[str, dict]:
@@ -36,7 +68,6 @@ def search_google(query: str) -> Union[str, dict]:
     except Exception as e:
         logger.error(f"Tavily Search Error: {e}")
         return f"Tavily Search Error: {e}"
-
 @tool
 def get_weather_by_zip(zip_code: str):
     """
