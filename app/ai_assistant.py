@@ -51,20 +51,26 @@ class AIAssistant:
             messages = state['messages']
             last_message = messages[-1]
             return "tools" if last_message.tool_calls else END
+        
+        try:
 
-        workflow = StateGraph(MessagesState)
-        workflow.add_node("agent", call_model)
-        workflow.add_node("tools", tool_node)
-        workflow.add_edge(START, "agent")
-        workflow.add_conditional_edges("agent", should_continue)
-        workflow.add_edge("tools", "agent")
+            workflow = StateGraph(MessagesState)
+            workflow.add_node("agent", call_model)
+            workflow.add_node("tools", tool_node)
+            workflow.add_edge(START, "agent")
+            workflow.add_conditional_edges("agent", should_continue)
+            workflow.add_edge("tools", "agent")
 
-        memory = PostgresSaver(pool)
-        memory.setup()
-        logger.info("Workflow setup completed.")
-        logger.debug(pool.get_stats())
+            memory = PostgresSaver(pool)
+            memory.setup()
+            logger.info("Workflow setup completed.")
+            logger.debug(pool.get_stats())
 
-        self.workflow = workflow.compile(checkpointer=memory)
+            self.workflow = workflow.compile(checkpointer=memory)
+        except Exception as e:
+            logger.error(f"Error setting up workflow: {e}")
+            print("Error setting up workflow: ", e)
+            raise e
         # config = {"configurable": {"thread_id": self.thread_id}}
         # checkpoint = memory.get(config)
 
