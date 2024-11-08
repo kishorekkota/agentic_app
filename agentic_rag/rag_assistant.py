@@ -103,11 +103,12 @@ class RAGAIAssistant:
         workflow.add_edge("rewrite", "agent")
 
         # Set up memory with PostgresSaver
-        memory = PostgresSaver(pool)
-        memory.setup()
-        logger.info("Workflow setup completed.")
+        # memory = PostgresSaver(pool)
+        # memory.setup()
+        # logger.info("Workflow setup completed.")
 
-        self.workflow = workflow.compile(checkpointer=memory)
+        #self.workflow = workflow.compile(checkpointer=memory)
+        self.workflow = workflow.compile()
 
     def start_new_session(self):
         self.thread_id = uuid.uuid4().hex

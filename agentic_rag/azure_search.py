@@ -87,10 +87,10 @@ def create_vector_store_tool(vector_store: AzureSearch):
 
         retrieve_policy_document = create_retriever_tool(
         retriever=retriever_,
-        name="retriever",
+        name="retriever_policy_documents",
         description="Search and Return  tool for HR Related questions and Leave Policy in NewYork.",
-        
         )
+
         logger.info("Retriever tool created successfully.")
         return retrieve_policy_document
 

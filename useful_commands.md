@@ -31,3 +31,5 @@ https://github.com/Azure-Samples/azure-search-python-samples/blob/main/Tutorial-
 
 
 https://github.com/etienne113/Chatbot/blob/48baa52f1eca85d1c09e8367bb7cc514409c5998/backend/tools/tools.py
+
+docker run  --name postgresql -e POSTGRESS_USER=postgres -e POSTGRESS_PASSWORD=postgres -e POSTGRESS_DB=postgres -p 5432:5432 -d postgres
