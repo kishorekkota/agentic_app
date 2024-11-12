@@ -137,41 +137,45 @@ for idx, message in enumerate(st.session_state.history):
         st.write("You: " + message.get("message"))
     else:
         st.markdown(f"<b>{message.get('message')}</b>", unsafe_allow_html=True)
+
+        if st.session_state.history[idx].get('run_id') is None:
+            st.session_state.history[idx]['run_id'] = st.session_state.run_id
         
         feedback_given = message.get('feedback_given', False)
         if not feedback_given:
             # Create a form for feedback
-            with st.form(key=f"feedback_form_{idx}"):
-                # Feedback selection
-                feedback_choice = st.radio(
-                    "Please provide your feedback:",
-                    ('👍 Positive', '👎 Negative'),
-                    key=f'feedback_choice_{idx}'
-                )
-                # Comment field
-                comment = st.text_area("Add a comment (optional):", key=f'comment_{idx}')
-                # Submit button
-                submit_feedback = st.form_submit_button('Submit Feedback')
-                
-                if submit_feedback:
-                    # Determine feedback score based on selection
-                    feedback_score = 1 if feedback_choice == '👍 Positive' else 0
-                    # Prepare feedback data
-                    feedback = {
-                        'user': st.session_state.username,
-                        'message': message.get('message'),
-                        'feedback': 'positive' if feedback_score == 5 else 'negative',
-                        'timestamp': message.get('timestamp'),
-                        'comment': comment
-                    }
-                    # Send feedback using langsmith_client
-                    langsmith_client.create_feedback(
-                        key='feedback_key',
-                        score=feedback_score,
-                        comment=comment,
-                        run_id=st.session_state.run_id
+            with st.expander("Provide Feedback", expanded=False):
+                with st.form(key=f"feedback_form_{idx}"):
+                    # Feedback selection
+                    feedback_choice = st.radio(
+                        "Please provide your feedback:",
+                        ('👍 Positive', '👎 Negative'),
+                        key=f'feedback_choice_{idx}'
                     )
-                    st.success("Thank you for your feedback!")
-                    st.session_state.history[idx]['feedback_given'] = True
+                    # Comment field
+                    comment = st.text_area("Add a comment (optional):", key=f'comment_{idx}')
+                    # Submit button
+                    submit_feedback = st.form_submit_button('Submit Feedback')
+                    
+                    if submit_feedback:
+                        # Determine feedback score based on selection
+                        feedback_score = 1 if feedback_choice == '👍 Positive' else 0
+                        # Prepare feedback data
+                        feedback = {
+                            'user': st.session_state.username,
+                            'message': message.get('message'),
+                            'feedback': 'positive' if feedback_score == 5 else 'negative',
+                            'timestamp': message.get('timestamp'),
+                            'comment': comment
+                        }
+                        # Send feedback using langsmith_client
+                        langsmith_client.create_feedback(
+                            key='feedback_key',
+                            score=feedback_score,
+                            comment=comment,
+                            run_id=st.session_state.history[idx].get('run_id')
+                        )
+                        st.success("Thank you for your feedback!")
+                        st.session_state.history[idx]['feedback_given'] = True
         else:
             st.write("Feedback received. Thank you!")
