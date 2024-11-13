@@ -10,6 +10,10 @@ from typing import Literal
 from tools import search_google, get_weather_by_zip,search_azure_rag
 from chat_response import ChatBot
 import logging
+from langsmith.run_helpers import get_current_run_tree
+from langsmith import traceable, run_helpers
+from langchain.callbacks.tracers.langchain import wait_for_all_tracers
+
 
 logger = logging.getLogger(__name__)
 
@@ -87,15 +91,26 @@ class AIAssistant:
         self.user_message = user_message
         if self.new_conversation:
             self.start_new_session()
-        config = {"configurable": {"thread_id": self.thread_id}}
+        
+        run_id = uuid.uuid4()
+        print("*********Run ID:", run_id)
+        config = {"configurable": {"thread_id": self.thread_id},"run_id": run_id}
         self.workflow.get_state(config)
+        try:
+            response = self.workflow.invoke(
+                {"messages": [HumanMessage(content=self.user_message)]}, config)
+        finally:
+            wait_for_all_tracers()          
         
-        response = self.workflow.invoke(
-            {"messages": [HumanMessage(content=self.user_message)]}, config)
+        langsmith_run = get_current_run_tree()
+        print("Langsmith Run:", langsmith_run)
+        #print(f"Run ID for processing: {langsmith_run.}") 
         
-        # for message in response["messages"]:
-        #     message.pretty_print()  # Print the response in a pretty format for readability.
+        print("*****Response from workflow:", response)
 
-        response = ChatBot(user_message,response["messages"][-1].content,self.thread_id)
+        for message in response["messages"]:
+            message.pretty_print()  # Print the response in a pretty format for readability.
 
-        return response
+        chat_response = ChatBot(user_message,response["messages"][-1].content,self.thread_id,run_id)
+
+        return chat_response

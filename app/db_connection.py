@@ -1,7 +1,7 @@
 from psycopg_pool import ConnectionPool  # psycopg is a PostgreSQL adapter
 import logging
 import os
-
+import urllib
 logger = logging.getLogger(__name__)
 
 # Use environment variables for sensitive information
