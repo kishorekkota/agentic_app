@@ -1,0 +1,26 @@
+{'response': {'classification': 'overtime',
+              'client_state': 'New York',
+              'question': 'what is the overtime policy in newyork ?',
+              'response': {'additional_info_needed': False,
+                           'answer': 'In New York, retail workers are entitled '
+                                     'to overtime pay if they work more than '
+                                     '40 hours in a workweek. The overtime pay '
+                                     'rate must be at least one and one-half '
+                                     'times the regular rate of pay. This is '
+                                     "in accordance with New York's overtime "
+                                     'laws and the Fair Labor Standards Act '
+                                     '(FLSA). However, certain occupations are '
+                                     'exempt from these overtime pay '
+                                     'provisions, including executive, '
+                                     'administrative, and professional '
+                                     'employees, among others. If an '
+                                     'employment agreement or contract '
+                                     'specifies greater overtime payments than '
+                                     'those required by state and federal law, '
+                                     'those terms should be followed.',
+                           'info_type': None,
+                           'question': 'what is the overtime policy in newyork '
+                                       '?',
+                           'run_id': 'e280eaf3-28c6-4d8c-8bb0-bbae53fd3e3f',
+                           'sources': [],
+                           'thread_id': ''}}}

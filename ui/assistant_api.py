@@ -12,7 +12,7 @@ CHATBOT_API_URL = os.getenv('CHATBOT_API_URL')
 
 logger = logging.getLogger(__name__)
 
-def chatbot_request(user_input, new_chat, thread_id: str, scope: str, username: str):
+def chatbot_request(user_input, new_chat, thread_id: str, scope: str, username: str,additional_info_needed: bool = False):
     """
     Sends a user's input to the chatbot API and retrieves the response.
 
@@ -28,12 +28,14 @@ def chatbot_request(user_input, new_chat, thread_id: str, scope: str, username: 
     logger.info("Sending user input to chatbot API")
 
     json_str = {
-        "message": user_input,
+        "message": "" if additional_info_needed else user_input,
         "new_chat": new_chat,
         "thread_id": thread_id,
         "scope": scope,
-        "username": username
+        "username": username,
+        "user_answer": user_input if additional_info_needed else ""
     }
+
 
 
     # json_str = json.dumps({

@@ -7,14 +7,15 @@ from azure.identity import ManagedIdentityCredential
 from azure.keyvault.secrets import SecretClient
 
 class EnvironmentVariables:
-    def __init__(self, use_key_vault: bool = False, key_vault_name: Optional[str] = None):
+    def __init__(self, use_key_vault: bool = False, key_vault_name: Optional[str] = None, profile: Optional[str] = None):
         if use_key_vault:
             if not key_vault_name:
                 raise ValueError("Key Vault name must be provided when use_key_vault is True.")
             self._load_variables_from_key_vault(key_vault_name)
         else:
-            # Load environment variables from a .env file, if present
-            load_dotenv()
+            # Determine the .env file to load based on the profile
+            env_file = f".env.{profile}" if profile else ".env"
+            load_dotenv(env_file)
             self._load_variables_from_env()
 
         # Validate that all required variables are set
