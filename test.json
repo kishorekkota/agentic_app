@@ -1,0 +1,11 @@
+{'messages': [HumanMessage(content='Hello', additional_kwargs={}, response_metadata={}, id='b9889964-5098-4289-a154-1e644a6b5b39'), AIMessage(content='Hi there! How can I assist you today?', additional_kwargs={'refusal': None
+        }, response_metadata={'token_usage': {'completion_tokens': 11, 'prompt_tokens': 103, 'total_tokens': 114, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0
+                }, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0
+                }
+            }, 'model_name': 'gpt-4o-2024-08-06', 'system_fingerprint': 'fp_159d8341cc', 'finish_reason': 'stop', 'logprobs': None
+        }, id='run-51f847ad-513c-4d13-bfae-6b2a2b3777af-0', usage_metadata={'input_tokens': 103, 'output_tokens': 11, 'total_tokens': 114, 'input_token_details': {'audio': 0, 'cache_read': 0
+            }, 'output_token_details': {'audio': 0, 'reasoning': 0
+            }
+        })
+    ]
+}

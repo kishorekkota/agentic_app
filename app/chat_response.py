@@ -6,6 +6,7 @@ class ChatBot:
     response: str
     thread_id: str
     run_id: str
+    sources: list = None
 
     def get_response(self):
         return self.response
