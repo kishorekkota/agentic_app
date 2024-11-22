@@ -29,23 +29,22 @@ st.session_state.thread_id = ""
 if 'new_chat' not in st.session_state:
     st.session_state.new_chat = True
 
-choices = ["Payroll", "Hiring", "Termination", "Leave", "Benefits", "Others"]
+#choices = ["Payroll", "Hiring", "Termination", "Leave", "Benefits", "Others"]
 
 # Create a tab-like interface for choices
-tabs = st.tabs(choices)
-for i, tab in enumerate(tabs):
-    with tab:
-        st.session_state.scope = choices[i]
-        st.write(f"Selected: {choices[i]}")
+# tabs = st.tabs(choices)
+# for i, tab in enumerate(tabs):
+#     with tab:
+#         st.session_state.scope = choices[i]
+#         st.write(f"Selected: {choices[i]}")
+
+st.session_state.scope = 'selected_scope'
 
 # Building a container for chat input, chat button, and end button.
 col1, col2, col3 = st.columns([4, 1, 1])
 with st.container():
     with col1:
-        if st.session_state.additional_info_needed:
-            user_input = st.text_input(placeholder="Please provide additional information...")
-        else:
-            user_input = st.chat_input(placeholder="Please enter your question here...")
+        user_input = st.chat_input(placeholder="Please enter your question here...")
     
     with col2:
         chat_button = st.button(label="Chat", key="chat_button", use_container_width=True)
