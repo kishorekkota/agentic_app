@@ -35,7 +35,7 @@ class AIAssistant:
         self._setup_workflow()
 
     def _setup_tools(self):
-        self.tools = [search_azure_rag]
+        self.tools = [search_google, get_weather_by_zip]
 
     def _setup_workflow(self):
         print("Setting up workflow... __setup_workflow__")
