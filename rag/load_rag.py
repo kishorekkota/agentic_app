@@ -52,10 +52,10 @@ def embed_documents(chunks_with_ids: list[Document]):
     logger.info("Documents embedded.")
     return embedded_docs
 
-def create_chroma_client(host: str = 'localhost', port: int = 8001):
+def create_chroma_client(host: str = '45-33-118-186.bitnimbususercontent.ai', port: int = 443):
     """Create a ChromaDB client."""
     logger.info("Creating ChromaDB client...")
-    return chromadb.HttpClient(host=host, port=port)
+    return chromadb.HttpClient(host=host, port=port,username="sku-xysjt",password="qc@)He?Z*H$DMqd,AV$49M4ot")
 
 def get_or_create_collection(client, collection_name: str):
     """Get or create a ChromaDB collection."""

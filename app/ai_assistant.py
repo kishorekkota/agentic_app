@@ -13,7 +13,9 @@ import logging
 from langsmith.run_helpers import get_current_run_tree
 from langsmith import traceable, run_helpers
 from langchain.callbacks.tracers.langchain import wait_for_all_tracers
+from langchain_core.tracers.context import tracing_v2_enabled
 
+from typing import TypedDict
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +37,7 @@ class AIAssistant:
         self._setup_workflow()
 
     def _setup_tools(self):
-        self.tools = [search_azure_rag]
+        self.tools = [search_google, get_weather_by_zip]
 
     def _setup_workflow(self):
         print("Setting up workflow... __setup_workflow__")
@@ -97,6 +99,10 @@ class AIAssistant:
         config = {"configurable": {"thread_id": self.thread_id},"run_id": run_id}
         self.workflow.get_state(config)
         try:
+            # with tracing_v2_enabled(project_name="simple_langchain"):
+            #     response = self.workflow.invoke(
+            #         {"messages": [HumanMessage(content=self.user_message)]}, config)
+                
             response = self.workflow.invoke(
                 {"messages": [HumanMessage(content=self.user_message)]}, config)
         finally:
