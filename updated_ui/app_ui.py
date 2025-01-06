@@ -2,35 +2,30 @@ import streamlit as st
 import os
 import requests
 import logging
-import html
-from environment_variables import EnvironmentVariables
-from fpdf import FPDF 
-import base64
-from fpdf.enums import WrapMode
 import json
-# Load environment variables
-hosted = os.getenv("HOSTED")
-profile = os.getenv("PROFILE")
-env = EnvironmentVariables.create_instance(hosted, profile)
-
-from assistant_api import chatbot_request,validate_client_id
+from environment_variables import EnvironmentVariables
+from assistant_api import chatbot_request, validate_client_id
 from utils import end_chat, load_sidebar, user_feedback
 from langsmith import Client
 from validations import is_valid_us_state
 from display_chat_history import display_chat_history
 from streamlit_extras.stylable_container import stylable_container
-# from streamlit_cookies_controller import CookieController
 
 # Configure logger
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
+# Load environment variables
+hosted = os.getenv("HOSTED")
+profile = os.getenv("PROFILE")
+env = EnvironmentVariables.create_instance(hosted, profile)
+
 langsmith_client = Client(api_key=env.langchain_api_key)
-# controller = CookieController()
-# cookies = controller.getAll()
-# logger.debug(cookies)
-# st.set_page_config(page_title="HR ChatBot")
-st.set_page_config(layout="wide")
+
+# Set page configuration
+st.set_page_config(page_title="Paychex ChatBot", layout="wide")
+
+# Custom CSS for styling
 st.markdown(
     """
     <style>
@@ -62,7 +57,6 @@ st.markdown(
     .stDecoration {
         background-image: linear-gradient(90deg, rgb(167, 199, 231), #004f8f)
     }
-    
     </style>
     """,
     unsafe_allow_html=True
@@ -70,7 +64,6 @@ st.markdown(
 
 st.title("HR ChatBot")
 st.logo("logo-paychex.svg", size="medium", link=None, icon_image=None)
-
 
 logger.debug(" st.query_params %s ", st.query_params)
 
@@ -125,7 +118,7 @@ def initialize_session_state():
 # Display client information
 def display_client_info():
     logger.debug("display_client_info")
-    col1, col2, col3 = st.columns([2, 1,3])
+    col1, col2, col3 = st.columns([2, 1, 3])
     with col1:
         st.markdown(f"**Paychex Client ID:** {st.session_state.client_id if st.session_state.client_id else 'N/A'}")
     with col2:
@@ -138,9 +131,8 @@ def handle_client_id_input():
     logger.debug("handle_client_id_input")
     client_id_container = st.empty()
     if not st.session_state.client_id:
-        
         logger.debug("Client ID not found in session state")
-        logger.debug("client client_id_available %s",st.session_state.client_id_available)
+        logger.debug("client client_id_available %s", st.session_state.client_id_available)
 
         with client_id_container:
             st.session_state.client_id_available = st.radio(
@@ -165,9 +157,9 @@ def handle_client_id_input():
             if st.session_state.client_id_available == "No":
                 client_id_container.empty()  # Clear the container
     else:
-        if  st.session_state.client_id_invalid:
+        if st.session_state.client_id_invalid:
             with client_id_container:
-                st.markdown(f"***Client ID Not Found:** Please enter valid clien id.*")
+                st.markdown(f"***Client ID Not Found:** Please enter valid client id.*")
                 logger.debug("Markdown should have been written")
                 st.session_state.client_id_available = st.radio(
                     "Do you have a Paychex Client ID?",
@@ -176,7 +168,6 @@ def handle_client_id_input():
                 )
                 logger.debug("Client ID availability selected: %s", st.session_state.client_id_available)
 
-
                 if st.session_state.client_id_available == "Yes":
                     client_id = st.text_input("Please enter your Paychex Client ID")
                     if client_id:
@@ -184,7 +175,7 @@ def handle_client_id_input():
                         st.session_state.client_id = client_id
                         st.session_state.client_id_invalid = False
                         query = st.session_state.history[-2].get('message')
-                        logger.debug(" most recent query message is %s", query )
+                        logger.debug(" most recent query message is %s", query)
                         submit_request_to_backend(query)
                         client_id_container.empty() 
                             
@@ -197,8 +188,6 @@ def handle_client_id_input():
 def handle_user_input():
     logger.debug("handle_user_input")
 
-
-    
     with stylable_container(
         key="green_button",
         css_styles="""
@@ -216,13 +205,11 @@ def handle_user_input():
         col1, col2 = st.columns([5, 1])
         with st.container():
             with col1:
-                #if  not st.session_state.client_id_invalid:
                 user_input = st.chat_input(placeholder="Please enter your question/response here...")
                 logger.debug("User input: %s", user_input)
             with col2:
                 if st.button(label="End", key="end_button", use_container_width=True):
                     st.session_state.client_id = None
-                    #end_chat()
                     st.session_state.input_text = ""
                     st.session_state.history = []
                     st.session_state.new_chat = True
@@ -230,14 +217,14 @@ def handle_user_input():
                     st.session_state.client_state = ""
                     st.session_state.client_id_available = None
                     st.session_state.client_id_reset = True
-                    logger.debug(" st.session_state.client_id_available %s",st.session_state.client_id_available)
+                    logger.debug(" st.session_state.client_id_available %s", st.session_state.client_id_available)
                     logger.debug("End button clicked")
                     st.rerun()
 
     if user_input:
         submit_request_to_backend(user_input)
 
-
+# Submit request to backend
 def submit_request_to_backend(user_input):
     logger.debug("submit_request_to_backend")
     st.session_state.history.append({"message": user_input, "is_user": True})
@@ -257,7 +244,10 @@ def submit_request_to_backend(user_input):
             st.session_state.client_industry,
             st.session_state.client_id
         )
-        st.session_state.history.append({"message": chat_response["answer"], "is_user": False, "sources": chat_response["sources"], "additional_info_needed": chat_response.get("additional_info_needed")})
+        st.session_state.history.append({"message": chat_response["answer"], "is_user": False, 
+                                         "sources": chat_response["sources"], 
+                                         "additional_info_needed": chat_response.get("additional_info_needed"),
+                                         "classification": chat_response.get("classification")})
         st.session_state.new_chat = False
         st.session_state.thread_id = chat_response.get("thread_id")
         st.session_state.run_id = chat_response.get("run_id")
@@ -283,8 +273,6 @@ def submit_request_to_backend(user_input):
     except requests.exceptions.RequestException as e:
         logger.error("RequestException occurred: %s", e)
         st.error(f"Error: {e}")
-
-
 
 # Main function
 def main():

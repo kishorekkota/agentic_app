@@ -284,7 +284,27 @@ def submit_request_to_backend(user_input):
         logger.error("RequestException occurred: %s", e)
         st.error(f"Error: {e}")
 
+def generate_pdf():
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.set_font("Arial", size=12)
 
+    for message in st.session_state.history:
+        if message["is_user"]:
+            pdf.set_text_color(0, 0, 255)
+            pdf.multi_cell(0, 10, f"You: {message['message']}")
+        else:
+            pdf.set_text_color(0, 0, 0)
+            pdf.multi_cell(0, 10, f"Bot: {message['message']}")
+
+    return pdf.output(dest="S").encode("latin1")
+
+def download_pdf():
+    pdf_data = generate_pdf()
+    b64 = base64.b64encode(pdf_data).decode()
+    href = f'<a href="data:application/octet-stream;base64,{b64}" download="chat_history.pdf">Download PDF</a>'
+    st.markdown(href, unsafe_allow_html=True)
 
 # Main function
 def main():
@@ -296,6 +316,9 @@ def main():
     display_client_info()
     handle_user_input()
     display_chat_history()
+
+    if st.button("Download Chat History as PDF"):
+        download_pdf()
 
     # JavaScript to scroll to the bottom of the chat window
     st.markdown(
