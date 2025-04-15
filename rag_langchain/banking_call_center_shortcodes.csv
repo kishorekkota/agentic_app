@@ -1,0 +1,21 @@
+Shortcode,Full Form / Meaning,Description
+KYC,Know Your Customer,Process of verifying customer identity
+ACCT,Account,Refers to any bank account (savings/checking)
+NRI,Non-Resident Indian,A customer living abroad
+OTP,One-Time Password,Used for 2FA during transactions
+TXN,Transaction,A banking operation like debit/credit
+CC,Credit Card,Credit card-related inquiry or product
+DC,Debit Card,Debit card-related issue or service
+PIN RST,PIN Reset,Customer wants to reset their card PIN
+ADDR UPD,Address Update,Request to change registered address
+FVR CHK,Fraud Verification Check,Call made to confirm suspicious transaction
+BAL QRY,Balance Query,Inquiry about account balance
+STMT RQ,Statement Request,Request for account statement
+ECS RVS,ECS Reversal,Request for electronic clearing reversal
+CHQ BK,Cheque Book Request,Customer requesting new cheque book
+FEE WVR,Fee Waiver,Request to waive bank charges
+NPS ACCT,New Personal Savings Account,Account opening request
+CLOSE ACCT,Close Account,Customer wants to close account
+PND DOC,Pending Documents,Application incomplete due to missing docs
+LMT INC,Limit Increase,Request to increase credit card limit
+ECS BLK,ECS Block,Customer wants to block recurring ECS

@@ -1,0 +1,1001 @@
+Memo ID,account_id,Date,Shortcode,Memo,Rep ID,Sentiment,Channel,Intent
+0,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-12-14,CLOSE ACCT,2024-12-14 | CLOSE ACCT | Rep: REP118,REP118,Negative,Email,Close Account
+1,54627136-b89e-4b46-9369-d779131a1074,2025-02-04,DC,2025-02-04 | DC | Rep: REP210,REP210,Neutral,Chat,Debit Card Service
+2,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-12-07,PND DOC,2024-12-07 | PND DOC | Rep: REP556,REP556,Positive,Chat,Document Follow-up
+3,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-26,PIN RST,2024-12-26 | PIN RST | Rep: REP780,REP780,Positive,Chat,Reset PIN
+4,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-10-24,KYC,2024-10-24 | KYC | Rep: REP587,REP587,Positive,Voice,Account Verification
+5,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-03-09,FEE WVR,2025-03-09 | FEE WVR | Rep: REP223,REP223,Negative,Email,Fee Waiver Request
+6,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-03-18,ACCT,2025-03-18 | ACCT | Rep: REP141 | Note: Collection notice acknowledged; partial payment made.,REP141,Positive,Chat,General Account Info
+7,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-10,COLL,2024-11-10 | COLL | Rep: REP797,REP797,Negative,Email,Collections Call
+8,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2024-12-14,CC,2024-12-14 | CC | Rep: REP105,REP105,Positive,Voice,Apply Credit Card
+9,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-09,TXN,2025-03-09 | TXN | Rep: REP379,REP379,Positive,Chat,Transaction Issue
+10,443c0160-bac5-4733-86d5-9c423bf3d008,2025-01-26,ECS BLK,2025-01-26 | ECS BLK | Rep: REP173,REP173,Negative,Voice,Block Auto Payment
+11,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-01-13,BAL TRF,2025-01-13 | BAL TRF | Rep: REP385,REP385,Negative,Chat,Balance Transfer Request
+12,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-11-11,FVR CHK,2024-11-11 | FVR CHK | Rep: REP942,REP942,Negative,Chat,Fraud Detection
+13,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-03-21,DISP,2025-03-21 | DISP | Rep: REP322 | Note: Collection notice acknowledged; partial payment made.,REP322,Positive,Chat,Dispute Transaction
+14,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-01-01,ECS RVS,2025-01-01 | ECS RVS | Rep: REP668,REP668,Positive,Chat,Reversal Request
+15,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-19,ECS RVS,2025-01-19 | ECS RVS | Rep: REP691,REP691,Negative,Voice,Reversal Request
+16,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-22,FVR CHK,2024-11-22 | FVR CHK | Rep: REP567 | Note: Requested urgent update to mailing address.,REP567,Negative,Voice,Fraud Detection
+17,cda122e2-98d5-4007-959a-0bedb790fe80,2024-11-12,STMT RQ,2024-11-12 | STMT RQ | Rep: REP232 | Note: No further action required; issue resolved.,REP232,Neutral,Email,Get Statement
+18,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-03-25,OTP,2025-03-25 | OTP | Rep: REP137,REP137,Neutral,Email,Authentication Help
+19,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-15,OTP,2025-01-15 | OTP | Rep: REP302 | Note: Card declined during purchase—issue escalated.,REP302,Positive,Voice,Authentication Help
+20,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-04-13,CC,2025-04-13 | CC | Rep: REP710,REP710,Negative,Chat,Apply Credit Card
+21,14453942-d088-4bae-b015-824ba4821f08,2024-12-16,FVR CHK,2024-12-16 | FVR CHK | Rep: REP906,REP906,Negative,Email,Fraud Detection
+22,bf954c81-7139-4f99-9385-aab171dbf23d,2024-10-27,TXN,2024-10-27 | TXN | Rep: REP538 | Note: No further action required; issue resolved.,REP538,Positive,Email,Transaction Issue
+23,89647783-4c9e-45dc-8830-c647231f87cf,2025-01-01,FEE WVR,2025-01-01 | FEE WVR | Rep: REP714 | Note: Dispute form submitted; follow-up needed in 5 days.,REP714,Neutral,Chat,Fee Waiver Request
+24,6117057d-dd3f-4142-844c-1e49f9428e43,2024-12-11,OTP,2024-12-11 | OTP | Rep: REP615 | Note: Customer complained about unrecognized transaction.,REP615,Negative,Chat,Authentication Help
+25,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-12-16,ADDR UPD,2024-12-16 | ADDR UPD | Rep: REP656 | Note: Customer confirmed identity after 2FA.,REP656,Negative,Email,Profile Update
+26,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-04-10,LMT INC,2025-04-10 | LMT INC | Rep: REP477 | Note: Requested urgent update to mailing address.,REP477,Positive,Voice,Increase Credit Limit
+27,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-10-21,TXN,2024-10-21 | TXN | Rep: REP641 | Note: Dispute form submitted; follow-up needed in 5 days.,REP641,Neutral,Chat,Transaction Issue
+28,e4a60b15-684d-4f73-a69e-41ecdd293758,2024-11-26,FEE WVR,2024-11-26 | FEE WVR | Rep: REP396 | Note: Advised to visit branch with original documents.,REP396,Positive,Chat,Fee Waiver Request
+29,bf954c81-7139-4f99-9385-aab171dbf23d,2025-04-10,CHQ BK,2025-04-10 | CHQ BK | Rep: REP633 | Note: Offered balance transfer options; customer interested.,REP633,Positive,Chat,Order Cheque Book
+30,5a8c24e3-6b78-4c44-9f0c-fe70174b1230,2024-11-12,KYC,2024-11-12 | KYC | Rep: REP463,REP463,Neutral,Chat,Account Verification
+31,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-02-09,ECS RVS,2025-02-09 | ECS RVS | Rep: REP925,REP925,Negative,Voice,Reversal Request
+32,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2025-04-03,ECS RVS,2025-04-03 | ECS RVS | Rep: REP908 | Note: Customer confirmed identity after 2FA.,REP908,Positive,Voice,Reversal Request
+33,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2024-11-29,KYC,2024-11-29 | KYC | Rep: REP155,REP155,Positive,Chat,Account Verification
+34,46023047-12c0-4e1d-b056-7a29178097ee,2024-11-08,FEE WVR,2024-11-08 | FEE WVR | Rep: REP002,REP002,Negative,Voice,Fee Waiver Request
+35,46023047-12c0-4e1d-b056-7a29178097ee,2025-03-28,CHQ BK,2025-03-28 | CHQ BK | Rep: REP185,REP185,Neutral,Email,Order Cheque Book
+36,b8673aa7-11ae-4850-9078-4b32c92d18e8,2025-02-03,CC,2025-02-03 | CC | Rep: REP550,REP550,Negative,Chat,Apply Credit Card
+37,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-02-06,LMT INC,2025-02-06 | LMT INC | Rep: REP440,REP440,Neutral,Email,Increase Credit Limit
+38,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2024-11-25,ACCT,2024-11-25 | ACCT | Rep: REP938 | Note: Customer satisfied with resolution.,REP938,Neutral,Email,General Account Info
+39,0ae08baa-0270-44ea-9d96-667079aaea2a,2024-12-02,DC,2024-12-02 | DC | Rep: REP492,REP492,Negative,Voice,Debit Card Service
+40,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-04-01,KYC,2025-04-01 | KYC | Rep: REP068,REP068,Negative,Email,Account Verification
+41,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-03-31,PIN RST,2025-03-31 | PIN RST | Rep: REP300,REP300,Positive,Chat,Reset PIN
+42,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2024-10-23,ECS RVS,2024-10-23 | ECS RVS | Rep: REP863,REP863,Positive,Chat,Reversal Request
+43,dbd63405-051c-4136-bd17-3a7c8e99c31a,2025-03-02,TXN,2025-03-02 | TXN | Rep: REP685,REP685,Negative,Voice,Transaction Issue
+44,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-04-06,OTP,2025-04-06 | OTP | Rep: REP807 | Note: Requested urgent update to mailing address.,REP807,Positive,Email,Authentication Help
+45,443c0160-bac5-4733-86d5-9c423bf3d008,2025-04-16,COLL,2025-04-16 | COLL | Rep: REP823,REP823,Neutral,Chat,Collections Call
+46,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-11-11,FEE WVR,2024-11-11 | FEE WVR | Rep: REP243 | Note: Customer satisfied with resolution.,REP243,Negative,Voice,Fee Waiver Request
+47,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-02-13,ECS RVS,2025-02-13 | ECS RVS | Rep: REP497,REP497,Positive,Chat,Reversal Request
+48,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-12-26,OTP,2024-12-26 | OTP | Rep: REP589,REP589,Neutral,Email,Authentication Help
+49,06d305e4-2a06-42f7-8e38-125c143d97ef,2024-12-10,KYC,2024-12-10 | KYC | Rep: REP120 | Note: Fraud alert placed on the account.,REP120,Neutral,Email,Account Verification
+50,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2025-03-11,CLOSE ACCT,2025-03-11 | CLOSE ACCT | Rep: REP029 | Note: Customer satisfied with resolution.,REP029,Positive,Voice,Close Account
+51,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-12-01,CHQ BK,2024-12-01 | CHQ BK | Rep: REP789 | Note: Customer complained about unrecognized transaction.,REP789,Positive,Voice,Order Cheque Book
+52,cda122e2-98d5-4007-959a-0bedb790fe80,2024-11-23,ECS RVS,"2024-11-23 | ECS RVS | Rep: REP832 | Note: Asked for statement via email, sent instantly.",REP832,Neutral,Email,Reversal Request
+53,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2025-02-13,BAL QRY,2025-02-13 | BAL QRY | Rep: REP628,REP628,Negative,Chat,Balance Inquiry
+54,48460ac7-904c-4750-92ab-181d88a194f0,2024-12-22,NPS ACCT,2024-12-22 | NPS ACCT | Rep: REP210,REP210,Neutral,Voice,Open New Account
+55,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2025-03-18,NRI,2025-03-18 | NRI | Rep: REP584,REP584,Negative,Chat,Foreign Services
+56,19870aee-236e-442d-9b1a-262bb11eea2d,2025-01-25,PIN RST,2025-01-25 | PIN RST | Rep: REP750,REP750,Negative,Voice,Reset PIN
+57,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2024-12-03,FEE WVR,2024-12-03 | FEE WVR | Rep: REP245 | Note: Dispute form submitted; follow-up needed in 5 days.,REP245,Negative,Chat,Fee Waiver Request
+58,b8725edb-28c7-4c65-9d0f-d2a9bbda4bb6,2024-10-21,FEE WVR,2024-10-21 | FEE WVR | Rep: REP633,REP633,Positive,Email,Fee Waiver Request
+59,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-01-30,BAL TRF,2025-01-30 | BAL TRF | Rep: REP000,REP000,Negative,Voice,Balance Transfer Request
+60,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-04-18,ACCT,2025-04-18 | ACCT | Rep: REP064,REP064,Negative,Chat,General Account Info
+61,28a8a9f6-e262-4314-8477-662ea54a5a54,2024-12-21,ACCT,2024-12-21 | ACCT | Rep: REP098,REP098,Negative,Voice,General Account Info
+62,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-02-10,CLOSE ACCT,2025-02-10 | CLOSE ACCT | Rep: REP126,REP126,Neutral,Email,Close Account
+63,53432400-5bb6-45d6-976b-66d0b309666a,2025-04-03,CLOSE ACCT,2025-04-03 | CLOSE ACCT | Rep: REP480,REP480,Neutral,Chat,Close Account
+64,4643ab21-aebd-4ee8-a202-40426dec5225,2024-12-22,BAL TRF,2024-12-22 | BAL TRF | Rep: REP295,REP295,Neutral,Voice,Balance Transfer Request
+65,4e43c73d-82d1-485b-a5b0-80cf6932918e,2025-04-03,CC,2025-04-03 | CC | Rep: REP018,REP018,Neutral,Voice,Apply Credit Card
+66,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-03-17,ECS RVS,2025-03-17 | ECS RVS | Rep: REP306,REP306,Neutral,Email,Reversal Request
+67,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-12-20,STMT RQ,2024-12-20 | STMT RQ | Rep: REP159,REP159,Neutral,Voice,Get Statement
+68,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-04-10,DC,2025-04-10 | DC | Rep: REP750,REP750,Neutral,Chat,Debit Card Service
+69,0ae08baa-0270-44ea-9d96-667079aaea2a,2024-10-22,OTP,"2024-10-22 | OTP | Rep: REP027 | Note: Asked for statement via email, sent instantly.",REP027,Negative,Voice,Authentication Help
+70,a226dc1c-bb88-40bd-9556-7af947862c29,2025-02-25,NPS ACCT,2025-02-25 | NPS ACCT | Rep: REP382 | Note: Advised to visit branch with original documents.,REP382,Positive,Email,Open New Account
+71,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-01-22,STMT RQ,2025-01-22 | STMT RQ | Rep: REP620,REP620,Neutral,Email,Get Statement
+72,5282a13a-908f-4fe8-b799-d702be60d2f7,2024-12-28,BAL QRY,2024-12-28 | BAL QRY | Rep: REP610,REP610,Negative,Voice,Balance Inquiry
+73,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-02-10,NPS ACCT,2025-02-10 | NPS ACCT | Rep: REP932 | Note: Card declined during purchase—issue escalated.,REP932,Positive,Chat,Open New Account
+74,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-02-23,ACCT,2025-02-23 | ACCT | Rep: REP377,REP377,Neutral,Voice,General Account Info
+75,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-02-27,ECS RVS,2025-02-27 | ECS RVS | Rep: REP795,REP795,Positive,Email,Reversal Request
+76,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-11-27,TXN,2024-11-27 | TXN | Rep: REP337,REP337,Positive,Chat,Transaction Issue
+77,da5ed01c-177e-4a00-b987-efa43826fcba,2025-01-09,TXN,2025-01-09 | TXN | Rep: REP129 | Note: Collection notice acknowledged; partial payment made.,REP129,Positive,Chat,Transaction Issue
+78,14453942-d088-4bae-b015-824ba4821f08,2025-02-16,ECS RVS,2025-02-16 | ECS RVS | Rep: REP794,REP794,Neutral,Email,Reversal Request
+79,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-20,LMT INC,2025-03-20 | LMT INC | Rep: REP074 | Note: Dispute form submitted; follow-up needed in 5 days.,REP074,Negative,Email,Increase Credit Limit
+80,14453942-d088-4bae-b015-824ba4821f08,2024-12-11,ECS RVS,2024-12-11 | ECS RVS | Rep: REP914,REP914,Negative,Chat,Reversal Request
+81,90afe5d4-7245-4a25-ab42-77927429fa9f,2024-12-15,PND DOC,2024-12-15 | PND DOC | Rep: REP987,REP987,Negative,Email,Document Follow-up
+82,b0b7373d-3ad0-4420-9854-84cb343e8a10,2024-12-07,CC,2024-12-07 | CC | Rep: REP039 | Note: Offered balance transfer options; customer interested.,REP039,Neutral,Voice,Apply Credit Card
+83,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2024-11-27,OTP,2024-11-27 | OTP | Rep: REP327 | Note: Customer satisfied with resolution.,REP327,Negative,Email,Authentication Help
+84,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2024-11-12,LMT INC,2024-11-12 | LMT INC | Rep: REP031 | Note: PIN reset confirmed and successful.,REP031,Positive,Voice,Increase Credit Limit
+85,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2024-10-23,FEE WVR,2024-10-23 | FEE WVR | Rep: REP355 | Note: Customer satisfied with resolution.,REP355,Neutral,Email,Fee Waiver Request
+86,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2024-12-08,BAL QRY,2024-12-08 | BAL QRY | Rep: REP888 | Note: Requested urgent update to mailing address.,REP888,Negative,Voice,Balance Inquiry
+87,b8725edb-28c7-4c65-9d0f-d2a9bbda4bb6,2024-11-22,DC,2024-11-22 | DC | Rep: REP774,REP774,Negative,Chat,Debit Card Service
+88,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-12-29,NRI,2024-12-29 | NRI | Rep: REP501 | Note: Dispute form submitted; follow-up needed in 5 days.,REP501,Negative,Email,Foreign Services
+89,20b597ca-3266-427e-a47d-79a31c1491a4,2025-02-14,DISP,2025-02-14 | DISP | Rep: REP094 | Note: Collection notice acknowledged; partial payment made.,REP094,Negative,Chat,Dispute Transaction
+90,f89462a3-b7a7-47a0-860d-341f8d68e2be,2024-12-16,ECS RVS,2024-12-16 | ECS RVS | Rep: REP213,REP213,Neutral,Chat,Reversal Request
+91,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-12-09,BAL QRY,2024-12-09 | BAL QRY | Rep: REP842,REP842,Neutral,Chat,Balance Inquiry
+92,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-01-10,DC,2025-01-10 | DC | Rep: REP237 | Note: Customer complained about unrecognized transaction.,REP237,Negative,Chat,Debit Card Service
+93,06d305e4-2a06-42f7-8e38-125c143d97ef,2025-01-02,BAL TRF,2025-01-02 | BAL TRF | Rep: REP363 | Note: Customer complained about unrecognized transaction.,REP363,Neutral,Voice,Balance Transfer Request
+94,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2025-01-10,ADDR UPD,2025-01-10 | ADDR UPD | Rep: REP380,REP380,Positive,Email,Profile Update
+95,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-12-22,DC,2024-12-22 | DC | Rep: REP919 | Note: Requested urgent update to mailing address.,REP919,Positive,Voice,Debit Card Service
+96,b8673aa7-11ae-4850-9078-4b32c92d18e8,2024-11-22,COLL,2024-11-22 | COLL | Rep: REP766 | Note: Card declined during purchase—issue escalated.,REP766,Positive,Voice,Collections Call
+97,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-04-11,BAL TRF,2025-04-11 | BAL TRF | Rep: REP750 | Note: Card declined during purchase—issue escalated.,REP750,Negative,Voice,Balance Transfer Request
+98,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2025-03-21,DISP,2025-03-21 | DISP | Rep: REP053,REP053,Positive,Voice,Dispute Transaction
+99,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-10-29,TXN,2024-10-29 | TXN | Rep: REP018,REP018,Positive,Chat,Transaction Issue
+100,dc1322a7-aa46-4408-a3a7-a1412d19735e,2024-11-21,LMT INC,2024-11-21 | LMT INC | Rep: REP390 | Note: Explained process for fee waiver eligibility.,REP390,Positive,Voice,Increase Credit Limit
+101,173392a5-0c8b-4b88-800e-b50d5edff8d1,2025-03-17,BAL QRY,2025-03-17 | BAL QRY | Rep: REP309,REP309,Neutral,Voice,Balance Inquiry
+102,70b65935-f9f4-4aba-8411-a3ff583f3a41,2025-02-09,STMT RQ,2025-02-09 | STMT RQ | Rep: REP700,REP700,Neutral,Voice,Get Statement
+103,8c141c43-a3e3-441a-a4ef-22356da489cc,2024-11-30,STMT RQ,2024-11-30 | STMT RQ | Rep: REP435,REP435,Positive,Email,Get Statement
+104,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-02-16,NRI,2025-02-16 | NRI | Rep: REP436,REP436,Negative,Chat,Foreign Services
+105,90afe5d4-7245-4a25-ab42-77927429fa9f,2024-12-11,TXN,2024-12-11 | TXN | Rep: REP821 | Note: Offered balance transfer options; customer interested.,REP821,Negative,Voice,Transaction Issue
+106,6117057d-dd3f-4142-844c-1e49f9428e43,2024-12-26,TXN,2024-12-26 | TXN | Rep: REP301,REP301,Negative,Email,Transaction Issue
+107,19870aee-236e-442d-9b1a-262bb11eea2d,2024-12-09,BAL TRF,2024-12-09 | BAL TRF | Rep: REP987 | Note: Dispute form submitted; follow-up needed in 5 days.,REP987,Neutral,Voice,Balance Transfer Request
+108,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-01-26,FVR CHK,2025-01-26 | FVR CHK | Rep: REP928,REP928,Neutral,Chat,Fraud Detection
+109,53432400-5bb6-45d6-976b-66d0b309666a,2025-03-16,TXN,2025-03-16 | TXN | Rep: REP971 | Note: Card declined during purchase—issue escalated.,REP971,Negative,Email,Transaction Issue
+110,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-01-30,PIN RST,2025-01-30 | PIN RST | Rep: REP342 | Note: Collection notice acknowledged; partial payment made.,REP342,Neutral,Chat,Reset PIN
+111,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2024-12-24,STMT RQ,2024-12-24 | STMT RQ | Rep: REP718 | Note: Card declined during purchase—issue escalated.,REP718,Neutral,Chat,Get Statement
+112,cda122e2-98d5-4007-959a-0bedb790fe80,2025-01-25,ECS RVS,2025-01-25 | ECS RVS | Rep: REP990,REP990,Positive,Chat,Reversal Request
+113,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2024-12-12,NRI,2024-12-12 | NRI | Rep: REP801,REP801,Positive,Email,Foreign Services
+114,70b65935-f9f4-4aba-8411-a3ff583f3a41,2025-03-31,FVR CHK,2025-03-31 | FVR CHK | Rep: REP281,REP281,Positive,Chat,Fraud Detection
+115,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-03-08,NPS ACCT,2025-03-08 | NPS ACCT | Rep: REP522,REP522,Positive,Chat,Open New Account
+116,81066c1c-c625-4ad3-8474-6ffad68ad9f3,2024-11-10,FVR CHK,2024-11-10 | FVR CHK | Rep: REP472 | Note: PIN reset confirmed and successful.,REP472,Neutral,Voice,Fraud Detection
+117,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-01-24,TXN,2025-01-24 | TXN | Rep: REP252,REP252,Negative,Email,Transaction Issue
+118,a5c2be23-9314-454a-a546-f96f75749afa,2025-03-20,PIN RST,2025-03-20 | PIN RST | Rep: REP645,REP645,Negative,Email,Reset PIN
+119,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2024-10-28,PIN RST,2024-10-28 | PIN RST | Rep: REP739,REP739,Positive,Voice,Reset PIN
+120,b7206ec9-9b0f-4849-8981-243e2f04b06e,2024-12-22,PND DOC,2024-12-22 | PND DOC | Rep: REP526,REP526,Neutral,Voice,Document Follow-up
+121,da5ed01c-177e-4a00-b987-efa43826fcba,2025-02-05,TXN,2025-02-05 | TXN | Rep: REP711 | Note: Explained process for fee waiver eligibility.,REP711,Positive,Chat,Transaction Issue
+122,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2024-11-15,STMT RQ,2024-11-15 | STMT RQ | Rep: REP755,REP755,Negative,Email,Get Statement
+123,443c0160-bac5-4733-86d5-9c423bf3d008,2025-01-30,DISP,2025-01-30 | DISP | Rep: REP142,REP142,Neutral,Email,Dispute Transaction
+124,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-03,LMT INC,2024-11-03 | LMT INC | Rep: REP089,REP089,Negative,Voice,Increase Credit Limit
+125,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2025-02-19,ECS BLK,"2025-02-19 | ECS BLK | Rep: REP943 | Note: Asked for statement via email, sent instantly.",REP943,Positive,Voice,Block Auto Payment
+126,a7e21628-b261-4068-8b36-1dd18a10f5ae,2025-01-21,ACCT,2025-01-21 | ACCT | Rep: REP425 | Note: Collection notice acknowledged; partial payment made.,REP425,Neutral,Email,General Account Info
+127,dbd63405-051c-4136-bd17-3a7c8e99c31a,2025-02-24,OTP,2025-02-24 | OTP | Rep: REP680,REP680,Neutral,Chat,Authentication Help
+128,19870aee-236e-442d-9b1a-262bb11eea2d,2024-12-28,PND DOC,2024-12-28 | PND DOC | Rep: REP257,REP257,Neutral,Chat,Document Follow-up
+129,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-09,ECS BLK,2025-01-09 | ECS BLK | Rep: REP382 | Note: Collection notice acknowledged; partial payment made.,REP382,Neutral,Email,Block Auto Payment
+130,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-02-24,NPS ACCT,"2025-02-24 | NPS ACCT | Rep: REP865 | Note: Asked for statement via email, sent instantly.",REP865,Neutral,Voice,Open New Account
+131,81066c1c-c625-4ad3-8474-6ffad68ad9f3,2024-10-26,NRI,2024-10-26 | NRI | Rep: REP553,REP553,Positive,Email,Foreign Services
+132,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-02-02,DISP,2025-02-02 | DISP | Rep: REP431 | Note: Collection notice acknowledged; partial payment made.,REP431,Positive,Voice,Dispute Transaction
+133,4643ab21-aebd-4ee8-a202-40426dec5225,2025-03-28,PIN RST,2025-03-28 | PIN RST | Rep: REP320 | Note: Advised to visit branch with original documents.,REP320,Neutral,Chat,Reset PIN
+134,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-10-25,KYC,2024-10-25 | KYC | Rep: REP049 | Note: Card declined during purchase—issue escalated.,REP049,Negative,Voice,Account Verification
+135,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-12-05,DC,2024-12-05 | DC | Rep: REP247 | Note: Dispute form submitted; follow-up needed in 5 days.,REP247,Positive,Voice,Debit Card Service
+136,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-11-11,CHQ BK,2024-11-11 | CHQ BK | Rep: REP041 | Note: Card declined during purchase—issue escalated.,REP041,Positive,Voice,Order Cheque Book
+137,915f65c5-471f-4429-b0ab-a614e553d45c,2025-03-23,STMT RQ,2025-03-23 | STMT RQ | Rep: REP718,REP718,Negative,Email,Get Statement
+138,bf3dabb4-534e-439c-8e50-da466bd22af9,2025-02-18,FEE WVR,2025-02-18 | FEE WVR | Rep: REP048 | Note: Customer complained about unrecognized transaction.,REP048,Negative,Chat,Fee Waiver Request
+139,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-01-18,ECS BLK,2025-01-18 | ECS BLK | Rep: REP806,REP806,Negative,Chat,Block Auto Payment
+140,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-04-12,FEE WVR,2025-04-12 | FEE WVR | Rep: REP313,REP313,Negative,Email,Fee Waiver Request
+141,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-03-24,OTP,2025-03-24 | OTP | Rep: REP662 | Note: No further action required; issue resolved.,REP662,Neutral,Chat,Authentication Help
+142,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2024-12-13,CLOSE ACCT,2024-12-13 | CLOSE ACCT | Rep: REP565,REP565,Negative,Voice,Close Account
+143,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2025-02-02,STMT RQ,2025-02-02 | STMT RQ | Rep: REP854,REP854,Neutral,Email,Get Statement
+144,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-03-10,KYC,2025-03-10 | KYC | Rep: REP422,REP422,Positive,Chat,Account Verification
+145,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2024-12-18,TXN,2024-12-18 | TXN | Rep: REP870 | Note: Customer satisfied with resolution.,REP870,Negative,Chat,Transaction Issue
+146,a226dc1c-bb88-40bd-9556-7af947862c29,2025-03-25,BAL TRF,2025-03-25 | BAL TRF | Rep: REP702 | Note: No further action required; issue resolved.,REP702,Neutral,Chat,Balance Transfer Request
+147,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-10-21,ACCT,2024-10-21 | ACCT | Rep: REP420,REP420,Positive,Voice,General Account Info
+148,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-30,CHQ BK,2024-11-30 | CHQ BK | Rep: REP535,REP535,Neutral,Email,Order Cheque Book
+149,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-01-10,NPS ACCT,2025-01-10 | NPS ACCT | Rep: REP662,REP662,Positive,Voice,Open New Account
+150,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-03-24,ECS RVS,2025-03-24 | ECS RVS | Rep: REP925 | Note: Offered balance transfer options; customer interested.,REP925,Negative,Chat,Reversal Request
+151,443c0160-bac5-4733-86d5-9c423bf3d008,2024-11-27,OTP,2024-11-27 | OTP | Rep: REP509 | Note: Offered balance transfer options; customer interested.,REP509,Negative,Chat,Authentication Help
+152,06d305e4-2a06-42f7-8e38-125c143d97ef,2024-11-14,ACCT,2024-11-14 | ACCT | Rep: REP700,REP700,Negative,Voice,General Account Info
+153,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-11-08,DISP,2024-11-08 | DISP | Rep: REP373,REP373,Neutral,Voice,Dispute Transaction
+154,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-03-01,CC,2025-03-01 | CC | Rep: REP778,REP778,Positive,Email,Apply Credit Card
+155,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-12-16,PND DOC,2024-12-16 | PND DOC | Rep: REP032,REP032,Positive,Chat,Document Follow-up
+156,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-04-07,BAL TRF,2025-04-07 | BAL TRF | Rep: REP033,REP033,Negative,Voice,Balance Transfer Request
+157,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-10-24,CLOSE ACCT,2024-10-24 | CLOSE ACCT | Rep: REP159,REP159,Neutral,Chat,Close Account
+158,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-04-09,ECS RVS,2025-04-09 | ECS RVS | Rep: REP771 | Note: Card declined during purchase—issue escalated.,REP771,Positive,Voice,Reversal Request
+159,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-12-19,BAL TRF,2024-12-19 | BAL TRF | Rep: REP691 | Note: Requested urgent update to mailing address.,REP691,Negative,Voice,Balance Transfer Request
+160,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-04-01,COLL,2025-04-01 | COLL | Rep: REP700,REP700,Positive,Email,Collections Call
+161,a226dc1c-bb88-40bd-9556-7af947862c29,2025-02-14,CHQ BK,2025-02-14 | CHQ BK | Rep: REP987,REP987,Neutral,Email,Order Cheque Book
+162,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-11-17,PIN RST,2024-11-17 | PIN RST | Rep: REP047,REP047,Neutral,Voice,Reset PIN
+163,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-03-06,NRI,2025-03-06 | NRI | Rep: REP158,REP158,Positive,Chat,Foreign Services
+164,bf954c81-7139-4f99-9385-aab171dbf23d,2025-03-19,BAL QRY,2025-03-19 | BAL QRY | Rep: REP915 | Note: Advised to visit branch with original documents.,REP915,Negative,Chat,Balance Inquiry
+165,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-11-18,DC,2024-11-18 | DC | Rep: REP352 | Note: Card declined during purchase—issue escalated.,REP352,Neutral,Chat,Debit Card Service
+166,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-12-26,COLL,2024-12-26 | COLL | Rep: REP468 | Note: Customer confirmed identity after 2FA.,REP468,Positive,Chat,Collections Call
+167,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2025-03-31,FVR CHK,2025-03-31 | FVR CHK | Rep: REP131,REP131,Negative,Email,Fraud Detection
+168,e4a60b15-684d-4f73-a69e-41ecdd293758,2025-01-25,CHQ BK,2025-01-25 | CHQ BK | Rep: REP686,REP686,Negative,Voice,Order Cheque Book
+169,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-11-03,PND DOC,2024-11-03 | PND DOC | Rep: REP413 | Note: Dispute form submitted; follow-up needed in 5 days.,REP413,Positive,Chat,Document Follow-up
+170,6117057d-dd3f-4142-844c-1e49f9428e43,2025-02-05,LMT INC,2025-02-05 | LMT INC | Rep: REP925,REP925,Neutral,Chat,Increase Credit Limit
+171,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-10-31,NRI,2024-10-31 | NRI | Rep: REP878,REP878,Negative,Chat,Foreign Services
+172,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-12-14,CC,2024-12-14 | CC | Rep: REP345,REP345,Positive,Chat,Apply Credit Card
+173,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-16,STMT RQ,2025-01-16 | STMT RQ | Rep: REP059,REP059,Positive,Chat,Get Statement
+174,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-12-04,CC,2024-12-04 | CC | Rep: REP685,REP685,Positive,Chat,Apply Credit Card
+175,81066c1c-c625-4ad3-8474-6ffad68ad9f3,2025-01-11,CLOSE ACCT,2025-01-11 | CLOSE ACCT | Rep: REP095 | Note: Requested urgent update to mailing address.,REP095,Neutral,Email,Close Account
+176,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-04-16,PIN RST,2025-04-16 | PIN RST | Rep: REP850 | Note: Collection notice acknowledged; partial payment made.,REP850,Positive,Chat,Reset PIN
+177,a226dc1c-bb88-40bd-9556-7af947862c29,2025-04-06,DC,2025-04-06 | DC | Rep: REP182 | Note: PIN reset confirmed and successful.,REP182,Negative,Voice,Debit Card Service
+178,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-03-16,PND DOC,2025-03-16 | PND DOC | Rep: REP907,REP907,Positive,Voice,Document Follow-up
+179,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-11-18,NPS ACCT,2024-11-18 | NPS ACCT | Rep: REP262,REP262,Negative,Voice,Open New Account
+180,54627136-b89e-4b46-9369-d779131a1074,2025-03-15,TXN,2025-03-15 | TXN | Rep: REP564 | Note: PIN reset confirmed and successful.,REP564,Neutral,Email,Transaction Issue
+181,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-01-25,NRI,2025-01-25 | NRI | Rep: REP989,REP989,Neutral,Email,Foreign Services
+182,8baa998e-4295-4756-869b-770df05f293f,2024-11-01,CLOSE ACCT,2024-11-01 | CLOSE ACCT | Rep: REP883,REP883,Neutral,Chat,Close Account
+183,4643ab21-aebd-4ee8-a202-40426dec5225,2025-02-09,PIN RST,2025-02-09 | PIN RST | Rep: REP628 | Note: PIN reset confirmed and successful.,REP628,Negative,Chat,Reset PIN
+184,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-01-21,CHQ BK,2025-01-21 | CHQ BK | Rep: REP089,REP089,Negative,Chat,Order Cheque Book
+185,bf3dabb4-534e-439c-8e50-da466bd22af9,2025-01-05,CHQ BK,"2025-01-05 | CHQ BK | Rep: REP253 | Note: Asked for statement via email, sent instantly.",REP253,Negative,Email,Order Cheque Book
+186,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-02-28,NPS ACCT,2025-02-28 | NPS ACCT | Rep: REP761 | Note: Advised to visit branch with original documents.,REP761,Neutral,Voice,Open New Account
+187,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-12-06,TXN,2024-12-06 | TXN | Rep: REP514 | Note: No further action required; issue resolved.,REP514,Negative,Chat,Transaction Issue
+188,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2024-11-27,CLOSE ACCT,2024-11-27 | CLOSE ACCT | Rep: REP937 | Note: PIN reset confirmed and successful.,REP937,Negative,Email,Close Account
+189,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-24,ADDR UPD,2025-01-24 | ADDR UPD | Rep: REP788,REP788,Negative,Email,Profile Update
+190,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-11-17,ECS RVS,2024-11-17 | ECS RVS | Rep: REP077,REP077,Neutral,Chat,Reversal Request
+191,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-10-31,LMT INC,2024-10-31 | LMT INC | Rep: REP307,REP307,Neutral,Chat,Increase Credit Limit
+192,f89462a3-b7a7-47a0-860d-341f8d68e2be,2024-10-31,TXN,2024-10-31 | TXN | Rep: REP511 | Note: Explained process for fee waiver eligibility.,REP511,Positive,Chat,Transaction Issue
+193,8baa998e-4295-4756-869b-770df05f293f,2025-03-06,CLOSE ACCT,2025-03-06 | CLOSE ACCT | Rep: REP176,REP176,Neutral,Email,Close Account
+194,804fa060-07c7-4ece-9a95-433dbf9c8575,2024-11-06,NRI,2024-11-06 | NRI | Rep: REP895 | Note: Customer satisfied with resolution.,REP895,Neutral,Chat,Foreign Services
+195,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-02-04,ACCT,2025-02-04 | ACCT | Rep: REP780,REP780,Neutral,Email,General Account Info
+196,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-04-13,ECS BLK,2025-04-13 | ECS BLK | Rep: REP096,REP096,Neutral,Chat,Block Auto Payment
+197,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-01-18,OTP,2025-01-18 | OTP | Rep: REP202 | Note: Fraud alert placed on the account.,REP202,Positive,Chat,Authentication Help
+198,1bf09578-0d01-44ec-959e-e1e53ff01af3,2025-02-17,LMT INC,2025-02-17 | LMT INC | Rep: REP541 | Note: Customer confirmed identity after 2FA.,REP541,Negative,Chat,Increase Credit Limit
+199,06d305e4-2a06-42f7-8e38-125c143d97ef,2025-03-25,KYC,"2025-03-25 | KYC | Rep: REP551 | Note: Asked for statement via email, sent instantly.",REP551,Positive,Email,Account Verification
+200,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-03-01,STMT RQ,2025-03-01 | STMT RQ | Rep: REP206 | Note: Requested urgent update to mailing address.,REP206,Neutral,Chat,Get Statement
+201,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-03-24,DC,2025-03-24 | DC | Rep: REP574,REP574,Negative,Voice,Debit Card Service
+202,cda122e2-98d5-4007-959a-0bedb790fe80,2025-03-30,PND DOC,2025-03-30 | PND DOC | Rep: REP540,REP540,Neutral,Chat,Document Follow-up
+203,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-01-27,BAL TRF,2025-01-27 | BAL TRF | Rep: REP662 | Note: Card declined during purchase—issue escalated.,REP662,Neutral,Chat,Balance Transfer Request
+204,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2025-04-17,CHQ BK,2025-04-17 | CHQ BK | Rep: REP688 | Note: Explained process for fee waiver eligibility.,REP688,Neutral,Voice,Order Cheque Book
+205,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-01-13,DC,2025-01-13 | DC | Rep: REP570 | Note: Fraud alert placed on the account.,REP570,Neutral,Chat,Debit Card Service
+206,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2025-01-23,ADDR UPD,2025-01-23 | ADDR UPD | Rep: REP414 | Note: Fraud alert placed on the account.,REP414,Negative,Voice,Profile Update
+207,b8673aa7-11ae-4850-9078-4b32c92d18e8,2025-02-17,PIN RST,2025-02-17 | PIN RST | Rep: REP126,REP126,Neutral,Email,Reset PIN
+208,915f65c5-471f-4429-b0ab-a614e553d45c,2024-12-23,COLL,"2024-12-23 | COLL | Rep: REP181 | Note: Asked for statement via email, sent instantly.",REP181,Positive,Email,Collections Call
+209,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-12-11,BAL TRF,2024-12-11 | BAL TRF | Rep: REP455,REP455,Positive,Email,Balance Transfer Request
+210,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2025-01-04,FVR CHK,2025-01-04 | FVR CHK | Rep: REP531,REP531,Negative,Chat,Fraud Detection
+211,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2024-10-30,OTP,2024-10-30 | OTP | Rep: REP915,REP915,Negative,Email,Authentication Help
+212,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-01-29,PND DOC,2025-01-29 | PND DOC | Rep: REP360,REP360,Negative,Voice,Document Follow-up
+213,dc1322a7-aa46-4408-a3a7-a1412d19735e,2024-11-09,PND DOC,2024-11-09 | PND DOC | Rep: REP080 | Note: Advised to visit branch with original documents.,REP080,Neutral,Voice,Document Follow-up
+214,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-03-14,OTP,2025-03-14 | OTP | Rep: REP672,REP672,Negative,Email,Authentication Help
+215,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2025-03-07,DC,2025-03-07 | DC | Rep: REP729,REP729,Negative,Voice,Debit Card Service
+216,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-01-25,BAL TRF,2025-01-25 | BAL TRF | Rep: REP147,REP147,Positive,Chat,Balance Transfer Request
+217,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-12-03,FEE WVR,2024-12-03 | FEE WVR | Rep: REP708 | Note: Requested urgent update to mailing address.,REP708,Neutral,Voice,Fee Waiver Request
+218,53432400-5bb6-45d6-976b-66d0b309666a,2024-12-19,NRI,2024-12-19 | NRI | Rep: REP275,REP275,Positive,Email,Foreign Services
+219,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-11-10,CHQ BK,2024-11-10 | CHQ BK | Rep: REP935 | Note: Card declined during purchase—issue escalated.,REP935,Negative,Voice,Order Cheque Book
+220,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-11-17,ADDR UPD,2024-11-17 | ADDR UPD | Rep: REP226,REP226,Positive,Voice,Profile Update
+221,8c141c43-a3e3-441a-a4ef-22356da489cc,2024-12-25,LMT INC,2024-12-25 | LMT INC | Rep: REP690 | Note: Advised to visit branch with original documents.,REP690,Neutral,Voice,Increase Credit Limit
+222,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2024-11-18,ECS RVS,2024-11-18 | ECS RVS | Rep: REP298,REP298,Positive,Voice,Reversal Request
+223,0ae08baa-0270-44ea-9d96-667079aaea2a,2024-11-11,TXN,2024-11-11 | TXN | Rep: REP660 | Note: Dispute form submitted; follow-up needed in 5 days.,REP660,Neutral,Email,Transaction Issue
+224,e4a60b15-684d-4f73-a69e-41ecdd293758,2025-03-21,ACCT,2025-03-21 | ACCT | Rep: REP540,REP540,Neutral,Email,General Account Info
+225,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-12-18,ECS BLK,2024-12-18 | ECS BLK | Rep: REP912 | Note: Offered balance transfer options; customer interested.,REP912,Positive,Voice,Block Auto Payment
+226,447b2c33-ad78-4482-af58-cfcf1d922222,2025-01-02,TXN,2025-01-02 | TXN | Rep: REP458 | Note: Fraud alert placed on the account.,REP458,Negative,Email,Transaction Issue
+227,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-24,CLOSE ACCT,2024-11-24 | CLOSE ACCT | Rep: REP549 | Note: Explained process for fee waiver eligibility.,REP549,Neutral,Email,Close Account
+228,a226dc1c-bb88-40bd-9556-7af947862c29,2025-04-06,TXN,2025-04-06 | TXN | Rep: REP517 | Note: Customer satisfied with resolution.,REP517,Positive,Voice,Transaction Issue
+229,46023047-12c0-4e1d-b056-7a29178097ee,2025-01-30,LMT INC,2025-01-30 | LMT INC | Rep: REP597,REP597,Neutral,Voice,Increase Credit Limit
+230,89647783-4c9e-45dc-8830-c647231f87cf,2025-01-10,OTP,2025-01-10 | OTP | Rep: REP833,REP833,Negative,Voice,Authentication Help
+231,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-03-09,OTP,2025-03-09 | OTP | Rep: REP800,REP800,Negative,Email,Authentication Help
+232,06d270b6-6fce-4d22-8fab-558f39f019ab,2024-10-30,CHQ BK,2024-10-30 | CHQ BK | Rep: REP220,REP220,Negative,Chat,Order Cheque Book
+233,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-01-22,FVR CHK,2025-01-22 | FVR CHK | Rep: REP518 | Note: Customer satisfied with resolution.,REP518,Neutral,Chat,Fraud Detection
+234,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-01-15,FEE WVR,2025-01-15 | FEE WVR | Rep: REP055,REP055,Positive,Email,Fee Waiver Request
+235,48460ac7-904c-4750-92ab-181d88a194f0,2024-12-06,OTP,2024-12-06 | OTP | Rep: REP259 | Note: Card declined during purchase—issue escalated.,REP259,Positive,Chat,Authentication Help
+236,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-01-29,DC,2025-01-29 | DC | Rep: REP634,REP634,Negative,Voice,Debit Card Service
+237,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-03-31,PND DOC,2025-03-31 | PND DOC | Rep: REP806,REP806,Positive,Chat,Document Follow-up
+238,48460ac7-904c-4750-92ab-181d88a194f0,2025-01-21,PIN RST,2025-01-21 | PIN RST | Rep: REP478 | Note: Explained process for fee waiver eligibility.,REP478,Positive,Email,Reset PIN
+239,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2025-02-04,NPS ACCT,2025-02-04 | NPS ACCT | Rep: REP857 | Note: Customer satisfied with resolution.,REP857,Positive,Chat,Open New Account
+240,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-02-15,OTP,2025-02-15 | OTP | Rep: REP293,REP293,Neutral,Chat,Authentication Help
+241,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2025-01-10,ECS BLK,2025-01-10 | ECS BLK | Rep: REP437 | Note: Fraud alert placed on the account.,REP437,Neutral,Email,Block Auto Payment
+242,70b65935-f9f4-4aba-8411-a3ff583f3a41,2025-04-12,ECS RVS,2025-04-12 | ECS RVS | Rep: REP945 | Note: Offered balance transfer options; customer interested.,REP945,Negative,Chat,Reversal Request
+243,b7206ec9-9b0f-4849-8981-243e2f04b06e,2024-11-27,STMT RQ,2024-11-27 | STMT RQ | Rep: REP236,REP236,Negative,Chat,Get Statement
+244,dc1322a7-aa46-4408-a3a7-a1412d19735e,2024-10-26,ADDR UPD,2024-10-26 | ADDR UPD | Rep: REP616 | Note: PIN reset confirmed and successful.,REP616,Negative,Voice,Profile Update
+245,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-01-31,NPS ACCT,2025-01-31 | NPS ACCT | Rep: REP589 | Note: Customer complained about unrecognized transaction.,REP589,Neutral,Chat,Open New Account
+246,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-11-03,COLL,2024-11-03 | COLL | Rep: REP798,REP798,Neutral,Email,Collections Call
+247,9cc2c168-853f-429e-8ca8-288f39625543,2024-12-26,ADDR UPD,2024-12-26 | ADDR UPD | Rep: REP457 | Note: Explained process for fee waiver eligibility.,REP457,Neutral,Chat,Profile Update
+248,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2025-03-22,NPS ACCT,2025-03-22 | NPS ACCT | Rep: REP233 | Note: Collection notice acknowledged; partial payment made.,REP233,Neutral,Email,Open New Account
+249,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-12-01,BAL QRY,2024-12-01 | BAL QRY | Rep: REP608 | Note: Requested urgent update to mailing address.,REP608,Negative,Chat,Balance Inquiry
+250,915f65c5-471f-4429-b0ab-a614e553d45c,2024-10-27,DC,2024-10-27 | DC | Rep: REP433,REP433,Negative,Chat,Debit Card Service
+251,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-01-23,PIN RST,2025-01-23 | PIN RST | Rep: REP462 | Note: No further action required; issue resolved.,REP462,Neutral,Voice,Reset PIN
+252,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-01-20,CC,2025-01-20 | CC | Rep: REP613 | Note: Dispute form submitted; follow-up needed in 5 days.,REP613,Positive,Voice,Apply Credit Card
+253,9d943d74-8a6a-46a5-bba8-8220111a003e,2025-03-19,OTP,2025-03-19 | OTP | Rep: REP316,REP316,Neutral,Chat,Authentication Help
+254,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-04-13,TXN,2025-04-13 | TXN | Rep: REP465,REP465,Negative,Voice,Transaction Issue
+255,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2024-11-06,STMT RQ,2024-11-06 | STMT RQ | Rep: REP256 | Note: Fraud alert placed on the account.,REP256,Negative,Voice,Get Statement
+256,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-03-06,PND DOC,2025-03-06 | PND DOC | Rep: REP518,REP518,Negative,Voice,Document Follow-up
+257,a5c2be23-9314-454a-a546-f96f75749afa,2025-02-25,TXN,2025-02-25 | TXN | Rep: REP571 | Note: PIN reset confirmed and successful.,REP571,Negative,Voice,Transaction Issue
+258,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-02-04,TXN,2025-02-04 | TXN | Rep: REP112,REP112,Neutral,Email,Transaction Issue
+259,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2024-11-20,BAL TRF,2024-11-20 | BAL TRF | Rep: REP862 | Note: Requested urgent update to mailing address.,REP862,Neutral,Chat,Balance Transfer Request
+260,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-02-02,ECS BLK,2025-02-02 | ECS BLK | Rep: REP852,REP852,Negative,Voice,Block Auto Payment
+261,33b3f695-4685-4d11-bccd-65bd79d42c68,2024-12-24,ADDR UPD,2024-12-24 | ADDR UPD | Rep: REP354,REP354,Negative,Email,Profile Update
+262,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-01-05,TXN,2025-01-05 | TXN | Rep: REP867,REP867,Negative,Email,Transaction Issue
+263,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-11-16,BAL QRY,2024-11-16 | BAL QRY | Rep: REP294,REP294,Positive,Email,Balance Inquiry
+264,a226dc1c-bb88-40bd-9556-7af947862c29,2025-01-01,ECS RVS,2025-01-01 | ECS RVS | Rep: REP922 | Note: PIN reset confirmed and successful.,REP922,Positive,Voice,Reversal Request
+265,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-12-06,CC,2024-12-06 | CC | Rep: REP999 | Note: Dispute form submitted; follow-up needed in 5 days.,REP999,Negative,Email,Apply Credit Card
+266,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-02-02,DC,2025-02-02 | DC | Rep: REP886,REP886,Positive,Voice,Debit Card Service
+267,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2025-02-16,CC,2025-02-16 | CC | Rep: REP564 | Note: Explained process for fee waiver eligibility.,REP564,Positive,Chat,Apply Credit Card
+268,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-11-27,CHQ BK,2024-11-27 | CHQ BK | Rep: REP566,REP566,Neutral,Email,Order Cheque Book
+269,9cc2c168-853f-429e-8ca8-288f39625543,2025-02-06,DC,2025-02-06 | DC | Rep: REP592,REP592,Positive,Email,Debit Card Service
+270,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-03-30,ECS BLK,2025-03-30 | ECS BLK | Rep: REP176,REP176,Positive,Voice,Block Auto Payment
+271,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2024-12-13,CLOSE ACCT,2024-12-13 | CLOSE ACCT | Rep: REP255,REP255,Positive,Voice,Close Account
+272,6988d2ab-0c85-4ec1-a641-e140468bce09,2024-12-19,PND DOC,2024-12-19 | PND DOC | Rep: REP074 | Note: Fraud alert placed on the account.,REP074,Neutral,Email,Document Follow-up
+273,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-02-13,ECS RVS,2025-02-13 | ECS RVS | Rep: REP443,REP443,Positive,Voice,Reversal Request
+274,23d538dc-dab3-4f26-b517-5f073d692200,2025-02-02,ACCT,2025-02-02 | ACCT | Rep: REP016 | Note: Customer satisfied with resolution.,REP016,Negative,Chat,General Account Info
+275,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2024-11-30,NRI,2024-11-30 | NRI | Rep: REP865,REP865,Negative,Chat,Foreign Services
+276,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-10-23,LMT INC,2024-10-23 | LMT INC | Rep: REP678,REP678,Positive,Chat,Increase Credit Limit
+277,8baa998e-4295-4756-869b-770df05f293f,2025-03-16,ECS BLK,2025-03-16 | ECS BLK | Rep: REP239 | Note: PIN reset confirmed and successful.,REP239,Negative,Voice,Block Auto Payment
+278,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-12-29,CC,"2024-12-29 | CC | Rep: REP913 | Note: Asked for statement via email, sent instantly.",REP913,Positive,Email,Apply Credit Card
+279,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-03-11,ECS BLK,2025-03-11 | ECS BLK | Rep: REP524,REP524,Negative,Email,Block Auto Payment
+280,8baa998e-4295-4756-869b-770df05f293f,2025-01-26,KYC,2025-01-26 | KYC | Rep: REP168,REP168,Positive,Email,Account Verification
+281,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-03-21,DISP,2025-03-21 | DISP | Rep: REP721,REP721,Positive,Chat,Dispute Transaction
+282,6988d2ab-0c85-4ec1-a641-e140468bce09,2024-12-27,FVR CHK,2024-12-27 | FVR CHK | Rep: REP888,REP888,Positive,Email,Fraud Detection
+283,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-02-10,BAL QRY,2025-02-10 | BAL QRY | Rep: REP441 | Note: No further action required; issue resolved.,REP441,Positive,Chat,Balance Inquiry
+284,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-28,PND DOC,2025-01-28 | PND DOC | Rep: REP619 | Note: PIN reset confirmed and successful.,REP619,Neutral,Chat,Document Follow-up
+285,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-04-14,LMT INC,2025-04-14 | LMT INC | Rep: REP776,REP776,Neutral,Voice,Increase Credit Limit
+286,1bf09578-0d01-44ec-959e-e1e53ff01af3,2025-04-05,PND DOC,2025-04-05 | PND DOC | Rep: REP653,REP653,Negative,Chat,Document Follow-up
+287,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-03-24,COLL,2025-03-24 | COLL | Rep: REP545 | Note: Dispute form submitted; follow-up needed in 5 days.,REP545,Neutral,Email,Collections Call
+288,90afe5d4-7245-4a25-ab42-77927429fa9f,2025-02-21,BAL QRY,2025-02-21 | BAL QRY | Rep: REP847 | Note: Customer satisfied with resolution.,REP847,Neutral,Email,Balance Inquiry
+289,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-03-04,KYC,2025-03-04 | KYC | Rep: REP057,REP057,Negative,Email,Account Verification
+290,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2025-01-26,COLL,2025-01-26 | COLL | Rep: REP726,REP726,Negative,Email,Collections Call
+291,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-02-22,COLL,2025-02-22 | COLL | Rep: REP832,REP832,Neutral,Email,Collections Call
+292,443c0160-bac5-4733-86d5-9c423bf3d008,2025-03-14,BAL TRF,2025-03-14 | BAL TRF | Rep: REP494 | Note: Dispute form submitted; follow-up needed in 5 days.,REP494,Neutral,Email,Balance Transfer Request
+293,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-01-21,ADDR UPD,2025-01-21 | ADDR UPD | Rep: REP612 | Note: Collection notice acknowledged; partial payment made.,REP612,Neutral,Email,Profile Update
+294,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-01-19,ACCT,2025-01-19 | ACCT | Rep: REP709 | Note: Requested urgent update to mailing address.,REP709,Positive,Voice,General Account Info
+295,06d305e4-2a06-42f7-8e38-125c143d97ef,2025-03-12,DISP,2025-03-12 | DISP | Rep: REP916,REP916,Negative,Chat,Dispute Transaction
+296,e4a60b15-684d-4f73-a69e-41ecdd293758,2024-10-29,DISP,2024-10-29 | DISP | Rep: REP849,REP849,Positive,Chat,Dispute Transaction
+297,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-04-15,DC,2025-04-15 | DC | Rep: REP163 | Note: Card declined during purchase—issue escalated.,REP163,Neutral,Chat,Debit Card Service
+298,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-02-10,PIN RST,2025-02-10 | PIN RST | Rep: REP599 | Note: Dispute form submitted; follow-up needed in 5 days.,REP599,Positive,Voice,Reset PIN
+299,89647783-4c9e-45dc-8830-c647231f87cf,2024-11-16,NRI,2024-11-16 | NRI | Rep: REP030,REP030,Positive,Chat,Foreign Services
+300,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-12-31,PND DOC,2024-12-31 | PND DOC | Rep: REP108,REP108,Negative,Chat,Document Follow-up
+301,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2024-10-29,CC,2024-10-29 | CC | Rep: REP954,REP954,Neutral,Email,Apply Credit Card
+302,70b65935-f9f4-4aba-8411-a3ff583f3a41,2025-03-14,DC,2025-03-14 | DC | Rep: REP945 | Note: Customer satisfied with resolution.,REP945,Neutral,Voice,Debit Card Service
+303,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-04-13,CHQ BK,2025-04-13 | CHQ BK | Rep: REP734,REP734,Positive,Email,Order Cheque Book
+304,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-03-19,ECS BLK,2025-03-19 | ECS BLK | Rep: REP530 | Note: Dispute form submitted; follow-up needed in 5 days.,REP530,Neutral,Voice,Block Auto Payment
+305,14453942-d088-4bae-b015-824ba4821f08,2025-04-18,STMT RQ,2025-04-18 | STMT RQ | Rep: REP540,REP540,Positive,Email,Get Statement
+306,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-12-10,CHQ BK,2024-12-10 | CHQ BK | Rep: REP614 | Note: Offered balance transfer options; customer interested.,REP614,Positive,Voice,Order Cheque Book
+307,20b597ca-3266-427e-a47d-79a31c1491a4,2024-11-21,DC,2024-11-21 | DC | Rep: REP633 | Note: Requested urgent update to mailing address.,REP633,Positive,Email,Debit Card Service
+308,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2025-02-23,CLOSE ACCT,2025-02-23 | CLOSE ACCT | Rep: REP479 | Note: Customer complained about unrecognized transaction.,REP479,Neutral,Voice,Close Account
+309,915f65c5-471f-4429-b0ab-a614e553d45c,2025-01-25,DISP,2025-01-25 | DISP | Rep: REP841 | Note: Explained process for fee waiver eligibility.,REP841,Positive,Email,Dispute Transaction
+310,b8725edb-28c7-4c65-9d0f-d2a9bbda4bb6,2025-03-21,CHQ BK,2025-03-21 | CHQ BK | Rep: REP171 | Note: PIN reset confirmed and successful.,REP171,Positive,Chat,Order Cheque Book
+311,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-03-09,COLL,"2025-03-09 | COLL | Rep: REP819 | Note: Asked for statement via email, sent instantly.",REP819,Neutral,Chat,Collections Call
+312,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2024-12-08,KYC,2024-12-08 | KYC | Rep: REP279 | Note: Customer complained about unrecognized transaction.,REP279,Neutral,Voice,Account Verification
+313,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-01-26,ECS BLK,2025-01-26 | ECS BLK | Rep: REP304,REP304,Negative,Email,Block Auto Payment
+314,41859cc2-9f52-49b6-9c34-6b7d3257de06,2025-03-12,FEE WVR,2025-03-12 | FEE WVR | Rep: REP652,REP652,Positive,Email,Fee Waiver Request
+315,0ae08baa-0270-44ea-9d96-667079aaea2a,2024-10-31,ECS BLK,2024-10-31 | ECS BLK | Rep: REP260,REP260,Neutral,Email,Block Auto Payment
+316,bf954c81-7139-4f99-9385-aab171dbf23d,2024-11-03,FVR CHK,2024-11-03 | FVR CHK | Rep: REP640,REP640,Positive,Email,Fraud Detection
+317,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-01-15,KYC,2025-01-15 | KYC | Rep: REP342 | Note: Requested urgent update to mailing address.,REP342,Positive,Chat,Account Verification
+318,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-03-11,ADDR UPD,"2025-03-11 | ADDR UPD | Rep: REP649 | Note: Asked for statement via email, sent instantly.",REP649,Negative,Chat,Profile Update
+319,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2025-01-11,FVR CHK,2025-01-11 | FVR CHK | Rep: REP021 | Note: Card declined during purchase—issue escalated.,REP021,Positive,Email,Fraud Detection
+320,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-03-22,PND DOC,2025-03-22 | PND DOC | Rep: REP669,REP669,Positive,Voice,Document Follow-up
+321,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-01-10,NPS ACCT,2025-01-10 | NPS ACCT | Rep: REP443,REP443,Neutral,Email,Open New Account
+322,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-03-11,BAL QRY,2025-03-11 | BAL QRY | Rep: REP242 | Note: Customer satisfied with resolution.,REP242,Positive,Voice,Balance Inquiry
+323,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-02-26,DC,2025-02-26 | DC | Rep: REP660,REP660,Negative,Email,Debit Card Service
+324,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-11-13,CLOSE ACCT,2024-11-13 | CLOSE ACCT | Rep: REP069,REP069,Positive,Email,Close Account
+325,8c141c43-a3e3-441a-a4ef-22356da489cc,2025-02-05,PIN RST,2025-02-05 | PIN RST | Rep: REP809 | Note: Customer confirmed identity after 2FA.,REP809,Positive,Chat,Reset PIN
+326,cda122e2-98d5-4007-959a-0bedb790fe80,2025-03-08,TXN,2025-03-08 | TXN | Rep: REP370,REP370,Neutral,Email,Transaction Issue
+327,46023047-12c0-4e1d-b056-7a29178097ee,2025-02-23,PND DOC,2025-02-23 | PND DOC | Rep: REP688,REP688,Neutral,Email,Document Follow-up
+328,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-01-13,OTP,2025-01-13 | OTP | Rep: REP502 | Note: Explained process for fee waiver eligibility.,REP502,Negative,Voice,Authentication Help
+329,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-03-21,ECS BLK,2025-03-21 | ECS BLK | Rep: REP242 | Note: Explained process for fee waiver eligibility.,REP242,Positive,Voice,Block Auto Payment
+330,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-10-24,TXN,2024-10-24 | TXN | Rep: REP562,REP562,Positive,Voice,Transaction Issue
+331,6988d2ab-0c85-4ec1-a641-e140468bce09,2024-11-05,CLOSE ACCT,2024-11-05 | CLOSE ACCT | Rep: REP593,REP593,Negative,Email,Close Account
+332,52014828-a05b-4c5c-ad00-9b7483e22d75,2024-12-27,BAL QRY,2024-12-27 | BAL QRY | Rep: REP586,REP586,Positive,Voice,Balance Inquiry
+333,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-10-30,COLL,2024-10-30 | COLL | Rep: REP614,REP614,Positive,Email,Collections Call
+334,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2024-12-15,ADDR UPD,2024-12-15 | ADDR UPD | Rep: REP828 | Note: Customer complained about unrecognized transaction.,REP828,Neutral,Email,Profile Update
+335,0f301ab3-6241-4c1a-83c1-90cfbc891002,2025-03-29,FVR CHK,2025-03-29 | FVR CHK | Rep: REP463,REP463,Negative,Chat,Fraud Detection
+336,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-03-14,NRI,2025-03-14 | NRI | Rep: REP161 | Note: Dispute form submitted; follow-up needed in 5 days.,REP161,Negative,Email,Foreign Services
+337,447b2c33-ad78-4482-af58-cfcf1d922222,2025-02-04,KYC,2025-02-04 | KYC | Rep: REP669,REP669,Negative,Voice,Account Verification
+338,14453942-d088-4bae-b015-824ba4821f08,2025-01-10,KYC,2025-01-10 | KYC | Rep: REP882 | Note: PIN reset confirmed and successful.,REP882,Positive,Voice,Account Verification
+339,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-01-17,CHQ BK,2025-01-17 | CHQ BK | Rep: REP786,REP786,Positive,Chat,Order Cheque Book
+340,89647783-4c9e-45dc-8830-c647231f87cf,2025-04-16,DISP,2025-04-16 | DISP | Rep: REP640 | Note: Card declined during purchase—issue escalated.,REP640,Positive,Chat,Dispute Transaction
+341,53432400-5bb6-45d6-976b-66d0b309666a,2025-03-29,ECS RVS,2025-03-29 | ECS RVS | Rep: REP132,REP132,Negative,Voice,Reversal Request
+342,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-11-07,CHQ BK,2024-11-07 | CHQ BK | Rep: REP498,REP498,Neutral,Voice,Order Cheque Book
+343,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-10-20,CC,2024-10-20 | CC | Rep: REP571,REP571,Negative,Email,Apply Credit Card
+344,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-02-28,ADDR UPD,2025-02-28 | ADDR UPD | Rep: REP281,REP281,Neutral,Voice,Profile Update
+345,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-03-30,ECS BLK,2025-03-30 | ECS BLK | Rep: REP300,REP300,Negative,Email,Block Auto Payment
+346,23d538dc-dab3-4f26-b517-5f073d692200,2024-10-23,KYC,2024-10-23 | KYC | Rep: REP888,REP888,Positive,Email,Account Verification
+347,90afe5d4-7245-4a25-ab42-77927429fa9f,2025-03-17,BAL TRF,2025-03-17 | BAL TRF | Rep: REP930,REP930,Negative,Chat,Balance Transfer Request
+348,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2024-11-25,NPS ACCT,2024-11-25 | NPS ACCT | Rep: REP977,REP977,Negative,Chat,Open New Account
+349,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-10-26,BAL QRY,2024-10-26 | BAL QRY | Rep: REP929,REP929,Positive,Email,Balance Inquiry
+350,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-01-18,NPS ACCT,2025-01-18 | NPS ACCT | Rep: REP621,REP621,Positive,Chat,Open New Account
+351,17a85cba-2f69-4b99-8db4-252f70b0ef33,2025-01-13,DISP,"2025-01-13 | DISP | Rep: REP291 | Note: Asked for statement via email, sent instantly.",REP291,Neutral,Chat,Dispute Transaction
+352,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-02-11,ECS RVS,2025-02-11 | ECS RVS | Rep: REP675,REP675,Neutral,Chat,Reversal Request
+353,46023047-12c0-4e1d-b056-7a29178097ee,2024-11-06,DISP,2024-11-06 | DISP | Rep: REP837 | Note: Fraud alert placed on the account.,REP837,Negative,Voice,Dispute Transaction
+354,70b65935-f9f4-4aba-8411-a3ff583f3a41,2024-12-25,KYC,2024-12-25 | KYC | Rep: REP322,REP322,Negative,Email,Account Verification
+355,20b597ca-3266-427e-a47d-79a31c1491a4,2025-01-11,ADDR UPD,2025-01-11 | ADDR UPD | Rep: REP585 | Note: Customer complained about unrecognized transaction.,REP585,Neutral,Voice,Profile Update
+356,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-04-06,CC,2025-04-06 | CC | Rep: REP055 | Note: Card declined during purchase—issue escalated.,REP055,Neutral,Chat,Apply Credit Card
+357,7c97ca79-ff2c-446d-9e36-c122afac1aff,2024-11-12,ACCT,2024-11-12 | ACCT | Rep: REP065 | Note: Advised to visit branch with original documents.,REP065,Neutral,Chat,General Account Info
+358,447b2c33-ad78-4482-af58-cfcf1d922222,2025-04-02,DC,2025-04-02 | DC | Rep: REP571,REP571,Negative,Email,Debit Card Service
+359,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-01-15,NPS ACCT,2025-01-15 | NPS ACCT | Rep: REP047 | Note: PIN reset confirmed and successful.,REP047,Negative,Email,Open New Account
+360,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-02-11,BAL QRY,2025-02-11 | BAL QRY | Rep: REP985 | Note: Customer complained about unrecognized transaction.,REP985,Negative,Voice,Balance Inquiry
+361,915f65c5-471f-4429-b0ab-a614e553d45c,2024-10-24,NPS ACCT,2024-10-24 | NPS ACCT | Rep: REP413,REP413,Positive,Voice,Open New Account
+362,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-01-07,DISP,2025-01-07 | DISP | Rep: REP024 | Note: Explained process for fee waiver eligibility.,REP024,Negative,Chat,Dispute Transaction
+363,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2024-11-20,BAL QRY,2024-11-20 | BAL QRY | Rep: REP873,REP873,Neutral,Email,Balance Inquiry
+364,06d270b6-6fce-4d22-8fab-558f39f019ab,2024-12-17,CLOSE ACCT,2024-12-17 | CLOSE ACCT | Rep: REP124,REP124,Positive,Email,Close Account
+365,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-10-27,OTP,2024-10-27 | OTP | Rep: REP406,REP406,Positive,Voice,Authentication Help
+366,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-01-13,KYC,2025-01-13 | KYC | Rep: REP554,REP554,Neutral,Voice,Account Verification
+367,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-12-11,ACCT,2024-12-11 | ACCT | Rep: REP490,REP490,Neutral,Chat,General Account Info
+368,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-12-27,OTP,2024-12-27 | OTP | Rep: REP147 | Note: Advised to visit branch with original documents.,REP147,Positive,Chat,Authentication Help
+369,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2024-11-25,KYC,2024-11-25 | KYC | Rep: REP164,REP164,Positive,Chat,Account Verification
+370,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-01-07,ACCT,2025-01-07 | ACCT | Rep: REP656,REP656,Positive,Chat,General Account Info
+371,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-03-05,ACCT,2025-03-05 | ACCT | Rep: REP210 | Note: Collection notice acknowledged; partial payment made.,REP210,Positive,Email,General Account Info
+372,bf954c81-7139-4f99-9385-aab171dbf23d,2025-04-07,FEE WVR,2025-04-07 | FEE WVR | Rep: REP701,REP701,Neutral,Email,Fee Waiver Request
+373,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2024-12-24,KYC,2024-12-24 | KYC | Rep: REP697,REP697,Positive,Voice,Account Verification
+374,b8673aa7-11ae-4850-9078-4b32c92d18e8,2024-12-18,TXN,2024-12-18 | TXN | Rep: REP580,REP580,Positive,Email,Transaction Issue
+375,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-02-18,NRI,2025-02-18 | NRI | Rep: REP430,REP430,Negative,Voice,Foreign Services
+376,b8673aa7-11ae-4850-9078-4b32c92d18e8,2025-04-04,PND DOC,2025-04-04 | PND DOC | Rep: REP810,REP810,Positive,Chat,Document Follow-up
+377,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-10-31,CLOSE ACCT,2024-10-31 | CLOSE ACCT | Rep: REP763,REP763,Neutral,Email,Close Account
+378,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2025-01-13,PIN RST,2025-01-13 | PIN RST | Rep: REP717,REP717,Positive,Chat,Reset PIN
+379,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2025-04-15,OTP,2025-04-15 | OTP | Rep: REP846,REP846,Positive,Chat,Authentication Help
+380,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2024-12-01,FVR CHK,2024-12-01 | FVR CHK | Rep: REP596 | Note: Customer confirmed identity after 2FA.,REP596,Negative,Voice,Fraud Detection
+381,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2024-10-20,FVR CHK,2024-10-20 | FVR CHK | Rep: REP996 | Note: Offered balance transfer options; customer interested.,REP996,Negative,Chat,Fraud Detection
+382,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-03-22,ADDR UPD,2025-03-22 | ADDR UPD | Rep: REP118 | Note: Customer confirmed identity after 2FA.,REP118,Neutral,Email,Profile Update
+383,6117057d-dd3f-4142-844c-1e49f9428e43,2024-12-08,BAL TRF,2024-12-08 | BAL TRF | Rep: REP367,REP367,Positive,Email,Balance Transfer Request
+384,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-12-14,BAL TRF,2024-12-14 | BAL TRF | Rep: REP325 | Note: Explained process for fee waiver eligibility.,REP325,Negative,Chat,Balance Transfer Request
+385,447b2c33-ad78-4482-af58-cfcf1d922222,2025-04-15,PIN RST,2025-04-15 | PIN RST | Rep: REP699 | Note: Customer complained about unrecognized transaction.,REP699,Neutral,Voice,Reset PIN
+386,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-12-06,COLL,2024-12-06 | COLL | Rep: REP689 | Note: Advised to visit branch with original documents.,REP689,Neutral,Voice,Collections Call
+387,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-10-20,CHQ BK,2024-10-20 | CHQ BK | Rep: REP753,REP753,Neutral,Voice,Order Cheque Book
+388,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2024-12-20,NPS ACCT,2024-12-20 | NPS ACCT | Rep: REP756 | Note: Advised to visit branch with original documents.,REP756,Neutral,Voice,Open New Account
+389,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-02-10,COLL,2025-02-10 | COLL | Rep: REP403,REP403,Positive,Email,Collections Call
+390,447b2c33-ad78-4482-af58-cfcf1d922222,2025-02-07,FEE WVR,2025-02-07 | FEE WVR | Rep: REP498 | Note: No further action required; issue resolved.,REP498,Positive,Chat,Fee Waiver Request
+391,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2025-03-14,FEE WVR,2025-03-14 | FEE WVR | Rep: REP405 | Note: Explained process for fee waiver eligibility.,REP405,Neutral,Voice,Fee Waiver Request
+392,a7e21628-b261-4068-8b36-1dd18a10f5ae,2024-12-19,NRI,2024-12-19 | NRI | Rep: REP246 | Note: No further action required; issue resolved.,REP246,Negative,Voice,Foreign Services
+393,6117057d-dd3f-4142-844c-1e49f9428e43,2024-11-17,BAL TRF,2024-11-17 | BAL TRF | Rep: REP258,REP258,Neutral,Chat,Balance Transfer Request
+394,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2024-10-23,COLL,2024-10-23 | COLL | Rep: REP263,REP263,Negative,Voice,Collections Call
+395,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-04-11,DC,2025-04-11 | DC | Rep: REP409,REP409,Negative,Voice,Debit Card Service
+396,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2024-12-13,LMT INC,2024-12-13 | LMT INC | Rep: REP013,REP013,Positive,Email,Increase Credit Limit
+397,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-04-04,NPS ACCT,2025-04-04 | NPS ACCT | Rep: REP056 | Note: Collection notice acknowledged; partial payment made.,REP056,Neutral,Voice,Open New Account
+398,823a02da-ed52-488a-ad1b-147536f95891,2024-12-21,FVR CHK,2024-12-21 | FVR CHK | Rep: REP792 | Note: Advised to visit branch with original documents.,REP792,Negative,Chat,Fraud Detection
+399,6117057d-dd3f-4142-844c-1e49f9428e43,2025-01-03,CC,2025-01-03 | CC | Rep: REP766,REP766,Neutral,Email,Apply Credit Card
+400,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2024-10-23,LMT INC,2024-10-23 | LMT INC | Rep: REP911,REP911,Negative,Voice,Increase Credit Limit
+401,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-04-09,STMT RQ,2025-04-09 | STMT RQ | Rep: REP334,REP334,Negative,Chat,Get Statement
+402,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-07,TXN,2024-12-07 | TXN | Rep: REP686 | Note: Requested urgent update to mailing address.,REP686,Positive,Email,Transaction Issue
+403,a7e21628-b261-4068-8b36-1dd18a10f5ae,2024-10-26,BAL TRF,2024-10-26 | BAL TRF | Rep: REP600,REP600,Neutral,Voice,Balance Transfer Request
+404,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-11-07,DC,2024-11-07 | DC | Rep: REP793 | Note: Collection notice acknowledged; partial payment made.,REP793,Positive,Email,Debit Card Service
+405,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-02-10,PIN RST,2025-02-10 | PIN RST | Rep: REP085 | Note: Customer complained about unrecognized transaction.,REP085,Negative,Email,Reset PIN
+406,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2024-12-18,PIN RST,2024-12-18 | PIN RST | Rep: REP839,REP839,Positive,Voice,Reset PIN
+407,b8673aa7-11ae-4850-9078-4b32c92d18e8,2025-01-14,BAL TRF,2025-01-14 | BAL TRF | Rep: REP462 | Note: Offered balance transfer options; customer interested.,REP462,Positive,Voice,Balance Transfer Request
+408,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2025-02-02,ECS RVS,2025-02-02 | ECS RVS | Rep: REP856 | Note: Card declined during purchase—issue escalated.,REP856,Negative,Voice,Reversal Request
+409,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2025-03-10,ECS RVS,2025-03-10 | ECS RVS | Rep: REP756,REP756,Neutral,Voice,Reversal Request
+410,e4a60b15-684d-4f73-a69e-41ecdd293758,2025-03-03,ECS RVS,2025-03-03 | ECS RVS | Rep: REP305,REP305,Negative,Chat,Reversal Request
+411,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2024-12-17,ECS BLK,2024-12-17 | ECS BLK | Rep: REP274,REP274,Negative,Chat,Block Auto Payment
+412,443c0160-bac5-4733-86d5-9c423bf3d008,2024-12-23,FVR CHK,2024-12-23 | FVR CHK | Rep: REP342,REP342,Positive,Email,Fraud Detection
+413,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2025-03-20,STMT RQ,2025-03-20 | STMT RQ | Rep: REP418 | Note: Customer complained about unrecognized transaction.,REP418,Neutral,Voice,Get Statement
+414,b0b7373d-3ad0-4420-9854-84cb343e8a10,2024-12-18,CHQ BK,2024-12-18 | CHQ BK | Rep: REP706,REP706,Neutral,Chat,Order Cheque Book
+415,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2024-11-26,ECS RVS,2024-11-26 | ECS RVS | Rep: REP915,REP915,Neutral,Email,Reversal Request
+416,70b65935-f9f4-4aba-8411-a3ff583f3a41,2024-11-07,ACCT,2024-11-07 | ACCT | Rep: REP216 | Note: Requested urgent update to mailing address.,REP216,Negative,Voice,General Account Info
+417,14453942-d088-4bae-b015-824ba4821f08,2025-02-07,ADDR UPD,2025-02-07 | ADDR UPD | Rep: REP893 | Note: Customer complained about unrecognized transaction.,REP893,Neutral,Chat,Profile Update
+418,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2024-12-09,ECS BLK,2024-12-09 | ECS BLK | Rep: REP921 | Note: PIN reset confirmed and successful.,REP921,Negative,Voice,Block Auto Payment
+419,89647783-4c9e-45dc-8830-c647231f87cf,2024-11-26,ACCT,2024-11-26 | ACCT | Rep: REP608 | Note: Dispute form submitted; follow-up needed in 5 days.,REP608,Positive,Chat,General Account Info
+420,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-03-25,FVR CHK,2025-03-25 | FVR CHK | Rep: REP764,REP764,Negative,Voice,Fraud Detection
+421,46023047-12c0-4e1d-b056-7a29178097ee,2024-11-08,CHQ BK,2024-11-08 | CHQ BK | Rep: REP025 | Note: Customer confirmed identity after 2FA.,REP025,Negative,Chat,Order Cheque Book
+422,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-01-25,PIN RST,2025-01-25 | PIN RST | Rep: REP329,REP329,Neutral,Email,Reset PIN
+423,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2024-11-10,DC,"2024-11-10 | DC | Rep: REP392 | Note: Asked for statement via email, sent instantly.",REP392,Negative,Email,Debit Card Service
+424,5282a13a-908f-4fe8-b799-d702be60d2f7,2024-10-21,TXN,2024-10-21 | TXN | Rep: REP603,REP603,Neutral,Chat,Transaction Issue
+425,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-12-14,ECS BLK,2024-12-14 | ECS BLK | Rep: REP587 | Note: Offered balance transfer options; customer interested.,REP587,Neutral,Chat,Block Auto Payment
+426,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-11-16,DC,2024-11-16 | DC | Rep: REP479 | Note: Customer confirmed identity after 2FA.,REP479,Neutral,Voice,Debit Card Service
+427,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2025-03-12,NRI,"2025-03-12 | NRI | Rep: REP449 | Note: Asked for statement via email, sent instantly.",REP449,Neutral,Email,Foreign Services
+428,81066c1c-c625-4ad3-8474-6ffad68ad9f3,2025-03-05,ADDR UPD,2025-03-05 | ADDR UPD | Rep: REP800 | Note: Customer satisfied with resolution.,REP800,Negative,Chat,Profile Update
+429,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-02-22,FEE WVR,2025-02-22 | FEE WVR | Rep: REP165,REP165,Neutral,Voice,Fee Waiver Request
+430,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-01-01,CHQ BK,2025-01-01 | CHQ BK | Rep: REP737,REP737,Positive,Chat,Order Cheque Book
+431,a5c2be23-9314-454a-a546-f96f75749afa,2024-10-21,NPS ACCT,2024-10-21 | NPS ACCT | Rep: REP717 | Note: Collection notice acknowledged; partial payment made.,REP717,Neutral,Email,Open New Account
+432,a7e21628-b261-4068-8b36-1dd18a10f5ae,2025-02-17,BAL TRF,2025-02-17 | BAL TRF | Rep: REP538,REP538,Negative,Chat,Balance Transfer Request
+433,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2024-12-02,CLOSE ACCT,2024-12-02 | CLOSE ACCT | Rep: REP996,REP996,Positive,Voice,Close Account
+434,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-02-28,KYC,2025-02-28 | KYC | Rep: REP213 | Note: Collection notice acknowledged; partial payment made.,REP213,Neutral,Email,Account Verification
+435,a5c2be23-9314-454a-a546-f96f75749afa,2025-01-09,DISP,2025-01-09 | DISP | Rep: REP174,REP174,Neutral,Voice,Dispute Transaction
+436,6117057d-dd3f-4142-844c-1e49f9428e43,2025-03-21,CLOSE ACCT,2025-03-21 | CLOSE ACCT | Rep: REP230 | Note: Advised to visit branch with original documents.,REP230,Positive,Voice,Close Account
+437,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-01-14,KYC,2025-01-14 | KYC | Rep: REP135 | Note: Fraud alert placed on the account.,REP135,Positive,Chat,Account Verification
+438,0f301ab3-6241-4c1a-83c1-90cfbc891002,2025-02-01,CHQ BK,2025-02-01 | CHQ BK | Rep: REP100 | Note: Customer complained about unrecognized transaction.,REP100,Negative,Voice,Order Cheque Book
+439,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2025-01-27,NRI,2025-01-27 | NRI | Rep: REP873,REP873,Positive,Chat,Foreign Services
+440,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-01-11,TXN,2025-01-11 | TXN | Rep: REP487,REP487,Negative,Voice,Transaction Issue
+441,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2024-11-11,ECS BLK,2024-11-11 | ECS BLK | Rep: REP999,REP999,Neutral,Email,Block Auto Payment
+442,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2025-02-14,BAL QRY,2025-02-14 | BAL QRY | Rep: REP568,REP568,Positive,Email,Balance Inquiry
+443,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-24,CLOSE ACCT,2025-03-24 | CLOSE ACCT | Rep: REP368 | Note: Collection notice acknowledged; partial payment made.,REP368,Negative,Voice,Close Account
+444,19870aee-236e-442d-9b1a-262bb11eea2d,2025-01-05,NRI,2025-01-05 | NRI | Rep: REP144 | Note: Collection notice acknowledged; partial payment made.,REP144,Negative,Chat,Foreign Services
+445,89647783-4c9e-45dc-8830-c647231f87cf,2024-10-25,CLOSE ACCT,2024-10-25 | CLOSE ACCT | Rep: REP157 | Note: Explained process for fee waiver eligibility.,REP157,Positive,Chat,Close Account
+446,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-03-20,DISP,2025-03-20 | DISP | Rep: REP619 | Note: Fraud alert placed on the account.,REP619,Negative,Chat,Dispute Transaction
+447,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-03-08,ECS RVS,2025-03-08 | ECS RVS | Rep: REP264,REP264,Negative,Email,Reversal Request
+448,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-12-17,KYC,2024-12-17 | KYC | Rep: REP620,REP620,Negative,Email,Account Verification
+449,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-12-19,STMT RQ,2024-12-19 | STMT RQ | Rep: REP564,REP564,Positive,Chat,Get Statement
+450,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-01-15,BAL QRY,2025-01-15 | BAL QRY | Rep: REP725 | Note: Requested urgent update to mailing address.,REP725,Positive,Email,Balance Inquiry
+451,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2025-04-08,CHQ BK,2025-04-08 | CHQ BK | Rep: REP168 | Note: Customer satisfied with resolution.,REP168,Neutral,Email,Order Cheque Book
+452,54627136-b89e-4b46-9369-d779131a1074,2025-04-16,FEE WVR,2025-04-16 | FEE WVR | Rep: REP042,REP042,Negative,Voice,Fee Waiver Request
+453,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-01-26,DISP,2025-01-26 | DISP | Rep: REP323 | Note: Advised to visit branch with original documents.,REP323,Negative,Email,Dispute Transaction
+454,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-10-23,FEE WVR,2024-10-23 | FEE WVR | Rep: REP409 | Note: Offered balance transfer options; customer interested.,REP409,Positive,Voice,Fee Waiver Request
+455,8baa998e-4295-4756-869b-770df05f293f,2025-02-12,ACCT,2025-02-12 | ACCT | Rep: REP929 | Note: Dispute form submitted; follow-up needed in 5 days.,REP929,Negative,Voice,General Account Info
+456,14453942-d088-4bae-b015-824ba4821f08,2025-04-14,FEE WVR,2025-04-14 | FEE WVR | Rep: REP158 | Note: Fraud alert placed on the account.,REP158,Positive,Voice,Fee Waiver Request
+457,5a8c24e3-6b78-4c44-9f0c-fe70174b1230,2025-04-16,TXN,2025-04-16 | TXN | Rep: REP914,REP914,Positive,Chat,Transaction Issue
+458,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2025-04-05,BAL QRY,2025-04-05 | BAL QRY | Rep: REP198,REP198,Negative,Chat,Balance Inquiry
+459,17a85cba-2f69-4b99-8db4-252f70b0ef33,2025-01-12,OTP,2025-01-12 | OTP | Rep: REP856 | Note: Customer complained about unrecognized transaction.,REP856,Negative,Email,Authentication Help
+460,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-12-30,OTP,2024-12-30 | OTP | Rep: REP892,REP892,Negative,Email,Authentication Help
+461,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-04-17,NRI,2025-04-17 | NRI | Rep: REP813 | Note: Advised to visit branch with original documents.,REP813,Negative,Voice,Foreign Services
+462,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-01-18,COLL,2025-01-18 | COLL | Rep: REP908,REP908,Neutral,Email,Collections Call
+463,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-12-07,CHQ BK,2024-12-07 | CHQ BK | Rep: REP760,REP760,Neutral,Voice,Order Cheque Book
+464,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-02-28,FEE WVR,2025-02-28 | FEE WVR | Rep: REP166,REP166,Neutral,Voice,Fee Waiver Request
+465,a226dc1c-bb88-40bd-9556-7af947862c29,2024-12-20,CLOSE ACCT,2024-12-20 | CLOSE ACCT | Rep: REP261,REP261,Negative,Chat,Close Account
+466,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-12-15,CHQ BK,2024-12-15 | CHQ BK | Rep: REP354,REP354,Neutral,Email,Order Cheque Book
+467,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-03-10,BAL TRF,2025-03-10 | BAL TRF | Rep: REP486,REP486,Positive,Chat,Balance Transfer Request
+468,4643ab21-aebd-4ee8-a202-40426dec5225,2025-01-01,DC,2025-01-01 | DC | Rep: REP789,REP789,Neutral,Email,Debit Card Service
+469,4643ab21-aebd-4ee8-a202-40426dec5225,2025-02-20,KYC,2025-02-20 | KYC | Rep: REP332 | Note: Customer confirmed identity after 2FA.,REP332,Neutral,Email,Account Verification
+470,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-11-07,NPS ACCT,2024-11-07 | NPS ACCT | Rep: REP709,REP709,Neutral,Voice,Open New Account
+471,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2024-12-26,STMT RQ,2024-12-26 | STMT RQ | Rep: REP891,REP891,Positive,Voice,Get Statement
+472,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-11-02,ECS RVS,2024-11-02 | ECS RVS | Rep: REP856,REP856,Neutral,Email,Reversal Request
+473,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2025-01-25,PIN RST,2025-01-25 | PIN RST | Rep: REP317,REP317,Neutral,Email,Reset PIN
+474,a226dc1c-bb88-40bd-9556-7af947862c29,2025-04-15,DISP,2025-04-15 | DISP | Rep: REP801,REP801,Negative,Chat,Dispute Transaction
+475,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-01-11,DISP,2025-01-11 | DISP | Rep: REP394,REP394,Neutral,Email,Dispute Transaction
+476,14453942-d088-4bae-b015-824ba4821f08,2025-03-04,BAL TRF,2025-03-04 | BAL TRF | Rep: REP200,REP200,Positive,Email,Balance Transfer Request
+477,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-03-04,KYC,2025-03-04 | KYC | Rep: REP788 | Note: Explained process for fee waiver eligibility.,REP788,Neutral,Chat,Account Verification
+478,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2025-03-10,DC,2025-03-10 | DC | Rep: REP975,REP975,Neutral,Voice,Debit Card Service
+479,7c97ca79-ff2c-446d-9e36-c122afac1aff,2024-10-21,FVR CHK,2024-10-21 | FVR CHK | Rep: REP303 | Note: Customer complained about unrecognized transaction.,REP303,Neutral,Email,Fraud Detection
+480,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2025-04-02,FEE WVR,2025-04-02 | FEE WVR | Rep: REP270,REP270,Positive,Voice,Fee Waiver Request
+481,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-01-27,LMT INC,2025-01-27 | LMT INC | Rep: REP941 | Note: Customer satisfied with resolution.,REP941,Negative,Email,Increase Credit Limit
+482,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-12-21,DC,2024-12-21 | DC | Rep: REP034,REP034,Positive,Chat,Debit Card Service
+483,823a02da-ed52-488a-ad1b-147536f95891,2024-12-18,ACCT,2024-12-18 | ACCT | Rep: REP022,REP022,Positive,Chat,General Account Info
+484,9d943d74-8a6a-46a5-bba8-8220111a003e,2025-01-18,ACCT,2025-01-18 | ACCT | Rep: REP165,REP165,Negative,Email,General Account Info
+485,cda122e2-98d5-4007-959a-0bedb790fe80,2024-11-03,OTP,2024-11-03 | OTP | Rep: REP165,REP165,Positive,Chat,Authentication Help
+486,28a8a9f6-e262-4314-8477-662ea54a5a54,2024-12-14,PIN RST,2024-12-14 | PIN RST | Rep: REP532,REP532,Neutral,Voice,Reset PIN
+487,9d943d74-8a6a-46a5-bba8-8220111a003e,2025-04-01,LMT INC,2025-04-01 | LMT INC | Rep: REP853,REP853,Negative,Voice,Increase Credit Limit
+488,7c97ca79-ff2c-446d-9e36-c122afac1aff,2024-12-07,COLL,2024-12-07 | COLL | Rep: REP718 | Note: Card declined during purchase—issue escalated.,REP718,Negative,Voice,Collections Call
+489,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-11-14,KYC,2024-11-14 | KYC | Rep: REP886,REP886,Neutral,Chat,Account Verification
+490,915f65c5-471f-4429-b0ab-a614e553d45c,2025-01-09,ADDR UPD,2025-01-09 | ADDR UPD | Rep: REP567,REP567,Neutral,Voice,Profile Update
+491,19870aee-236e-442d-9b1a-262bb11eea2d,2024-11-18,DC,2024-11-18 | DC | Rep: REP180,REP180,Negative,Voice,Debit Card Service
+492,447b2c33-ad78-4482-af58-cfcf1d922222,2025-01-04,DC,2025-01-04 | DC | Rep: REP194 | Note: Card declined during purchase—issue escalated.,REP194,Neutral,Email,Debit Card Service
+493,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2025-04-05,NRI,2025-04-05 | NRI | Rep: REP305 | Note: Customer confirmed identity after 2FA.,REP305,Positive,Chat,Foreign Services
+494,89647783-4c9e-45dc-8830-c647231f87cf,2024-10-20,DISP,2024-10-20 | DISP | Rep: REP389,REP389,Negative,Email,Dispute Transaction
+495,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-10-27,CC,2024-10-27 | CC | Rep: REP710,REP710,Negative,Email,Apply Credit Card
+496,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-01-27,PIN RST,2025-01-27 | PIN RST | Rep: REP464,REP464,Negative,Voice,Reset PIN
+497,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-01-21,CLOSE ACCT,2025-01-21 | CLOSE ACCT | Rep: REP779 | Note: Offered balance transfer options; customer interested.,REP779,Positive,Email,Close Account
+498,7c97ca79-ff2c-446d-9e36-c122afac1aff,2025-02-19,ACCT,2025-02-19 | ACCT | Rep: REP838 | Note: Card declined during purchase—issue escalated.,REP838,Positive,Voice,General Account Info
+499,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-02-04,TXN,2025-02-04 | TXN | Rep: REP010,REP010,Negative,Chat,Transaction Issue
+500,b7206ec9-9b0f-4849-8981-243e2f04b06e,2024-11-26,ECS RVS,2024-11-26 | ECS RVS | Rep: REP387,REP387,Negative,Email,Reversal Request
+501,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-03-05,ADDR UPD,2025-03-05 | ADDR UPD | Rep: REP485 | Note: Requested urgent update to mailing address.,REP485,Positive,Voice,Profile Update
+502,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2024-11-12,PND DOC,2024-11-12 | PND DOC | Rep: REP884 | Note: Card declined during purchase—issue escalated.,REP884,Negative,Email,Document Follow-up
+503,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-06,ECS RVS,2025-01-06 | ECS RVS | Rep: REP546,REP546,Neutral,Chat,Reversal Request
+504,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-12-17,CLOSE ACCT,2024-12-17 | CLOSE ACCT | Rep: REP906,REP906,Neutral,Email,Close Account
+505,e3d43b2b-56c6-4cb0-98e8-847df6184288,2024-11-13,CLOSE ACCT,2024-11-13 | CLOSE ACCT | Rep: REP045,REP045,Positive,Email,Close Account
+506,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-01-11,ACCT,2025-01-11 | ACCT | Rep: REP841,REP841,Positive,Chat,General Account Info
+507,0f301ab3-6241-4c1a-83c1-90cfbc891002,2025-03-23,CLOSE ACCT,2025-03-23 | CLOSE ACCT | Rep: REP277,REP277,Positive,Email,Close Account
+508,e3d43b2b-56c6-4cb0-98e8-847df6184288,2024-11-02,KYC,2024-11-02 | KYC | Rep: REP079 | Note: Card declined during purchase—issue escalated.,REP079,Positive,Voice,Account Verification
+509,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-03-28,ECS RVS,2025-03-28 | ECS RVS | Rep: REP687,REP687,Positive,Email,Reversal Request
+510,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-12-10,ECS BLK,2024-12-10 | ECS BLK | Rep: REP073,REP073,Positive,Chat,Block Auto Payment
+511,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-02-15,OTP,2025-02-15 | OTP | Rep: REP793,REP793,Negative,Chat,Authentication Help
+512,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-03-31,FEE WVR,2025-03-31 | FEE WVR | Rep: REP471,REP471,Positive,Voice,Fee Waiver Request
+513,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2025-04-07,BAL TRF,2025-04-07 | BAL TRF | Rep: REP926,REP926,Positive,Email,Balance Transfer Request
+514,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2025-04-07,PIN RST,2025-04-07 | PIN RST | Rep: REP115,REP115,Neutral,Voice,Reset PIN
+515,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2024-12-13,NRI,2024-12-13 | NRI | Rep: REP797,REP797,Neutral,Email,Foreign Services
+516,dbd63405-051c-4136-bd17-3a7c8e99c31a,2025-01-25,OTP,2025-01-25 | OTP | Rep: REP538,REP538,Negative,Email,Authentication Help
+517,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2024-12-14,DISP,2024-12-14 | DISP | Rep: REP660,REP660,Positive,Voice,Dispute Transaction
+518,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-10-23,OTP,2024-10-23 | OTP | Rep: REP777,REP777,Negative,Chat,Authentication Help
+519,bf954c81-7139-4f99-9385-aab171dbf23d,2025-01-30,CHQ BK,2025-01-30 | CHQ BK | Rep: REP112,REP112,Negative,Email,Order Cheque Book
+520,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2024-10-24,NPS ACCT,2024-10-24 | NPS ACCT | Rep: REP334 | Note: Collection notice acknowledged; partial payment made.,REP334,Negative,Chat,Open New Account
+521,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-12-21,ECS BLK,2024-12-21 | ECS BLK | Rep: REP320,REP320,Positive,Voice,Block Auto Payment
+522,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-11-01,CHQ BK,2024-11-01 | CHQ BK | Rep: REP439,REP439,Positive,Chat,Order Cheque Book
+523,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-11-25,TXN,2024-11-25 | TXN | Rep: REP998 | Note: Collection notice acknowledged; partial payment made.,REP998,Positive,Voice,Transaction Issue
+524,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-01-14,STMT RQ,2025-01-14 | STMT RQ | Rep: REP611,REP611,Negative,Voice,Get Statement
+525,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-12-10,NRI,2024-12-10 | NRI | Rep: REP957,REP957,Positive,Chat,Foreign Services
+526,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-01-23,COLL,2025-01-23 | COLL | Rep: REP460 | Note: Offered balance transfer options; customer interested.,REP460,Neutral,Chat,Collections Call
+527,8baa998e-4295-4756-869b-770df05f293f,2024-11-29,STMT RQ,2024-11-29 | STMT RQ | Rep: REP677,REP677,Neutral,Voice,Get Statement
+528,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2024-12-07,NRI,2024-12-07 | NRI | Rep: REP128,REP128,Neutral,Chat,Foreign Services
+529,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-11-11,ECS BLK,2024-11-11 | ECS BLK | Rep: REP055 | Note: Customer complained about unrecognized transaction.,REP055,Positive,Voice,Block Auto Payment
+530,46023047-12c0-4e1d-b056-7a29178097ee,2025-01-15,NPS ACCT,2025-01-15 | NPS ACCT | Rep: REP081,REP081,Negative,Email,Open New Account
+531,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-01-27,ACCT,2025-01-27 | ACCT | Rep: REP607 | Note: Requested urgent update to mailing address.,REP607,Negative,Email,General Account Info
+532,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-03-01,COLL,2025-03-01 | COLL | Rep: REP927,REP927,Negative,Chat,Collections Call
+533,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-21,FVR CHK,2025-01-21 | FVR CHK | Rep: REP441 | Note: Explained process for fee waiver eligibility.,REP441,Negative,Email,Fraud Detection
+534,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2024-12-10,KYC,2024-12-10 | KYC | Rep: REP860,REP860,Neutral,Voice,Account Verification
+535,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2024-11-17,PND DOC,2024-11-17 | PND DOC | Rep: REP387 | Note: Advised to visit branch with original documents.,REP387,Negative,Email,Document Follow-up
+536,19870aee-236e-442d-9b1a-262bb11eea2d,2024-12-07,FVR CHK,2024-12-07 | FVR CHK | Rep: REP357,REP357,Neutral,Chat,Fraud Detection
+537,20b597ca-3266-427e-a47d-79a31c1491a4,2024-10-26,STMT RQ,2024-10-26 | STMT RQ | Rep: REP078 | Note: Fraud alert placed on the account.,REP078,Positive,Chat,Get Statement
+538,6117057d-dd3f-4142-844c-1e49f9428e43,2024-11-26,FEE WVR,2024-11-26 | FEE WVR | Rep: REP285 | Note: Customer satisfied with resolution.,REP285,Positive,Voice,Fee Waiver Request
+539,6117057d-dd3f-4142-844c-1e49f9428e43,2024-11-17,LMT INC,2024-11-17 | LMT INC | Rep: REP497,REP497,Neutral,Chat,Increase Credit Limit
+540,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-10-25,FEE WVR,2024-10-25 | FEE WVR | Rep: REP584 | Note: Customer satisfied with resolution.,REP584,Negative,Email,Fee Waiver Request
+541,1bf09578-0d01-44ec-959e-e1e53ff01af3,2025-04-01,CLOSE ACCT,2025-04-01 | CLOSE ACCT | Rep: REP928 | Note: Customer confirmed identity after 2FA.,REP928,Neutral,Voice,Close Account
+542,da5ed01c-177e-4a00-b987-efa43826fcba,2025-03-12,OTP,2025-03-12 | OTP | Rep: REP255 | Note: Customer satisfied with resolution.,REP255,Positive,Chat,Authentication Help
+543,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-01-19,PIN RST,2025-01-19 | PIN RST | Rep: REP284,REP284,Negative,Chat,Reset PIN
+544,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2024-10-20,LMT INC,2024-10-20 | LMT INC | Rep: REP538 | Note: Customer confirmed identity after 2FA.,REP538,Neutral,Voice,Increase Credit Limit
+545,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2024-11-04,CLOSE ACCT,2024-11-04 | CLOSE ACCT | Rep: REP265 | Note: Explained process for fee waiver eligibility.,REP265,Neutral,Chat,Close Account
+546,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-01-19,NRI,2025-01-19 | NRI | Rep: REP836 | Note: Dispute form submitted; follow-up needed in 5 days.,REP836,Negative,Voice,Foreign Services
+547,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-02-10,KYC,2025-02-10 | KYC | Rep: REP255,REP255,Positive,Chat,Account Verification
+548,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-10-21,KYC,2024-10-21 | KYC | Rep: REP154 | Note: Advised to visit branch with original documents.,REP154,Positive,Email,Account Verification
+549,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2025-02-04,CHQ BK,2025-02-04 | CHQ BK | Rep: REP281,REP281,Negative,Email,Order Cheque Book
+550,52014828-a05b-4c5c-ad00-9b7483e22d75,2024-12-25,TXN,2024-12-25 | TXN | Rep: REP377,REP377,Negative,Voice,Transaction Issue
+551,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-01-26,LMT INC,2025-01-26 | LMT INC | Rep: REP499,REP499,Neutral,Chat,Increase Credit Limit
+552,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-02-19,LMT INC,2025-02-19 | LMT INC | Rep: REP637 | Note: Card declined during purchase—issue escalated.,REP637,Negative,Voice,Increase Credit Limit
+553,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-01-27,CC,2025-01-27 | CC | Rep: REP520,REP520,Negative,Chat,Apply Credit Card
+554,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2024-11-08,DISP,2024-11-08 | DISP | Rep: REP407 | Note: Dispute form submitted; follow-up needed in 5 days.,REP407,Positive,Chat,Dispute Transaction
+555,70b65935-f9f4-4aba-8411-a3ff583f3a41,2024-11-26,FEE WVR,2024-11-26 | FEE WVR | Rep: REP656 | Note: Requested urgent update to mailing address.,REP656,Negative,Voice,Fee Waiver Request
+556,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2025-03-30,CC,2025-03-30 | CC | Rep: REP144 | Note: Dispute form submitted; follow-up needed in 5 days.,REP144,Positive,Voice,Apply Credit Card
+557,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-04-16,PND DOC,2025-04-16 | PND DOC | Rep: REP143 | Note: Collection notice acknowledged; partial payment made.,REP143,Positive,Chat,Document Follow-up
+558,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-10-29,FEE WVR,2024-10-29 | FEE WVR | Rep: REP620 | Note: Customer satisfied with resolution.,REP620,Positive,Email,Fee Waiver Request
+559,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-10-20,DISP,2024-10-20 | DISP | Rep: REP176,REP176,Neutral,Chat,Dispute Transaction
+560,443c0160-bac5-4733-86d5-9c423bf3d008,2024-11-13,OTP,2024-11-13 | OTP | Rep: REP856 | Note: Card declined during purchase—issue escalated.,REP856,Positive,Email,Authentication Help
+561,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2024-11-07,FEE WVR,2024-11-07 | FEE WVR | Rep: REP693,REP693,Negative,Voice,Fee Waiver Request
+562,4e3b0722-bc67-47bb-9ff8-61243e0d60cd,2025-01-27,OTP,2025-01-27 | OTP | Rep: REP097,REP097,Positive,Email,Authentication Help
+563,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2025-02-14,ECS BLK,2025-02-14 | ECS BLK | Rep: REP653,REP653,Negative,Chat,Block Auto Payment
+564,e3d43b2b-56c6-4cb0-98e8-847df6184288,2025-02-01,NRI,2025-02-01 | NRI | Rep: REP731 | Note: Dispute form submitted; follow-up needed in 5 days.,REP731,Neutral,Chat,Foreign Services
+565,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2025-01-09,FEE WVR,2025-01-09 | FEE WVR | Rep: REP307,REP307,Negative,Voice,Fee Waiver Request
+566,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2024-11-10,BAL QRY,2024-11-10 | BAL QRY | Rep: REP619,REP619,Positive,Voice,Balance Inquiry
+567,915f65c5-471f-4429-b0ab-a614e553d45c,2025-02-24,STMT RQ,2025-02-24 | STMT RQ | Rep: REP727,REP727,Neutral,Chat,Get Statement
+568,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-21,COLL,2025-01-21 | COLL | Rep: REP518,REP518,Positive,Chat,Collections Call
+569,39c58908-0e01-4368-a3c6-d1147d2a69d9,2024-11-07,OTP,2024-11-07 | OTP | Rep: REP675,REP675,Negative,Chat,Authentication Help
+570,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-04-15,ECS RVS,2025-04-15 | ECS RVS | Rep: REP994,REP994,Negative,Chat,Reversal Request
+571,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2024-12-05,NRI,2024-12-05 | NRI | Rep: REP352 | Note: Collection notice acknowledged; partial payment made.,REP352,Negative,Voice,Foreign Services
+572,e4a60b15-684d-4f73-a69e-41ecdd293758,2025-02-23,NPS ACCT,2025-02-23 | NPS ACCT | Rep: REP140,REP140,Negative,Chat,Open New Account
+573,48460ac7-904c-4750-92ab-181d88a194f0,2025-01-02,STMT RQ,2025-01-02 | STMT RQ | Rep: REP134,REP134,Negative,Voice,Get Statement
+574,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-10-21,OTP,2024-10-21 | OTP | Rep: REP879 | Note: Card declined during purchase—issue escalated.,REP879,Negative,Chat,Authentication Help
+575,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-02-01,CHQ BK,2025-02-01 | CHQ BK | Rep: REP564 | Note: Dispute form submitted; follow-up needed in 5 days.,REP564,Negative,Chat,Order Cheque Book
+576,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2025-04-16,ECS BLK,2025-04-16 | ECS BLK | Rep: REP094,REP094,Neutral,Chat,Block Auto Payment
+577,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2024-11-14,FEE WVR,2024-11-14 | FEE WVR | Rep: REP487 | Note: Collection notice acknowledged; partial payment made.,REP487,Negative,Email,Fee Waiver Request
+578,8c141c43-a3e3-441a-a4ef-22356da489cc,2025-04-16,CHQ BK,2025-04-16 | CHQ BK | Rep: REP265 | Note: Fraud alert placed on the account.,REP265,Negative,Email,Order Cheque Book
+579,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2024-12-29,PND DOC,2024-12-29 | PND DOC | Rep: REP258,REP258,Negative,Email,Document Follow-up
+580,17a85cba-2f69-4b99-8db4-252f70b0ef33,2025-02-22,CLOSE ACCT,2025-02-22 | CLOSE ACCT | Rep: REP145,REP145,Neutral,Email,Close Account
+581,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-04-17,TXN,2025-04-17 | TXN | Rep: REP616,REP616,Positive,Email,Transaction Issue
+582,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-04-16,KYC,2025-04-16 | KYC | Rep: REP959,REP959,Positive,Email,Account Verification
+583,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-11-04,ECS BLK,2024-11-04 | ECS BLK | Rep: REP766,REP766,Neutral,Email,Block Auto Payment
+584,bf954c81-7139-4f99-9385-aab171dbf23d,2025-02-13,KYC,2025-02-13 | KYC | Rep: REP969 | Note: Collection notice acknowledged; partial payment made.,REP969,Negative,Chat,Account Verification
+585,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-03-29,CHQ BK,2025-03-29 | CHQ BK | Rep: REP694 | Note: Card declined during purchase—issue escalated.,REP694,Positive,Chat,Order Cheque Book
+586,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-02-18,DISP,2025-02-18 | DISP | Rep: REP490 | Note: Explained process for fee waiver eligibility.,REP490,Neutral,Chat,Dispute Transaction
+587,06698fa8-120a-4e1b-8d05-3de76b397d97,2024-11-27,DC,2024-11-27 | DC | Rep: REP450 | Note: Requested urgent update to mailing address.,REP450,Negative,Voice,Debit Card Service
+588,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2025-03-10,NRI,2025-03-10 | NRI | Rep: REP023,REP023,Positive,Email,Foreign Services
+589,443c0160-bac5-4733-86d5-9c423bf3d008,2024-12-02,ECS RVS,2024-12-02 | ECS RVS | Rep: REP908 | Note: Customer satisfied with resolution.,REP908,Positive,Chat,Reversal Request
+590,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-01-19,BAL QRY,2025-01-19 | BAL QRY | Rep: REP737,REP737,Negative,Voice,Balance Inquiry
+591,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-01-02,PIN RST,2025-01-02 | PIN RST | Rep: REP409 | Note: Explained process for fee waiver eligibility.,REP409,Positive,Email,Reset PIN
+592,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-02,DC,2025-01-02 | DC | Rep: REP221,REP221,Neutral,Email,Debit Card Service
+593,46023047-12c0-4e1d-b056-7a29178097ee,2025-01-01,CC,2025-01-01 | CC | Rep: REP666,REP666,Positive,Voice,Apply Credit Card
+594,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2024-12-22,CLOSE ACCT,2024-12-22 | CLOSE ACCT | Rep: REP909,REP909,Positive,Chat,Close Account
+595,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-04-11,CHQ BK,2025-04-11 | CHQ BK | Rep: REP630 | Note: Offered balance transfer options; customer interested.,REP630,Negative,Voice,Order Cheque Book
+596,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-12,ACCT,2025-01-12 | ACCT | Rep: REP990,REP990,Positive,Chat,General Account Info
+597,46023047-12c0-4e1d-b056-7a29178097ee,2025-01-19,BAL QRY,2025-01-19 | BAL QRY | Rep: REP454,REP454,Neutral,Email,Balance Inquiry
+598,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-10-26,FEE WVR,2024-10-26 | FEE WVR | Rep: REP870,REP870,Positive,Chat,Fee Waiver Request
+599,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-20,TXN,2024-11-20 | TXN | Rep: REP261 | Note: Collection notice acknowledged; partial payment made.,REP261,Positive,Chat,Transaction Issue
+600,8baa998e-4295-4756-869b-770df05f293f,2025-03-28,ACCT,2025-03-28 | ACCT | Rep: REP434,REP434,Positive,Voice,General Account Info
+601,6988d2ab-0c85-4ec1-a641-e140468bce09,2024-12-31,CHQ BK,2024-12-31 | CHQ BK | Rep: REP993,REP993,Positive,Chat,Order Cheque Book
+602,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-12-13,LMT INC,2024-12-13 | LMT INC | Rep: REP607,REP607,Positive,Chat,Increase Credit Limit
+603,46023047-12c0-4e1d-b056-7a29178097ee,2025-01-06,ECS RVS,2025-01-06 | ECS RVS | Rep: REP673,REP673,Neutral,Voice,Reversal Request
+604,443c0160-bac5-4733-86d5-9c423bf3d008,2025-02-20,DC,2025-02-20 | DC | Rep: REP382,REP382,Positive,Voice,Debit Card Service
+605,4643ab21-aebd-4ee8-a202-40426dec5225,2024-12-28,ACCT,2024-12-28 | ACCT | Rep: REP285,REP285,Negative,Chat,General Account Info
+606,5282a13a-908f-4fe8-b799-d702be60d2f7,2024-12-14,COLL,2024-12-14 | COLL | Rep: REP835 | Note: Fraud alert placed on the account.,REP835,Negative,Chat,Collections Call
+607,b0b7373d-3ad0-4420-9854-84cb343e8a10,2024-11-26,KYC,"2024-11-26 | KYC | Rep: REP814 | Note: Asked for statement via email, sent instantly.",REP814,Negative,Chat,Account Verification
+608,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-11-20,ECS BLK,2024-11-20 | ECS BLK | Rep: REP872,REP872,Neutral,Chat,Block Auto Payment
+609,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-11-29,DISP,2024-11-29 | DISP | Rep: REP835,REP835,Positive,Email,Dispute Transaction
+610,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2025-03-17,BAL TRF,2025-03-17 | BAL TRF | Rep: REP443,REP443,Positive,Email,Balance Transfer Request
+611,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2024-11-09,CLOSE ACCT,2024-11-09 | CLOSE ACCT | Rep: REP278,REP278,Neutral,Email,Close Account
+612,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-04-16,PND DOC,2025-04-16 | PND DOC | Rep: REP854,REP854,Neutral,Email,Document Follow-up
+613,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-11-04,KYC,2024-11-04 | KYC | Rep: REP111,REP111,Positive,Voice,Account Verification
+614,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2025-01-26,ADDR UPD,2025-01-26 | ADDR UPD | Rep: REP379 | Note: PIN reset confirmed and successful.,REP379,Neutral,Email,Profile Update
+615,06d270b6-6fce-4d22-8fab-558f39f019ab,2024-11-30,BAL TRF,2024-11-30 | BAL TRF | Rep: REP038,REP038,Positive,Voice,Balance Transfer Request
+616,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-01-23,LMT INC,2025-01-23 | LMT INC | Rep: REP688 | Note: Customer confirmed identity after 2FA.,REP688,Neutral,Email,Increase Credit Limit
+617,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-13,BAL TRF,2025-01-13 | BAL TRF | Rep: REP152,REP152,Positive,Voice,Balance Transfer Request
+618,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-12-23,CLOSE ACCT,2024-12-23 | CLOSE ACCT | Rep: REP179,REP179,Negative,Voice,Close Account
+619,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-10-31,NRI,2024-10-31 | NRI | Rep: REP286 | Note: Offered balance transfer options; customer interested.,REP286,Positive,Email,Foreign Services
+620,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-04-01,LMT INC,2025-04-01 | LMT INC | Rep: REP589 | Note: Customer complained about unrecognized transaction.,REP589,Neutral,Chat,Increase Credit Limit
+621,90afe5d4-7245-4a25-ab42-77927429fa9f,2024-11-30,KYC,2024-11-30 | KYC | Rep: REP581 | Note: Card declined during purchase—issue escalated.,REP581,Positive,Email,Account Verification
+622,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-01-01,TXN,2025-01-01 | TXN | Rep: REP566,REP566,Negative,Voice,Transaction Issue
+623,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-10-23,KYC,2024-10-23 | KYC | Rep: REP963,REP963,Negative,Voice,Account Verification
+624,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-03-30,COLL,2025-03-30 | COLL | Rep: REP715,REP715,Neutral,Email,Collections Call
+625,b8673aa7-11ae-4850-9078-4b32c92d18e8,2024-11-04,OTP,2024-11-04 | OTP | Rep: REP474,REP474,Positive,Email,Authentication Help
+626,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-02-03,ECS RVS,2025-02-03 | ECS RVS | Rep: REP779 | Note: Requested urgent update to mailing address.,REP779,Negative,Voice,Reversal Request
+627,173392a5-0c8b-4b88-800e-b50d5edff8d1,2025-03-11,ADDR UPD,2025-03-11 | ADDR UPD | Rep: REP039,REP039,Negative,Voice,Profile Update
+628,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-01-04,OTP,2025-01-04 | OTP | Rep: REP167,REP167,Negative,Email,Authentication Help
+629,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-03-30,CLOSE ACCT,2025-03-30 | CLOSE ACCT | Rep: REP058,REP058,Positive,Chat,Close Account
+630,41859cc2-9f52-49b6-9c34-6b7d3257de06,2025-01-29,PND DOC,2025-01-29 | PND DOC | Rep: REP929,REP929,Positive,Voice,Document Follow-up
+631,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-03-16,ECS RVS,2025-03-16 | ECS RVS | Rep: REP691,REP691,Neutral,Voice,Reversal Request
+632,53432400-5bb6-45d6-976b-66d0b309666a,2024-12-29,ADDR UPD,2024-12-29 | ADDR UPD | Rep: REP644 | Note: PIN reset confirmed and successful.,REP644,Negative,Email,Profile Update
+633,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-11-01,ECS BLK,2024-11-01 | ECS BLK | Rep: REP404,REP404,Positive,Chat,Block Auto Payment
+634,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-01-31,OTP,2025-01-31 | OTP | Rep: REP723 | Note: Advised to visit branch with original documents.,REP723,Neutral,Email,Authentication Help
+635,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-10-31,FEE WVR,2024-10-31 | FEE WVR | Rep: REP128,REP128,Positive,Email,Fee Waiver Request
+636,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-02-18,BAL QRY,"2025-02-18 | BAL QRY | Rep: REP333 | Note: Asked for statement via email, sent instantly.",REP333,Neutral,Chat,Balance Inquiry
+637,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-10-20,ADDR UPD,2024-10-20 | ADDR UPD | Rep: REP846,REP846,Neutral,Voice,Profile Update
+638,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-12-01,FVR CHK,2024-12-01 | FVR CHK | Rep: REP241,REP241,Positive,Voice,Fraud Detection
+639,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2024-12-22,OTP,2024-12-22 | OTP | Rep: REP105,REP105,Positive,Email,Authentication Help
+640,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-04-06,PND DOC,2025-04-06 | PND DOC | Rep: REP541,REP541,Neutral,Voice,Document Follow-up
+641,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-03-07,PND DOC,2025-03-07 | PND DOC | Rep: REP548,REP548,Positive,Email,Document Follow-up
+642,23d538dc-dab3-4f26-b517-5f073d692200,2025-02-17,BAL TRF,2025-02-17 | BAL TRF | Rep: REP851 | Note: Dispute form submitted; follow-up needed in 5 days.,REP851,Negative,Voice,Balance Transfer Request
+643,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-20,FEE WVR,2025-01-20 | FEE WVR | Rep: REP610,REP610,Positive,Voice,Fee Waiver Request
+644,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-11-07,CC,2024-11-07 | CC | Rep: REP499 | Note: Advised to visit branch with original documents.,REP499,Negative,Chat,Apply Credit Card
+645,8baa998e-4295-4756-869b-770df05f293f,2024-12-08,FVR CHK,2024-12-08 | FVR CHK | Rep: REP300 | Note: Explained process for fee waiver eligibility.,REP300,Negative,Chat,Fraud Detection
+646,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2025-01-27,DISP,2025-01-27 | DISP | Rep: REP838,REP838,Positive,Chat,Dispute Transaction
+647,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2024-10-27,BAL QRY,2024-10-27 | BAL QRY | Rep: REP703 | Note: Collection notice acknowledged; partial payment made.,REP703,Negative,Email,Balance Inquiry
+648,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-01-01,DISP,2025-01-01 | DISP | Rep: REP980,REP980,Negative,Voice,Dispute Transaction
+649,dbd63405-051c-4136-bd17-3a7c8e99c31a,2025-02-14,COLL,2025-02-14 | COLL | Rep: REP041,REP041,Neutral,Chat,Collections Call
+650,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2025-03-02,DISP,2025-03-02 | DISP | Rep: REP942,REP942,Positive,Voice,Dispute Transaction
+651,a5c2be23-9314-454a-a546-f96f75749afa,2025-02-18,NRI,2025-02-18 | NRI | Rep: REP893 | Note: Customer complained about unrecognized transaction.,REP893,Neutral,Email,Foreign Services
+652,bf3dabb4-534e-439c-8e50-da466bd22af9,2024-10-25,ADDR UPD,"2024-10-25 | ADDR UPD | Rep: REP290 | Note: Asked for statement via email, sent instantly.",REP290,Neutral,Voice,Profile Update
+653,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-02-27,FEE WVR,2025-02-27 | FEE WVR | Rep: REP569,REP569,Neutral,Chat,Fee Waiver Request
+654,89647783-4c9e-45dc-8830-c647231f87cf,2024-12-05,FVR CHK,2024-12-05 | FVR CHK | Rep: REP679,REP679,Positive,Chat,Fraud Detection
+655,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-01-06,NPS ACCT,2025-01-06 | NPS ACCT | Rep: REP868,REP868,Positive,Voice,Open New Account
+656,3b569f87-2a2c-4b2b-8c45-9dc1500fe43d,2024-11-25,ECS BLK,2024-11-25 | ECS BLK | Rep: REP298 | Note: Card declined during purchase—issue escalated.,REP298,Positive,Chat,Block Auto Payment
+657,06698fa8-120a-4e1b-8d05-3de76b397d97,2024-11-16,PND DOC,2024-11-16 | PND DOC | Rep: REP043 | Note: Dispute form submitted; follow-up needed in 5 days.,REP043,Negative,Email,Document Follow-up
+658,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-12-20,KYC,2024-12-20 | KYC | Rep: REP272 | Note: Fraud alert placed on the account.,REP272,Negative,Email,Account Verification
+659,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-11-25,NRI,2024-11-25 | NRI | Rep: REP803 | Note: Fraud alert placed on the account.,REP803,Negative,Chat,Foreign Services
+660,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-04-12,LMT INC,2025-04-12 | LMT INC | Rep: REP543,REP543,Negative,Email,Increase Credit Limit
+661,f89462a3-b7a7-47a0-860d-341f8d68e2be,2024-12-14,KYC,"2024-12-14 | KYC | Rep: REP355 | Note: Asked for statement via email, sent instantly.",REP355,Neutral,Email,Account Verification
+662,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-01-19,ECS BLK,2025-01-19 | ECS BLK | Rep: REP683 | Note: Collection notice acknowledged; partial payment made.,REP683,Positive,Voice,Block Auto Payment
+663,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2025-03-11,CHQ BK,2025-03-11 | CHQ BK | Rep: REP525 | Note: Advised to visit branch with original documents.,REP525,Positive,Email,Order Cheque Book
+664,19870aee-236e-442d-9b1a-262bb11eea2d,2025-04-12,CHQ BK,2025-04-12 | CHQ BK | Rep: REP728,REP728,Positive,Chat,Order Cheque Book
+665,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-01-22,TXN,2025-01-22 | TXN | Rep: REP069 | Note: Customer satisfied with resolution.,REP069,Positive,Chat,Transaction Issue
+666,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-03-29,TXN,2025-03-29 | TXN | Rep: REP890,REP890,Positive,Chat,Transaction Issue
+667,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-12-17,FEE WVR,2024-12-17 | FEE WVR | Rep: REP934 | Note: Explained process for fee waiver eligibility.,REP934,Positive,Chat,Fee Waiver Request
+668,6117057d-dd3f-4142-844c-1e49f9428e43,2025-04-06,OTP,2025-04-06 | OTP | Rep: REP176,REP176,Neutral,Email,Authentication Help
+669,a5c2be23-9314-454a-a546-f96f75749afa,2024-10-23,PND DOC,2024-10-23 | PND DOC | Rep: REP358,REP358,Negative,Voice,Document Follow-up
+670,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2025-04-18,BAL TRF,2025-04-18 | BAL TRF | Rep: REP541 | Note: Requested urgent update to mailing address.,REP541,Neutral,Chat,Balance Transfer Request
+671,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-01-24,COLL,2025-01-24 | COLL | Rep: REP262 | Note: Offered balance transfer options; customer interested.,REP262,Negative,Voice,Collections Call
+672,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-03-06,FEE WVR,2025-03-06 | FEE WVR | Rep: REP698,REP698,Negative,Email,Fee Waiver Request
+673,b8725edb-28c7-4c65-9d0f-d2a9bbda4bb6,2024-11-07,BAL TRF,2024-11-07 | BAL TRF | Rep: REP009,REP009,Negative,Voice,Balance Transfer Request
+674,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2024-12-08,NRI,2024-12-08 | NRI | Rep: REP238,REP238,Positive,Email,Foreign Services
+675,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-11-27,FEE WVR,2024-11-27 | FEE WVR | Rep: REP628,REP628,Neutral,Chat,Fee Waiver Request
+676,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-05,NPS ACCT,2024-11-05 | NPS ACCT | Rep: REP156,REP156,Neutral,Chat,Open New Account
+677,823a02da-ed52-488a-ad1b-147536f95891,2024-11-24,FVR CHK,"2024-11-24 | FVR CHK | Rep: REP736 | Note: Asked for statement via email, sent instantly.",REP736,Negative,Voice,Fraud Detection
+678,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2024-10-27,PIN RST,2024-10-27 | PIN RST | Rep: REP521 | Note: Dispute form submitted; follow-up needed in 5 days.,REP521,Neutral,Chat,Reset PIN
+679,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2024-11-25,CC,2024-11-25 | CC | Rep: REP307 | Note: No further action required; issue resolved.,REP307,Negative,Chat,Apply Credit Card
+680,447b2c33-ad78-4482-af58-cfcf1d922222,2024-12-09,ECS RVS,2024-12-09 | ECS RVS | Rep: REP287,REP287,Positive,Voice,Reversal Request
+681,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-03-10,PND DOC,2025-03-10 | PND DOC | Rep: REP142,REP142,Neutral,Chat,Document Follow-up
+682,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-01-13,DC,2025-01-13 | DC | Rep: REP940 | Note: Offered balance transfer options; customer interested.,REP940,Neutral,Chat,Debit Card Service
+683,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-02-03,DC,2025-02-03 | DC | Rep: REP763 | Note: Explained process for fee waiver eligibility.,REP763,Neutral,Chat,Debit Card Service
+684,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-02-17,DC,2025-02-17 | DC | Rep: REP675,REP675,Neutral,Voice,Debit Card Service
+685,90aba0e9-b888-4e3f-baf3-ad6ed194daa1,2025-03-09,CLOSE ACCT,2025-03-09 | CLOSE ACCT | Rep: REP481,REP481,Positive,Email,Close Account
+686,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-10-31,BAL TRF,2024-10-31 | BAL TRF | Rep: REP991 | Note: Customer satisfied with resolution.,REP991,Positive,Voice,Balance Transfer Request
+687,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-02-20,DISP,2025-02-20 | DISP | Rep: REP852,REP852,Positive,Email,Dispute Transaction
+688,9cc2c168-853f-429e-8ca8-288f39625543,2024-10-27,ECS RVS,2024-10-27 | ECS RVS | Rep: REP721,REP721,Positive,Email,Reversal Request
+689,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-01-09,PND DOC,2025-01-09 | PND DOC | Rep: REP552,REP552,Negative,Email,Document Follow-up
+690,915f65c5-471f-4429-b0ab-a614e553d45c,2024-12-04,PIN RST,2024-12-04 | PIN RST | Rep: REP677,REP677,Positive,Email,Reset PIN
+691,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2024-11-02,DC,2024-11-02 | DC | Rep: REP989,REP989,Positive,Chat,Debit Card Service
+692,6117057d-dd3f-4142-844c-1e49f9428e43,2025-02-01,PND DOC,2025-02-01 | PND DOC | Rep: REP006,REP006,Positive,Voice,Document Follow-up
+693,90afe5d4-7245-4a25-ab42-77927429fa9f,2025-03-05,ACCT,2025-03-05 | ACCT | Rep: REP534 | Note: Fraud alert placed on the account.,REP534,Negative,Email,General Account Info
+694,443c0160-bac5-4733-86d5-9c423bf3d008,2024-11-26,CC,2024-11-26 | CC | Rep: REP903,REP903,Positive,Email,Apply Credit Card
+695,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-10-31,CHQ BK,2024-10-31 | CHQ BK | Rep: REP155 | Note: PIN reset confirmed and successful.,REP155,Neutral,Email,Order Cheque Book
+696,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2024-11-17,DISP,2024-11-17 | DISP | Rep: REP027 | Note: PIN reset confirmed and successful.,REP027,Neutral,Email,Dispute Transaction
+697,70b65935-f9f4-4aba-8411-a3ff583f3a41,2024-11-27,TXN,2024-11-27 | TXN | Rep: REP975,REP975,Positive,Email,Transaction Issue
+698,443c0160-bac5-4733-86d5-9c423bf3d008,2024-12-22,PND DOC,2024-12-22 | PND DOC | Rep: REP680,REP680,Neutral,Voice,Document Follow-up
+699,53432400-5bb6-45d6-976b-66d0b309666a,2024-11-05,COLL,2024-11-05 | COLL | Rep: REP495 | Note: Customer satisfied with resolution.,REP495,Negative,Email,Collections Call
+700,bf954c81-7139-4f99-9385-aab171dbf23d,2024-11-10,ECS BLK,2024-11-10 | ECS BLK | Rep: REP703,REP703,Negative,Email,Block Auto Payment
+701,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2025-02-01,BAL TRF,2025-02-01 | BAL TRF | Rep: REP413,REP413,Positive,Email,Balance Transfer Request
+702,c7018be2-d970-4ed2-ac6b-c2bfd14c44ff,2025-02-15,STMT RQ,2025-02-15 | STMT RQ | Rep: REP502,REP502,Positive,Voice,Get Statement
+703,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-12-29,NPS ACCT,2024-12-29 | NPS ACCT | Rep: REP710,REP710,Positive,Voice,Open New Account
+704,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-03-12,DISP,2025-03-12 | DISP | Rep: REP928,REP928,Neutral,Chat,Dispute Transaction
+705,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-01-30,BAL TRF,2025-01-30 | BAL TRF | Rep: REP461,REP461,Neutral,Chat,Balance Transfer Request
+706,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-01-01,ADDR UPD,2025-01-01 | ADDR UPD | Rep: REP406 | Note: PIN reset confirmed and successful.,REP406,Negative,Voice,Profile Update
+707,a7e21628-b261-4068-8b36-1dd18a10f5ae,2024-12-30,PND DOC,2024-12-30 | PND DOC | Rep: REP967 | Note: Customer confirmed identity after 2FA.,REP967,Negative,Voice,Document Follow-up
+708,823a02da-ed52-488a-ad1b-147536f95891,2025-01-27,ACCT,2025-01-27 | ACCT | Rep: REP115,REP115,Negative,Email,General Account Info
+709,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-04-16,CHQ BK,2025-04-16 | CHQ BK | Rep: REP114,REP114,Negative,Voice,Order Cheque Book
+710,8baa998e-4295-4756-869b-770df05f293f,2024-11-30,FVR CHK,2024-11-30 | FVR CHK | Rep: REP210,REP210,Neutral,Voice,Fraud Detection
+711,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-09,ECS RVS,2025-01-09 | ECS RVS | Rep: REP390,REP390,Negative,Voice,Reversal Request
+712,90afe5d4-7245-4a25-ab42-77927429fa9f,2024-11-29,DISP,2024-11-29 | DISP | Rep: REP361,REP361,Positive,Email,Dispute Transaction
+713,da5ed01c-177e-4a00-b987-efa43826fcba,2025-01-03,ECS BLK,2025-01-03 | ECS BLK | Rep: REP064,REP064,Positive,Email,Block Auto Payment
+714,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-12-20,NPS ACCT,2024-12-20 | NPS ACCT | Rep: REP998 | Note: Offered balance transfer options; customer interested.,REP998,Neutral,Voice,Open New Account
+715,28a8a9f6-e262-4314-8477-662ea54a5a54,2024-11-11,DC,2024-11-11 | DC | Rep: REP949,REP949,Positive,Voice,Debit Card Service
+716,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2024-11-19,LMT INC,2024-11-19 | LMT INC | Rep: REP149 | Note: Offered balance transfer options; customer interested.,REP149,Negative,Email,Increase Credit Limit
+717,b0b7373d-3ad0-4420-9854-84cb343e8a10,2024-12-17,DISP,"2024-12-17 | DISP | Rep: REP000 | Note: Asked for statement via email, sent instantly.",REP000,Negative,Chat,Dispute Transaction
+718,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-03-14,OTP,2025-03-14 | OTP | Rep: REP127,REP127,Positive,Email,Authentication Help
+719,14453942-d088-4bae-b015-824ba4821f08,2025-02-07,TXN,2025-02-07 | TXN | Rep: REP971,REP971,Positive,Voice,Transaction Issue
+720,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2024-12-06,CC,2024-12-06 | CC | Rep: REP061 | Note: Customer confirmed identity after 2FA.,REP061,Neutral,Chat,Apply Credit Card
+721,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-02-28,STMT RQ,2025-02-28 | STMT RQ | Rep: REP746,REP746,Negative,Chat,Get Statement
+722,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-01-29,ECS BLK,2025-01-29 | ECS BLK | Rep: REP392,REP392,Neutral,Email,Block Auto Payment
+723,443c0160-bac5-4733-86d5-9c423bf3d008,2024-11-23,CLOSE ACCT,2024-11-23 | CLOSE ACCT | Rep: REP680 | Note: Fraud alert placed on the account.,REP680,Positive,Voice,Close Account
+724,dc1322a7-aa46-4408-a3a7-a1412d19735e,2024-12-24,CLOSE ACCT,2024-12-24 | CLOSE ACCT | Rep: REP404,REP404,Negative,Voice,Close Account
+725,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-04-16,KYC,2025-04-16 | KYC | Rep: REP589,REP589,Positive,Email,Account Verification
+726,20b597ca-3266-427e-a47d-79a31c1491a4,2025-02-02,STMT RQ,2025-02-02 | STMT RQ | Rep: REP394 | Note: No further action required; issue resolved.,REP394,Neutral,Chat,Get Statement
+727,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-04-05,NRI,2025-04-05 | NRI | Rep: REP867 | Note: Advised to visit branch with original documents.,REP867,Negative,Email,Foreign Services
+728,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-10-26,LMT INC,2024-10-26 | LMT INC | Rep: REP317,REP317,Neutral,Email,Increase Credit Limit
+729,46023047-12c0-4e1d-b056-7a29178097ee,2025-02-08,OTP,2025-02-08 | OTP | Rep: REP152 | Note: Advised to visit branch with original documents.,REP152,Positive,Voice,Authentication Help
+730,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-01-24,FVR CHK,2025-01-24 | FVR CHK | Rep: REP865 | Note: Customer satisfied with resolution.,REP865,Positive,Chat,Fraud Detection
+731,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-01-17,LMT INC,2025-01-17 | LMT INC | Rep: REP754 | Note: Customer satisfied with resolution.,REP754,Positive,Email,Increase Credit Limit
+732,7c97ca79-ff2c-446d-9e36-c122afac1aff,2025-04-13,CHQ BK,2025-04-13 | CHQ BK | Rep: REP600,REP600,Negative,Chat,Order Cheque Book
+733,9d943d74-8a6a-46a5-bba8-8220111a003e,2025-03-08,NRI,2025-03-08 | NRI | Rep: REP927,REP927,Negative,Chat,Foreign Services
+734,06d305e4-2a06-42f7-8e38-125c143d97ef,2024-10-29,DC,2024-10-29 | DC | Rep: REP167,REP167,Neutral,Email,Debit Card Service
+735,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-01-02,OTP,2025-01-02 | OTP | Rep: REP670 | Note: Collection notice acknowledged; partial payment made.,REP670,Positive,Voice,Authentication Help
+736,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-01-14,STMT RQ,2025-01-14 | STMT RQ | Rep: REP377 | Note: Collection notice acknowledged; partial payment made.,REP377,Positive,Email,Get Statement
+737,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2025-03-16,FVR CHK,2025-03-16 | FVR CHK | Rep: REP505,REP505,Neutral,Voice,Fraud Detection
+738,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-01-12,STMT RQ,2025-01-12 | STMT RQ | Rep: REP240 | Note: Fraud alert placed on the account.,REP240,Negative,Chat,Get Statement
+739,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-12-10,FEE WVR,2024-12-10 | FEE WVR | Rep: REP251,REP251,Negative,Email,Fee Waiver Request
+740,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-12-19,OTP,2024-12-19 | OTP | Rep: REP608,REP608,Negative,Voice,Authentication Help
+741,4643ab21-aebd-4ee8-a202-40426dec5225,2024-12-20,BAL QRY,2024-12-20 | BAL QRY | Rep: REP536,REP536,Positive,Chat,Balance Inquiry
+742,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2025-01-04,NPS ACCT,2025-01-04 | NPS ACCT | Rep: REP174,REP174,Neutral,Voice,Open New Account
+743,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-11-03,FEE WVR,2024-11-03 | FEE WVR | Rep: REP972 | Note: PIN reset confirmed and successful.,REP972,Positive,Email,Fee Waiver Request
+744,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-11-18,DC,2024-11-18 | DC | Rep: REP811,REP811,Positive,Email,Debit Card Service
+745,90afe5d4-7245-4a25-ab42-77927429fa9f,2024-10-23,NRI,2024-10-23 | NRI | Rep: REP061,REP061,Neutral,Email,Foreign Services
+746,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-03-12,NPS ACCT,2025-03-12 | NPS ACCT | Rep: REP699,REP699,Neutral,Voice,Open New Account
+747,4e43c73d-82d1-485b-a5b0-80cf6932918e,2025-01-04,BAL QRY,2025-01-04 | BAL QRY | Rep: REP162 | Note: PIN reset confirmed and successful.,REP162,Neutral,Chat,Balance Inquiry
+748,bf954c81-7139-4f99-9385-aab171dbf23d,2025-01-03,PND DOC,2025-01-03 | PND DOC | Rep: REP688,REP688,Neutral,Email,Document Follow-up
+749,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2025-01-17,ECS BLK,2025-01-17 | ECS BLK | Rep: REP603 | Note: PIN reset confirmed and successful.,REP603,Negative,Voice,Block Auto Payment
+750,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2024-11-30,FEE WVR,2024-11-30 | FEE WVR | Rep: REP078,REP078,Positive,Voice,Fee Waiver Request
+751,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-02-10,OTP,2025-02-10 | OTP | Rep: REP559 | Note: Explained process for fee waiver eligibility.,REP559,Positive,Chat,Authentication Help
+752,89647783-4c9e-45dc-8830-c647231f87cf,2025-02-10,CLOSE ACCT,2025-02-10 | CLOSE ACCT | Rep: REP037,REP037,Negative,Email,Close Account
+753,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-01-18,CC,2025-01-18 | CC | Rep: REP840,REP840,Negative,Chat,Apply Credit Card
+754,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-02-16,BAL TRF,2025-02-16 | BAL TRF | Rep: REP420,REP420,Positive,Voice,Balance Transfer Request
+755,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-31,LMT INC,2025-03-31 | LMT INC | Rep: REP533,REP533,Negative,Email,Increase Credit Limit
+756,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2025-02-08,FVR CHK,2025-02-08 | FVR CHK | Rep: REP630 | Note: Collection notice acknowledged; partial payment made.,REP630,Neutral,Voice,Fraud Detection
+757,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2025-01-04,KYC,2025-01-04 | KYC | Rep: REP559,REP559,Neutral,Email,Account Verification
+758,8baa998e-4295-4756-869b-770df05f293f,2025-02-21,CHQ BK,2025-02-21 | CHQ BK | Rep: REP505,REP505,Positive,Email,Order Cheque Book
+759,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-01-22,LMT INC,2025-01-22 | LMT INC | Rep: REP224 | Note: Dispute form submitted; follow-up needed in 5 days.,REP224,Neutral,Chat,Increase Credit Limit
+760,48460ac7-904c-4750-92ab-181d88a194f0,2024-12-05,NPS ACCT,2024-12-05 | NPS ACCT | Rep: REP705,REP705,Neutral,Email,Open New Account
+761,8baa998e-4295-4756-869b-770df05f293f,2025-02-15,NRI,2025-02-15 | NRI | Rep: REP582,REP582,Negative,Chat,Foreign Services
+762,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2025-03-24,BAL QRY,2025-03-24 | BAL QRY | Rep: REP375,REP375,Neutral,Voice,Balance Inquiry
+763,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-02-24,CC,2025-02-24 | CC | Rep: REP432,REP432,Positive,Email,Apply Credit Card
+764,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-04-16,FVR CHK,2025-04-16 | FVR CHK | Rep: REP190 | Note: Collection notice acknowledged; partial payment made.,REP190,Positive,Voice,Fraud Detection
+765,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2024-12-25,STMT RQ,2024-12-25 | STMT RQ | Rep: REP925,REP925,Positive,Voice,Get Statement
+766,b8673aa7-11ae-4850-9078-4b32c92d18e8,2025-04-14,CHQ BK,2025-04-14 | CHQ BK | Rep: REP662,REP662,Neutral,Email,Order Cheque Book
+767,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-01-30,LMT INC,2025-01-30 | LMT INC | Rep: REP872,REP872,Negative,Chat,Increase Credit Limit
+768,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2024-11-24,FVR CHK,2024-11-24 | FVR CHK | Rep: REP408 | Note: Offered balance transfer options; customer interested.,REP408,Positive,Voice,Fraud Detection
+769,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-04-07,CHQ BK,2025-04-07 | CHQ BK | Rep: REP305 | Note: Collection notice acknowledged; partial payment made.,REP305,Negative,Chat,Order Cheque Book
+770,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-03-09,BAL TRF,2025-03-09 | BAL TRF | Rep: REP860,REP860,Neutral,Chat,Balance Transfer Request
+771,447b2c33-ad78-4482-af58-cfcf1d922222,2025-01-02,STMT RQ,"2025-01-02 | STMT RQ | Rep: REP829 | Note: Asked for statement via email, sent instantly.",REP829,Neutral,Voice,Get Statement
+772,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-01-03,STMT RQ,2025-01-03 | STMT RQ | Rep: REP166,REP166,Negative,Chat,Get Statement
+773,1bf09578-0d01-44ec-959e-e1e53ff01af3,2024-10-26,DC,2024-10-26 | DC | Rep: REP922,REP922,Positive,Chat,Debit Card Service
+774,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2025-02-07,NRI,2025-02-07 | NRI | Rep: REP307,REP307,Positive,Voice,Foreign Services
+775,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-01-15,NPS ACCT,2025-01-15 | NPS ACCT | Rep: REP123,REP123,Negative,Email,Open New Account
+776,41859cc2-9f52-49b6-9c34-6b7d3257de06,2025-03-22,OTP,2025-03-22 | OTP | Rep: REP996,REP996,Negative,Email,Authentication Help
+777,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-01-09,ADDR UPD,2025-01-09 | ADDR UPD | Rep: REP044,REP044,Neutral,Chat,Profile Update
+778,4643ab21-aebd-4ee8-a202-40426dec5225,2024-11-22,KYC,2024-11-22 | KYC | Rep: REP648,REP648,Positive,Email,Account Verification
+779,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-11-28,CC,2024-11-28 | CC | Rep: REP535,REP535,Positive,Chat,Apply Credit Card
+780,53432400-5bb6-45d6-976b-66d0b309666a,2024-11-13,BAL TRF,2024-11-13 | BAL TRF | Rep: REP733,REP733,Negative,Voice,Balance Transfer Request
+781,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2025-04-07,BAL QRY,2025-04-07 | BAL QRY | Rep: REP938,REP938,Negative,Voice,Balance Inquiry
+782,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-11-06,ECS BLK,2024-11-06 | ECS BLK | Rep: REP790 | Note: Customer confirmed identity after 2FA.,REP790,Positive,Email,Block Auto Payment
+783,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-01-06,CHQ BK,2025-01-06 | CHQ BK | Rep: REP031,REP031,Neutral,Chat,Order Cheque Book
+784,b8725edb-28c7-4c65-9d0f-d2a9bbda4bb6,2025-02-11,DISP,2025-02-11 | DISP | Rep: REP722 | Note: Explained process for fee waiver eligibility.,REP722,Negative,Chat,Dispute Transaction
+785,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-03-20,BAL TRF,2025-03-20 | BAL TRF | Rep: REP732 | Note: Customer confirmed identity after 2FA.,REP732,Neutral,Chat,Balance Transfer Request
+786,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-04-06,PIN RST,2025-04-06 | PIN RST | Rep: REP338,REP338,Negative,Chat,Reset PIN
+787,bf954c81-7139-4f99-9385-aab171dbf23d,2025-03-01,COLL,2025-03-01 | COLL | Rep: REP105 | Note: Requested urgent update to mailing address.,REP105,Positive,Chat,Collections Call
+788,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-02-28,DC,2025-02-28 | DC | Rep: REP443 | Note: Customer confirmed identity after 2FA.,REP443,Positive,Chat,Debit Card Service
+789,da5ed01c-177e-4a00-b987-efa43826fcba,2025-01-20,BAL QRY,2025-01-20 | BAL QRY | Rep: REP347,REP347,Negative,Voice,Balance Inquiry
+790,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-11-16,LMT INC,2024-11-16 | LMT INC | Rep: REP096 | Note: Explained process for fee waiver eligibility.,REP096,Positive,Voice,Increase Credit Limit
+791,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2024-12-16,PND DOC,2024-12-16 | PND DOC | Rep: REP743 | Note: Advised to visit branch with original documents.,REP743,Neutral,Email,Document Follow-up
+792,bf3dabb4-534e-439c-8e50-da466bd22af9,2025-01-25,TXN,2025-01-25 | TXN | Rep: REP767 | Note: Collection notice acknowledged; partial payment made.,REP767,Negative,Voice,Transaction Issue
+793,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-01-24,KYC,2025-01-24 | KYC | Rep: REP732 | Note: Fraud alert placed on the account.,REP732,Negative,Voice,Account Verification
+794,4643ab21-aebd-4ee8-a202-40426dec5225,2025-02-16,NRI,2025-02-16 | NRI | Rep: REP834 | Note: Customer complained about unrecognized transaction.,REP834,Neutral,Voice,Foreign Services
+795,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2025-01-17,BAL TRF,2025-01-17 | BAL TRF | Rep: REP579,REP579,Positive,Voice,Balance Transfer Request
+796,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-04-18,CC,2025-04-18 | CC | Rep: REP173 | Note: Card declined during purchase—issue escalated.,REP173,Positive,Email,Apply Credit Card
+797,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-10-20,BAL TRF,2024-10-20 | BAL TRF | Rep: REP787 | Note: Explained process for fee waiver eligibility.,REP787,Neutral,Voice,Balance Transfer Request
+798,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-03-15,OTP,2025-03-15 | OTP | Rep: REP544 | Note: Offered balance transfer options; customer interested.,REP544,Neutral,Email,Authentication Help
+799,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-02-24,PIN RST,2025-02-24 | PIN RST | Rep: REP983 | Note: Offered balance transfer options; customer interested.,REP983,Negative,Chat,Reset PIN
+800,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2024-12-09,PIN RST,2024-12-09 | PIN RST | Rep: REP108 | Note: Explained process for fee waiver eligibility.,REP108,Neutral,Voice,Reset PIN
+801,823a02da-ed52-488a-ad1b-147536f95891,2025-04-05,PND DOC,2025-04-05 | PND DOC | Rep: REP791,REP791,Positive,Chat,Document Follow-up
+802,06d305e4-2a06-42f7-8e38-125c143d97ef,2024-12-17,CC,2024-12-17 | CC | Rep: REP644,REP644,Positive,Email,Apply Credit Card
+803,46023047-12c0-4e1d-b056-7a29178097ee,2024-11-08,CHQ BK,2024-11-08 | CHQ BK | Rep: REP406,REP406,Neutral,Email,Order Cheque Book
+804,8baa998e-4295-4756-869b-770df05f293f,2024-10-31,CHQ BK,2024-10-31 | CHQ BK | Rep: REP868,REP868,Neutral,Email,Order Cheque Book
+805,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-12-26,DC,2024-12-26 | DC | Rep: REP160 | Note: Customer complained about unrecognized transaction.,REP160,Positive,Chat,Debit Card Service
+806,8c141c43-a3e3-441a-a4ef-22356da489cc,2025-04-17,ECS BLK,2025-04-17 | ECS BLK | Rep: REP080,REP080,Neutral,Chat,Block Auto Payment
+807,41859cc2-9f52-49b6-9c34-6b7d3257de06,2025-04-09,KYC,2025-04-09 | KYC | Rep: REP502,REP502,Negative,Email,Account Verification
+808,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-16,ADDR UPD,"2025-01-16 | ADDR UPD | Rep: REP653 | Note: Asked for statement via email, sent instantly.",REP653,Positive,Email,Profile Update
+809,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2024-11-02,CHQ BK,2024-11-02 | CHQ BK | Rep: REP943,REP943,Neutral,Voice,Order Cheque Book
+810,53432400-5bb6-45d6-976b-66d0b309666a,2025-04-11,TXN,2025-04-11 | TXN | Rep: REP534,REP534,Positive,Voice,Transaction Issue
+811,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-02-27,KYC,2025-02-27 | KYC | Rep: REP922 | Note: Dispute form submitted; follow-up needed in 5 days.,REP922,Neutral,Chat,Account Verification
+812,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-02-09,CC,2025-02-09 | CC | Rep: REP266,REP266,Negative,Chat,Apply Credit Card
+813,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-11-23,CC,2024-11-23 | CC | Rep: REP204 | Note: Collection notice acknowledged; partial payment made.,REP204,Neutral,Voice,Apply Credit Card
+814,a5c2be23-9314-454a-a546-f96f75749afa,2025-02-15,STMT RQ,2025-02-15 | STMT RQ | Rep: REP899 | Note: Card declined during purchase—issue escalated.,REP899,Positive,Email,Get Statement
+815,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2025-01-29,ADDR UPD,2025-01-29 | ADDR UPD | Rep: REP231,REP231,Negative,Chat,Profile Update
+816,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2025-02-28,CLOSE ACCT,2025-02-28 | CLOSE ACCT | Rep: REP474,REP474,Neutral,Voice,Close Account
+817,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-03-15,ACCT,2025-03-15 | ACCT | Rep: REP203,REP203,Positive,Email,General Account Info
+818,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-10-20,DISP,2024-10-20 | DISP | Rep: REP798,REP798,Positive,Email,Dispute Transaction
+819,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-11-20,PND DOC,2024-11-20 | PND DOC | Rep: REP443,REP443,Negative,Voice,Document Follow-up
+820,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2024-12-07,CLOSE ACCT,2024-12-07 | CLOSE ACCT | Rep: REP061 | Note: Offered balance transfer options; customer interested.,REP061,Negative,Chat,Close Account
+821,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2024-12-18,TXN,2024-12-18 | TXN | Rep: REP034 | Note: PIN reset confirmed and successful.,REP034,Neutral,Voice,Transaction Issue
+822,41859cc2-9f52-49b6-9c34-6b7d3257de06,2025-03-25,DC,2025-03-25 | DC | Rep: REP871,REP871,Positive,Email,Debit Card Service
+823,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2025-04-06,ACCT,2025-04-06 | ACCT | Rep: REP902,REP902,Positive,Email,General Account Info
+824,48460ac7-904c-4750-92ab-181d88a194f0,2025-03-15,KYC,2025-03-15 | KYC | Rep: REP982,REP982,Positive,Email,Account Verification
+825,06d305e4-2a06-42f7-8e38-125c143d97ef,2025-02-28,COLL,2025-02-28 | COLL | Rep: REP605 | Note: Requested urgent update to mailing address.,REP605,Positive,Chat,Collections Call
+826,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2025-02-11,NRI,2025-02-11 | NRI | Rep: REP782 | Note: Collection notice acknowledged; partial payment made.,REP782,Neutral,Email,Foreign Services
+827,bf954c81-7139-4f99-9385-aab171dbf23d,2025-04-08,BAL TRF,2025-04-08 | BAL TRF | Rep: REP650 | Note: Offered balance transfer options; customer interested.,REP650,Positive,Voice,Balance Transfer Request
+828,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-11-01,OTP,2024-11-01 | OTP | Rep: REP311,REP311,Positive,Chat,Authentication Help
+829,da5ed01c-177e-4a00-b987-efa43826fcba,2025-01-17,OTP,2025-01-17 | OTP | Rep: REP881 | Note: Dispute form submitted; follow-up needed in 5 days.,REP881,Neutral,Email,Authentication Help
+830,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-02-20,ECS BLK,2025-02-20 | ECS BLK | Rep: REP866 | Note: Card declined during purchase—issue escalated.,REP866,Positive,Voice,Block Auto Payment
+831,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-03,TXN,2025-03-03 | TXN | Rep: REP007 | Note: Collection notice acknowledged; partial payment made.,REP007,Negative,Chat,Transaction Issue
+832,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2024-12-07,PIN RST,2024-12-07 | PIN RST | Rep: REP942,REP942,Positive,Voice,Reset PIN
+833,823a02da-ed52-488a-ad1b-147536f95891,2025-01-26,OTP,2025-01-26 | OTP | Rep: REP355,REP355,Neutral,Voice,Authentication Help
+834,a226dc1c-bb88-40bd-9556-7af947862c29,2025-01-09,ECS BLK,2025-01-09 | ECS BLK | Rep: REP450 | Note: Requested urgent update to mailing address.,REP450,Negative,Email,Block Auto Payment
+835,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2024-10-31,PIN RST,2024-10-31 | PIN RST | Rep: REP229,REP229,Negative,Chat,Reset PIN
+836,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2024-12-14,DISP,2024-12-14 | DISP | Rep: REP673,REP673,Neutral,Voice,Dispute Transaction
+837,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-04-08,PIN RST,2025-04-08 | PIN RST | Rep: REP502,REP502,Negative,Email,Reset PIN
+838,a5c2be23-9314-454a-a546-f96f75749afa,2025-01-17,NRI,2025-01-17 | NRI | Rep: REP155,REP155,Negative,Voice,Foreign Services
+839,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-04-02,CC,2025-04-02 | CC | Rep: REP767,REP767,Neutral,Chat,Apply Credit Card
+840,5a8c24e3-6b78-4c44-9f0c-fe70174b1230,2025-03-06,STMT RQ,2025-03-06 | STMT RQ | Rep: REP378,REP378,Neutral,Email,Get Statement
+841,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-01-05,BAL TRF,2025-01-05 | BAL TRF | Rep: REP169 | Note: PIN reset confirmed and successful.,REP169,Positive,Voice,Balance Transfer Request
+842,28a8a9f6-e262-4314-8477-662ea54a5a54,2025-02-17,ECS RVS,2025-02-17 | ECS RVS | Rep: REP694,REP694,Positive,Chat,Reversal Request
+843,32d5fe86-eac5-40e9-8b43-f8c963ba2f01,2024-12-16,PND DOC,2024-12-16 | PND DOC | Rep: REP989,REP989,Negative,Email,Document Follow-up
+844,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-03-05,KYC,2025-03-05 | KYC | Rep: REP320,REP320,Neutral,Voice,Account Verification
+845,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-02-10,PIN RST,2025-02-10 | PIN RST | Rep: REP534 | Note: Collection notice acknowledged; partial payment made.,REP534,Positive,Email,Reset PIN
+846,9cc2c168-853f-429e-8ca8-288f39625543,2024-11-25,STMT RQ,2024-11-25 | STMT RQ | Rep: REP338,REP338,Negative,Voice,Get Statement
+847,53432400-5bb6-45d6-976b-66d0b309666a,2025-02-09,ACCT,2025-02-09 | ACCT | Rep: REP465 | Note: Customer satisfied with resolution.,REP465,Neutral,Voice,General Account Info
+848,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2024-12-03,CHQ BK,2024-12-03 | CHQ BK | Rep: REP703 | Note: Dispute form submitted; follow-up needed in 5 days.,REP703,Positive,Email,Order Cheque Book
+849,915f65c5-471f-4429-b0ab-a614e553d45c,2025-03-28,CC,2025-03-28 | CC | Rep: REP055,REP055,Negative,Chat,Apply Credit Card
+850,6988d2ab-0c85-4ec1-a641-e140468bce09,2025-01-17,BAL QRY,2025-01-17 | BAL QRY | Rep: REP249,REP249,Neutral,Email,Balance Inquiry
+851,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-03-24,LMT INC,2025-03-24 | LMT INC | Rep: REP228,REP228,Positive,Chat,Increase Credit Limit
+852,54627136-b89e-4b46-9369-d779131a1074,2025-02-14,KYC,2025-02-14 | KYC | Rep: REP056,REP056,Positive,Chat,Account Verification
+853,17a85cba-2f69-4b99-8db4-252f70b0ef33,2025-01-02,PIN RST,2025-01-02 | PIN RST | Rep: REP655,REP655,Negative,Email,Reset PIN
+854,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2024-12-02,DISP,2024-12-02 | DISP | Rep: REP467,REP467,Positive,Chat,Dispute Transaction
+855,20b597ca-3266-427e-a47d-79a31c1491a4,2025-01-13,PIN RST,2025-01-13 | PIN RST | Rep: REP302,REP302,Positive,Voice,Reset PIN
+856,a226dc1c-bb88-40bd-9556-7af947862c29,2024-12-26,ACCT,2024-12-26 | ACCT | Rep: REP089,REP089,Positive,Voice,General Account Info
+857,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-01-10,ADDR UPD,2025-01-10 | ADDR UPD | Rep: REP580 | Note: Explained process for fee waiver eligibility.,REP580,Neutral,Email,Profile Update
+858,14c6962b-8b83-44ef-8a1e-32a82f4ecf5c,2025-02-04,NRI,2025-02-04 | NRI | Rep: REP980 | Note: Requested urgent update to mailing address.,REP980,Positive,Email,Foreign Services
+859,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-06,COLL,2025-01-06 | COLL | Rep: REP121,REP121,Positive,Voice,Collections Call
+860,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-02-24,ECS RVS,2025-02-24 | ECS RVS | Rep: REP115,REP115,Neutral,Voice,Reversal Request
+861,447b2c33-ad78-4482-af58-cfcf1d922222,2025-01-25,NPS ACCT,2025-01-25 | NPS ACCT | Rep: REP190,REP190,Neutral,Email,Open New Account
+862,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-12-25,ADDR UPD,2024-12-25 | ADDR UPD | Rep: REP689,REP689,Negative,Voice,Profile Update
+863,823a02da-ed52-488a-ad1b-147536f95891,2025-02-15,DC,2025-02-15 | DC | Rep: REP613,REP613,Negative,Voice,Debit Card Service
+864,a226dc1c-bb88-40bd-9556-7af947862c29,2025-04-05,LMT INC,2025-04-05 | LMT INC | Rep: REP849,REP849,Positive,Email,Increase Credit Limit
+865,89647783-4c9e-45dc-8830-c647231f87cf,2024-12-19,ECS RVS,2024-12-19 | ECS RVS | Rep: REP385 | Note: Customer complained about unrecognized transaction.,REP385,Neutral,Chat,Reversal Request
+866,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2025-02-04,TXN,2025-02-04 | TXN | Rep: REP954 | Note: Customer complained about unrecognized transaction.,REP954,Negative,Voice,Transaction Issue
+867,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2024-11-21,PIN RST,2024-11-21 | PIN RST | Rep: REP011,REP011,Negative,Voice,Reset PIN
+868,a5c2be23-9314-454a-a546-f96f75749afa,2024-12-09,CC,2024-12-09 | CC | Rep: REP249,REP249,Negative,Email,Apply Credit Card
+869,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-03-18,ECS BLK,2025-03-18 | ECS BLK | Rep: REP772,REP772,Positive,Chat,Block Auto Payment
+870,8d40f1f4-e8f8-4c51-bae9-54db78afb62d,2024-10-29,FEE WVR,2024-10-29 | FEE WVR | Rep: REP465,REP465,Positive,Email,Fee Waiver Request
+871,06698fa8-120a-4e1b-8d05-3de76b397d97,2025-03-30,ACCT,2025-03-30 | ACCT | Rep: REP484 | Note: No further action required; issue resolved.,REP484,Neutral,Chat,General Account Info
+872,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2024-11-07,NPS ACCT,2024-11-07 | NPS ACCT | Rep: REP414,REP414,Negative,Voice,Open New Account
+873,b7206ec9-9b0f-4849-8981-243e2f04b06e,2024-10-23,CC,2024-10-23 | CC | Rep: REP844,REP844,Positive,Chat,Apply Credit Card
+874,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-04-08,TXN,2025-04-08 | TXN | Rep: REP350 | Note: Requested urgent update to mailing address.,REP350,Positive,Voice,Transaction Issue
+875,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-14,DC,2024-12-14 | DC | Rep: REP499,REP499,Negative,Chat,Debit Card Service
+876,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2024-11-18,CLOSE ACCT,2024-11-18 | CLOSE ACCT | Rep: REP240 | Note: Collection notice acknowledged; partial payment made.,REP240,Positive,Voice,Close Account
+877,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2025-02-23,OTP,2025-02-23 | OTP | Rep: REP040,REP040,Positive,Chat,Authentication Help
+878,0f301ab3-6241-4c1a-83c1-90cfbc891002,2024-12-23,PND DOC,2024-12-23 | PND DOC | Rep: REP138,REP138,Negative,Voice,Document Follow-up
+879,4e43c73d-82d1-485b-a5b0-80cf6932918e,2024-10-24,TXN,2024-10-24 | TXN | Rep: REP384 | Note: Offered balance transfer options; customer interested.,REP384,Neutral,Voice,Transaction Issue
+880,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-01-22,OTP,2025-01-22 | OTP | Rep: REP107,REP107,Neutral,Voice,Authentication Help
+881,a7e21628-b261-4068-8b36-1dd18a10f5ae,2025-04-14,BAL TRF,2025-04-14 | BAL TRF | Rep: REP702 | Note: Card declined during purchase—issue escalated.,REP702,Neutral,Chat,Balance Transfer Request
+882,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-03-09,FVR CHK,2025-03-09 | FVR CHK | Rep: REP755,REP755,Negative,Email,Fraud Detection
+883,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-02-23,FVR CHK,2025-02-23 | FVR CHK | Rep: REP591 | Note: Dispute form submitted; follow-up needed in 5 days.,REP591,Negative,Voice,Fraud Detection
+884,10408cd5-26ae-4239-9e05-6efe42e2aae5,2025-02-21,BAL TRF,"2025-02-21 | BAL TRF | Rep: REP532 | Note: Asked for statement via email, sent instantly.",REP532,Positive,Voice,Balance Transfer Request
+885,52014828-a05b-4c5c-ad00-9b7483e22d75,2024-10-22,ECS RVS,2024-10-22 | ECS RVS | Rep: REP376 | Note: Customer satisfied with resolution.,REP376,Neutral,Email,Reversal Request
+886,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2025-02-02,PIN RST,2025-02-02 | PIN RST | Rep: REP346,REP346,Negative,Voice,Reset PIN
+887,9d943d74-8a6a-46a5-bba8-8220111a003e,2024-12-30,ECS RVS,2024-12-30 | ECS RVS | Rep: REP669,REP669,Positive,Chat,Reversal Request
+888,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-16,DISP,2025-01-16 | DISP | Rep: REP992,REP992,Positive,Voice,Dispute Transaction
+889,5282a13a-908f-4fe8-b799-d702be60d2f7,2024-11-20,BAL TRF,"2024-11-20 | BAL TRF | Rep: REP443 | Note: Asked for statement via email, sent instantly.",REP443,Negative,Chat,Balance Transfer Request
+890,dc1322a7-aa46-4408-a3a7-a1412d19735e,2025-01-14,TXN,2025-01-14 | TXN | Rep: REP079,REP079,Neutral,Email,Transaction Issue
+891,29a6d7e9-89b9-42e8-8e97-0adecdcf52a5,2024-11-14,OTP,2024-11-14 | OTP | Rep: REP262,REP262,Negative,Voice,Authentication Help
+892,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-04-05,CLOSE ACCT,2025-04-05 | CLOSE ACCT | Rep: REP872 | Note: Customer confirmed identity after 2FA.,REP872,Neutral,Email,Close Account
+893,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2024-11-23,CC,2024-11-23 | CC | Rep: REP034,REP034,Positive,Chat,Apply Credit Card
+894,06d305e4-2a06-42f7-8e38-125c143d97ef,2025-01-09,NPS ACCT,2025-01-09 | NPS ACCT | Rep: REP374,REP374,Positive,Email,Open New Account
+895,06aa8efe-c4fa-4689-9f97-e1fe24151b18,2025-01-16,NRI,2025-01-16 | NRI | Rep: REP202 | Note: Requested urgent update to mailing address.,REP202,Neutral,Chat,Foreign Services
+896,8c141c43-a3e3-441a-a4ef-22356da489cc,2025-01-06,CC,2025-01-06 | CC | Rep: REP417 | Note: Dispute form submitted; follow-up needed in 5 days.,REP417,Negative,Email,Apply Credit Card
+897,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-27,OTP,2024-11-27 | OTP | Rep: REP146,REP146,Positive,Email,Authentication Help
+898,173392a5-0c8b-4b88-800e-b50d5edff8d1,2025-01-22,NPS ACCT,2025-01-22 | NPS ACCT | Rep: REP104,REP104,Negative,Chat,Open New Account
+899,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2025-02-04,BAL QRY,2025-02-04 | BAL QRY | Rep: REP345,REP345,Neutral,Chat,Balance Inquiry
+900,89647783-4c9e-45dc-8830-c647231f87cf,2024-12-10,LMT INC,2024-12-10 | LMT INC | Rep: REP330,REP330,Positive,Email,Increase Credit Limit
+901,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-02-25,ACCT,"2025-02-25 | ACCT | Rep: REP232 | Note: Asked for statement via email, sent instantly.",REP232,Negative,Voice,General Account Info
+902,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2024-11-09,ECS BLK,2024-11-09 | ECS BLK | Rep: REP706 | Note: Explained process for fee waiver eligibility.,REP706,Neutral,Voice,Block Auto Payment
+903,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2025-01-31,FEE WVR,2025-01-31 | FEE WVR | Rep: REP784 | Note: Offered balance transfer options; customer interested.,REP784,Negative,Email,Fee Waiver Request
+904,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-01-23,FVR CHK,2025-01-23 | FVR CHK | Rep: REP021,REP021,Negative,Voice,Fraud Detection
+905,41859cc2-9f52-49b6-9c34-6b7d3257de06,2024-10-22,TXN,2024-10-22 | TXN | Rep: REP246,REP246,Positive,Voice,Transaction Issue
+906,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-02-22,FVR CHK,2025-02-22 | FVR CHK | Rep: REP683 | Note: Requested urgent update to mailing address.,REP683,Negative,Chat,Fraud Detection
+907,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-02-14,BAL TRF,2025-02-14 | BAL TRF | Rep: REP350,REP350,Positive,Voice,Balance Transfer Request
+908,20b597ca-3266-427e-a47d-79a31c1491a4,2024-11-11,BAL TRF,2024-11-11 | BAL TRF | Rep: REP981,REP981,Positive,Chat,Balance Transfer Request
+909,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2024-11-30,OTP,2024-11-30 | OTP | Rep: REP748 | Note: No further action required; issue resolved.,REP748,Positive,Email,Authentication Help
+910,9cc2c168-853f-429e-8ca8-288f39625543,2025-02-19,CHQ BK,2025-02-19 | CHQ BK | Rep: REP262,REP262,Positive,Voice,Order Cheque Book
+911,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-10-30,BAL TRF,2024-10-30 | BAL TRF | Rep: REP676 | Note: Card declined during purchase—issue escalated.,REP676,Negative,Voice,Balance Transfer Request
+912,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2025-02-22,FEE WVR,2025-02-22 | FEE WVR | Rep: REP394,REP394,Positive,Email,Fee Waiver Request
+913,5a8c24e3-6b78-4c44-9f0c-fe70174b1230,2024-12-16,FEE WVR,2024-12-16 | FEE WVR | Rep: REP005 | Note: Offered balance transfer options; customer interested.,REP005,Negative,Chat,Fee Waiver Request
+914,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-12-11,BAL QRY,2024-12-11 | BAL QRY | Rep: REP103,REP103,Negative,Voice,Balance Inquiry
+915,17a85cba-2f69-4b99-8db4-252f70b0ef33,2025-01-24,PIN RST,2025-01-24 | PIN RST | Rep: REP216,REP216,Negative,Email,Reset PIN
+916,a7e21628-b261-4068-8b36-1dd18a10f5ae,2025-01-03,NRI,2025-01-03 | NRI | Rep: REP141,REP141,Positive,Email,Foreign Services
+917,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2025-02-28,FEE WVR,2025-02-28 | FEE WVR | Rep: REP054,REP054,Neutral,Voice,Fee Waiver Request
+918,443c0160-bac5-4733-86d5-9c423bf3d008,2025-01-26,BAL QRY,2025-01-26 | BAL QRY | Rep: REP306,REP306,Negative,Chat,Balance Inquiry
+919,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-03-17,LMT INC,2025-03-17 | LMT INC | Rep: REP426,REP426,Positive,Email,Increase Credit Limit
+920,81066c1c-c625-4ad3-8474-6ffad68ad9f3,2025-01-14,DC,2025-01-14 | DC | Rep: REP531,REP531,Neutral,Email,Debit Card Service
+921,f8190d5a-c206-4b20-bf2f-39acfbb85d6d,2024-12-14,CHQ BK,2024-12-14 | CHQ BK | Rep: REP870 | Note: Fraud alert placed on the account.,REP870,Neutral,Chat,Order Cheque Book
+922,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-03-09,ECS RVS,2025-03-09 | ECS RVS | Rep: REP049 | Note: Offered balance transfer options; customer interested.,REP049,Positive,Email,Reversal Request
+923,33b3f695-4685-4d11-bccd-65bd79d42c68,2024-11-16,STMT RQ,2024-11-16 | STMT RQ | Rep: REP605,REP605,Neutral,Voice,Get Statement
+924,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-21,FEE WVR,2024-12-21 | FEE WVR | Rep: REP145,REP145,Neutral,Voice,Fee Waiver Request
+925,447b2c33-ad78-4482-af58-cfcf1d922222,2025-03-02,KYC,2025-03-02 | KYC | Rep: REP914 | Note: Dispute form submitted; follow-up needed in 5 days.,REP914,Negative,Voice,Account Verification
+926,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2024-11-30,CC,2024-11-30 | CC | Rep: REP142 | Note: Offered balance transfer options; customer interested.,REP142,Neutral,Email,Apply Credit Card
+927,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2024-11-28,PIN RST,2024-11-28 | PIN RST | Rep: REP852 | Note: PIN reset confirmed and successful.,REP852,Negative,Email,Reset PIN
+928,14453942-d088-4bae-b015-824ba4821f08,2024-11-29,KYC,2024-11-29 | KYC | Rep: REP162,REP162,Neutral,Email,Account Verification
+929,5a8c24e3-6b78-4c44-9f0c-fe70174b1230,2025-04-04,CLOSE ACCT,2025-04-04 | CLOSE ACCT | Rep: REP930,REP930,Positive,Voice,Close Account
+930,1bf09578-0d01-44ec-959e-e1e53ff01af3,2025-03-04,NPS ACCT,2025-03-04 | NPS ACCT | Rep: REP286 | Note: Advised to visit branch with original documents.,REP286,Positive,Email,Open New Account
+931,28a8a9f6-e262-4314-8477-662ea54a5a54,2024-12-22,CC,2024-12-22 | CC | Rep: REP544 | Note: Advised to visit branch with original documents.,REP544,Neutral,Email,Apply Credit Card
+932,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-10-21,ADDR UPD,2024-10-21 | ADDR UPD | Rep: REP584 | Note: Customer complained about unrecognized transaction.,REP584,Neutral,Voice,Profile Update
+933,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-02-16,CHQ BK,2025-02-16 | CHQ BK | Rep: REP722,REP722,Positive,Voice,Order Cheque Book
+934,73d8b86a-d1dc-425c-b98e-7712bc5351ee,2024-12-06,PND DOC,2024-12-06 | PND DOC | Rep: REP964,REP964,Positive,Voice,Document Follow-up
+935,b8673aa7-11ae-4850-9078-4b32c92d18e8,2024-10-26,CHQ BK,2024-10-26 | CHQ BK | Rep: REP706 | Note: Dispute form submitted; follow-up needed in 5 days.,REP706,Neutral,Voice,Order Cheque Book
+936,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-02,DC,2024-11-02 | DC | Rep: REP103 | Note: Requested urgent update to mailing address.,REP103,Negative,Chat,Debit Card Service
+937,9cc2c168-853f-429e-8ca8-288f39625543,2025-03-06,PND DOC,2025-03-06 | PND DOC | Rep: REP319,REP319,Negative,Chat,Document Follow-up
+938,ce8624be-26bf-4d8d-bc8e-6ba8dc7ddf63,2024-12-27,ECS RVS,2024-12-27 | ECS RVS | Rep: REP772,REP772,Positive,Voice,Reversal Request
+939,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-12-16,NPS ACCT,2024-12-16 | NPS ACCT | Rep: REP156,REP156,Neutral,Chat,Open New Account
+940,8c141c43-a3e3-441a-a4ef-22356da489cc,2025-02-26,FEE WVR,2025-02-26 | FEE WVR | Rep: REP808 | Note: Customer complained about unrecognized transaction.,REP808,Positive,Voice,Fee Waiver Request
+941,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-01-22,FVR CHK,2025-01-22 | FVR CHK | Rep: REP897,REP897,Negative,Email,Fraud Detection
+942,dc1322a7-aa46-4408-a3a7-a1412d19735e,2024-11-09,CLOSE ACCT,2024-11-09 | CLOSE ACCT | Rep: REP564,REP564,Neutral,Email,Close Account
+943,15da6d3d-8f92-4c54-a77d-ea4e2ce1b14d,2025-03-16,DISP,2025-03-16 | DISP | Rep: REP512,REP512,Neutral,Email,Dispute Transaction
+944,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-04-01,NPS ACCT,2025-04-01 | NPS ACCT | Rep: REP472,REP472,Negative,Chat,Open New Account
+945,9cc2c168-853f-429e-8ca8-288f39625543,2025-02-25,DISP,2025-02-25 | DISP | Rep: REP565,REP565,Negative,Voice,Dispute Transaction
+946,e060bf64-5d7b-4fce-b318-1054dfee0b20,2025-02-21,FVR CHK,2025-02-21 | FVR CHK | Rep: REP018,REP018,Negative,Voice,Fraud Detection
+947,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-01-26,NRI,2025-01-26 | NRI | Rep: REP824,REP824,Neutral,Voice,Foreign Services
+948,b0b7373d-3ad0-4420-9854-84cb343e8a10,2025-02-05,BAL QRY,2025-02-05 | BAL QRY | Rep: REP354 | Note: Offered balance transfer options; customer interested.,REP354,Positive,Voice,Balance Inquiry
+949,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-17,NPS ACCT,2024-11-17 | NPS ACCT | Rep: REP750,REP750,Positive,Email,Open New Account
+950,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-04-04,PND DOC,2025-04-04 | PND DOC | Rep: REP983 | Note: Customer complained about unrecognized transaction.,REP983,Neutral,Voice,Document Follow-up
+951,4e43c73d-82d1-485b-a5b0-80cf6932918e,2024-11-05,DC,2024-11-05 | DC | Rep: REP512,REP512,Positive,Email,Debit Card Service
+952,da5ed01c-177e-4a00-b987-efa43826fcba,2025-04-08,ECS RVS,2025-04-08 | ECS RVS | Rep: REP694 | Note: Dispute form submitted; follow-up needed in 5 days.,REP694,Neutral,Email,Reversal Request
+953,52014828-a05b-4c5c-ad00-9b7483e22d75,2024-12-17,BAL TRF,2024-12-17 | BAL TRF | Rep: REP110,REP110,Neutral,Chat,Balance Transfer Request
+954,2d6b83e6-6ce7-4785-96dd-19a74c0eb35d,2024-10-24,FEE WVR,2024-10-24 | FEE WVR | Rep: REP571,REP571,Positive,Email,Fee Waiver Request
+955,e060bf64-5d7b-4fce-b318-1054dfee0b20,2024-11-25,NPS ACCT,2024-11-25 | NPS ACCT | Rep: REP979,REP979,Neutral,Chat,Open New Account
+956,0c067c6d-ddbd-4c91-882e-8a09196eb5ca,2025-01-03,STMT RQ,2025-01-03 | STMT RQ | Rep: REP246 | Note: Dispute form submitted; follow-up needed in 5 days.,REP246,Neutral,Voice,Get Statement
+957,e3dce91d-ea4f-4d97-9514-bdeb43dacd04,2025-01-13,TXN,2025-01-13 | TXN | Rep: REP005 | Note: No further action required; issue resolved.,REP005,Negative,Voice,Transaction Issue
+958,804fa060-07c7-4ece-9a95-433dbf9c8575,2024-11-06,CLOSE ACCT,2024-11-06 | CLOSE ACCT | Rep: REP526 | Note: Offered balance transfer options; customer interested.,REP526,Positive,Chat,Close Account
+959,20b597ca-3266-427e-a47d-79a31c1491a4,2025-03-02,BAL TRF,2025-03-02 | BAL TRF | Rep: REP267,REP267,Positive,Email,Balance Transfer Request
+960,bf973dae-e279-4e3e-a0f8-f4bdde27d835,2025-02-23,PND DOC,2025-02-23 | PND DOC | Rep: REP809,REP809,Positive,Email,Document Follow-up
+961,53432400-5bb6-45d6-976b-66d0b309666a,2025-02-08,LMT INC,2025-02-08 | LMT INC | Rep: REP225,REP225,Negative,Email,Increase Credit Limit
+962,7c97ca79-ff2c-446d-9e36-c122afac1aff,2024-11-04,DC,2024-11-04 | DC | Rep: REP317,REP317,Positive,Email,Debit Card Service
+963,06d270b6-6fce-4d22-8fab-558f39f019ab,2025-03-20,FVR CHK,2025-03-20 | FVR CHK | Rep: REP422 | Note: PIN reset confirmed and successful.,REP422,Neutral,Chat,Fraud Detection
+964,225cc911-8434-49ec-b30f-7cfd9c4a33b2,2024-10-24,CLOSE ACCT,2024-10-24 | CLOSE ACCT | Rep: REP498,REP498,Positive,Chat,Close Account
+965,a205ea87-4fa9-4d62-b169-de85a7b9bc91,2025-01-24,LMT INC,2025-01-24 | LMT INC | Rep: REP664 | Note: Offered balance transfer options; customer interested.,REP664,Positive,Email,Increase Credit Limit
+966,4643ab21-aebd-4ee8-a202-40426dec5225,2024-12-24,ECS BLK,2024-12-24 | ECS BLK | Rep: REP492,REP492,Positive,Email,Block Auto Payment
+967,b0b7373d-3ad0-4420-9854-84cb343e8a10,2024-11-14,PND DOC,"2024-11-14 | PND DOC | Rep: REP175 | Note: Asked for statement via email, sent instantly.",REP175,Neutral,Email,Document Follow-up
+968,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-01-12,NPS ACCT,2025-01-12 | NPS ACCT | Rep: REP589 | Note: Advised to visit branch with original documents.,REP589,Positive,Voice,Open New Account
+969,b9d0fe24-6860-4bbc-b5c1-7a0c8810d05c,2024-10-23,CC,2024-10-23 | CC | Rep: REP721,REP721,Neutral,Chat,Apply Credit Card
+970,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-02-01,DISP,2025-02-01 | DISP | Rep: REP775,REP775,Neutral,Voice,Dispute Transaction
+971,6988d2ab-0c85-4ec1-a641-e140468bce09,2024-10-20,DISP,2024-10-20 | DISP | Rep: REP205 | Note: Card declined during purchase—issue escalated.,REP205,Neutral,Chat,Dispute Transaction
+972,ccf5d64a-c743-49b8-a561-95f4b4a79b76,2025-01-21,TXN,"2025-01-21 | TXN | Rep: REP573 | Note: Asked for statement via email, sent instantly.",REP573,Positive,Email,Transaction Issue
+973,0434e68f-dcd2-4409-95ab-2e1b5b50e6e8,2025-02-20,DISP,2025-02-20 | DISP | Rep: REP991,REP991,Neutral,Chat,Dispute Transaction
+974,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2025-01-20,TXN,2025-01-20 | TXN | Rep: REP246,REP246,Neutral,Voice,Transaction Issue
+975,f8035d6f-dc44-472f-aa65-0b94655e9cd6,2024-11-28,NRI,2024-11-28 | NRI | Rep: REP083,REP083,Negative,Voice,Foreign Services
+976,bf954c81-7139-4f99-9385-aab171dbf23d,2025-04-10,PIN RST,2025-04-10 | PIN RST | Rep: REP927,REP927,Positive,Voice,Reset PIN
+977,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2024-11-06,BAL TRF,2024-11-06 | BAL TRF | Rep: REP294 | Note: Dispute form submitted; follow-up needed in 5 days.,REP294,Positive,Voice,Balance Transfer Request
+978,91aae7c3-2bcf-4b9b-b239-0dd0de5f6e6f,2025-03-10,NRI,2025-03-10 | NRI | Rep: REP991 | Note: Fraud alert placed on the account.,REP991,Positive,Chat,Foreign Services
+979,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2024-10-31,BAL QRY,2024-10-31 | BAL QRY | Rep: REP373,REP373,Neutral,Voice,Balance Inquiry
+980,36bd642d-6ae0-48aa-970f-6d1ce4c68704,2025-02-27,NRI,2025-02-27 | NRI | Rep: REP191,REP191,Neutral,Chat,Foreign Services
+981,1bf09578-0d01-44ec-959e-e1e53ff01af3,2025-03-23,BAL QRY,2025-03-23 | BAL QRY | Rep: REP001,REP001,Neutral,Voice,Balance Inquiry
+982,5282a13a-908f-4fe8-b799-d702be60d2f7,2024-12-03,CC,2024-12-03 | CC | Rep: REP038 | Note: Dispute form submitted; follow-up needed in 5 days.,REP038,Positive,Voice,Apply Credit Card
+983,bf4d3049-e9cc-4fbe-9fdc-ff4109ff584e,2025-01-11,COLL,2025-01-11 | COLL | Rep: REP803 | Note: Fraud alert placed on the account.,REP803,Negative,Voice,Collections Call
+984,990c2a8e-9b41-4b33-ac89-d3cfe4b7bb93,2024-11-18,TXN,2024-11-18 | TXN | Rep: REP203 | Note: Card declined during purchase—issue escalated.,REP203,Negative,Chat,Transaction Issue
+985,502fd85b-626a-4e9e-bcd2-708a1cafe1c1,2025-04-10,COLL,2025-04-10 | COLL | Rep: REP559 | Note: Dispute form submitted; follow-up needed in 5 days.,REP559,Negative,Email,Collections Call
+986,840e6707-e8c3-4b4a-8af2-b0b7b29a93b5,2024-11-02,BAL QRY,2024-11-02 | BAL QRY | Rep: REP407,REP407,Positive,Email,Balance Inquiry
+987,47ef81b0-6f52-4417-b977-c0b1ceca29eb,2025-01-10,FVR CHK,2025-01-10 | FVR CHK | Rep: REP048 | Note: No further action required; issue resolved.,REP048,Negative,Voice,Fraud Detection
+988,0ae08baa-0270-44ea-9d96-667079aaea2a,2025-01-19,COLL,2025-01-19 | COLL | Rep: REP354 | Note: Dispute form submitted; follow-up needed in 5 days.,REP354,Positive,Email,Collections Call
+989,a7e21628-b261-4068-8b36-1dd18a10f5ae,2025-03-19,STMT RQ,2025-03-19 | STMT RQ | Rep: REP614,REP614,Negative,Chat,Get Statement
+990,06698fa8-120a-4e1b-8d05-3de76b397d97,2024-12-14,PIN RST,2024-12-14 | PIN RST | Rep: REP259,REP259,Negative,Email,Reset PIN
+991,f89462a3-b7a7-47a0-860d-341f8d68e2be,2025-03-08,CLOSE ACCT,2025-03-08 | CLOSE ACCT | Rep: REP803,REP803,Neutral,Voice,Close Account
+992,b5d99b36-3595-4a88-91ba-4553c2d3ed9f,2025-02-14,ACCT,2025-02-14 | ACCT | Rep: REP072,REP072,Positive,Email,General Account Info
+993,da5ed01c-177e-4a00-b987-efa43826fcba,2024-12-04,BAL QRY,2024-12-04 | BAL QRY | Rep: REP976 | Note: Dispute form submitted; follow-up needed in 5 days.,REP976,Neutral,Email,Balance Inquiry
+994,f0f4107a-3ef7-4a62-bd63-35453e5482c2,2024-11-27,ECS BLK,2024-11-27 | ECS BLK | Rep: REP446,REP446,Neutral,Chat,Block Auto Payment
+995,70b65935-f9f4-4aba-8411-a3ff583f3a41,2025-03-27,STMT RQ,2025-03-27 | STMT RQ | Rep: REP601,REP601,Positive,Chat,Get Statement
+996,33b3f695-4685-4d11-bccd-65bd79d42c68,2025-02-12,CC,2025-02-12 | CC | Rep: REP839,REP839,Neutral,Email,Apply Credit Card
+997,5f9c04ee-03d3-44a5-b221-ad85fe6269be,2025-03-15,NPS ACCT,2025-03-15 | NPS ACCT | Rep: REP453 | Note: PIN reset confirmed and successful.,REP453,Negative,Voice,Open New Account
+998,da5ed01c-177e-4a00-b987-efa43826fcba,2024-12-12,ECS BLK,2024-12-12 | ECS BLK | Rep: REP630,REP630,Neutral,Chat,Block Auto Payment
+999,a226dc1c-bb88-40bd-9556-7af947862c29,2024-12-24,PND DOC,2024-12-24 | PND DOC | Rep: REP886 | Note: Dispute form submitted; follow-up needed in 5 days.,REP886,Positive,Chat,Document Follow-up
