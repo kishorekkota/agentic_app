@@ -19,3 +19,12 @@ CLOSE ACCT,Close Account,Customer wants to close account
 PND DOC,Pending Documents,Application incomplete due to missing docs
 LMT INC,Limit Increase,Request to increase credit card limit
 ECS BLK,ECS Block,Customer wants to block recurring ECS
+PND,Pending,TBD
+DOC,Document,Refers to any required documentation
+NPS,New Personal Savings,Refers to a new personal savings account
+FVR,Fraud Verification Request,Request to verify a transaction
+ADDR,Address,Refers to customer address
+STMT,Statement,Refers to account statement
+QRY,Query,General inquiry or question
+BAL,Balance,Refers to account balance
+BLK,Block,Refers to blocking a card or account
