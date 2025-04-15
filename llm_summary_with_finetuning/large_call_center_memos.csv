@@ -2,14 +2,14 @@ Memo ID,account_id,Date,Shortcode,Memo,Rep ID,Sentiment,Channel,Intent
 0,f7a5ae32-c2f2-47ca-a3ef-b45845fc6b72,2024-12-14,CLOSE ACCT,2024-12-14 | CLOSE ACCT | Rep: REP118,REP118,Negative,Email,Close Account
 1,54627136-b89e-4b46-9369-d779131a1074,2025-02-04,DC,2025-02-04 | DC | Rep: REP210,REP210,Neutral,Chat,Debit Card Service
 2,4c183bc4-9920-4b57-899a-9e39cfe16ad0,2024-12-07,PND DOC,2024-12-07 | PND DOC | Rep: REP556,REP556,Positive,Chat,Document Follow-up
-3,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-26,PIN RST,2024-12-26 | PIN RST | Rep: REP780,REP780,Positive,Chat,Reset PIN
+3,173392a5-0c8b-4b88-800e-b50d5edff8d1,2024-12-26,PIN RST,2024-12-26 | PIN RST was rqstd | Rep: REP780,REP780,Positive,Chat,Reset PIN
 4,17a85cba-2f69-4b99-8db4-252f70b0ef33,2024-10-24,KYC,2024-10-24 | KYC | Rep: REP587,REP587,Positive,Voice,Account Verification
-5,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-03-09,FEE WVR,2025-03-09 | FEE WVR | Rep: REP223,REP223,Negative,Email,Fee Waiver Request
+5,39c58908-0e01-4368-a3c6-d1147d2a69d9,2025-03-09,FEE WVR,2025-03-09 | FEE WVR done per escalation | Rep: REP223,REP223,Negative,Email,Fee Waiver Request
 6,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-03-18,ACCT,2025-03-18 | ACCT | Rep: REP141 | Note: Collection notice acknowledged; partial payment made.,REP141,Positive,Chat,General Account Info
 7,da5ed01c-177e-4a00-b987-efa43826fcba,2024-11-10,COLL,2024-11-10 | COLL | Rep: REP797,REP797,Negative,Email,Collections Call
 8,dc4d4c8b-e0c4-4756-958e-b544b47385a3,2024-12-14,CC,2024-12-14 | CC | Rep: REP105,REP105,Positive,Voice,Apply Credit Card
 9,89647783-4c9e-45dc-8830-c647231f87cf,2025-03-09,TXN,2025-03-09 | TXN | Rep: REP379,REP379,Positive,Chat,Transaction Issue
-10,443c0160-bac5-4733-86d5-9c423bf3d008,2025-01-26,ECS BLK,2025-01-26 | ECS BLK | Rep: REP173,REP173,Negative,Voice,Block Auto Payment
+10,443c0160-bac5-4733-86d5-9c423bf3d008,2025-01-26,ECS BLK,2025-01-26 | ECS BLK | Rep: REP173 blk rqstd,REP173,Negative,Voice,Block Auto Payment
 11,804fa060-07c7-4ece-9a95-433dbf9c8575,2025-01-13,BAL TRF,2025-01-13 | BAL TRF | Rep: REP385,REP385,Negative,Chat,Balance Transfer Request
 12,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-11-11,FVR CHK,2024-11-11 | FVR CHK | Rep: REP942,REP942,Negative,Chat,Fraud Detection
 13,0842f9fc-3fa9-4ec9-8251-82210e4a9d52,2025-03-21,DISP,2025-03-21 | DISP | Rep: REP322 | Note: Collection notice acknowledged; partial payment made.,REP322,Positive,Chat,Dispute Transaction
@@ -18,9 +18,9 @@ Memo ID,account_id,Date,Shortcode,Memo,Rep ID,Sentiment,Channel,Intent
 16,dbd63405-051c-4136-bd17-3a7c8e99c31a,2024-11-22,FVR CHK,2024-11-22 | FVR CHK | Rep: REP567 | Note: Requested urgent update to mailing address.,REP567,Negative,Voice,Fraud Detection
 17,cda122e2-98d5-4007-959a-0bedb790fe80,2024-11-12,STMT RQ,2024-11-12 | STMT RQ | Rep: REP232 | Note: No further action required; issue resolved.,REP232,Neutral,Email,Get Statement
 18,d7fe11dc-048f-49b8-b1bc-dcbdbb9a7984,2025-03-25,OTP,2025-03-25 | OTP | Rep: REP137,REP137,Neutral,Email,Authentication Help
-19,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-15,OTP,2025-01-15 | OTP | Rep: REP302 | Note: Card declined during purchase—issue escalated.,REP302,Positive,Voice,Authentication Help
+19,5282a13a-908f-4fe8-b799-d702be60d2f7,2025-01-15,OTP,2025-01-15 | OTP failed and txn blocked| Rep: REP302 | Note: Card declined during purchase—issue escalated.,REP302,Positive,Voice,Authentication Help
 20,b7206ec9-9b0f-4849-8981-243e2f04b06e,2025-04-13,CC,2025-04-13 | CC | Rep: REP710,REP710,Negative,Chat,Apply Credit Card
-21,14453942-d088-4bae-b015-824ba4821f08,2024-12-16,FVR CHK,2024-12-16 | FVR CHK | Rep: REP906,REP906,Negative,Email,Fraud Detection
+21,14453942-d088-4bae-b015-824ba4821f08,2024-12-16,FVR CHK,2024-12-16 | FVR CHK failed and customer frustrated| Rep: REP906,REP906,Negative,Email,Fraud Detection
 22,bf954c81-7139-4f99-9385-aab171dbf23d,2024-10-27,TXN,2024-10-27 | TXN | Rep: REP538 | Note: No further action required; issue resolved.,REP538,Positive,Email,Transaction Issue
 23,89647783-4c9e-45dc-8830-c647231f87cf,2025-01-01,FEE WVR,2025-01-01 | FEE WVR | Rep: REP714 | Note: Dispute form submitted; follow-up needed in 5 days.,REP714,Neutral,Chat,Fee Waiver Request
 24,6117057d-dd3f-4142-844c-1e49f9428e43,2024-12-11,OTP,2024-12-11 | OTP | Rep: REP615 | Note: Customer complained about unrecognized transaction.,REP615,Negative,Chat,Authentication Help
@@ -43,7 +43,7 @@ Memo ID,account_id,Date,Shortcode,Memo,Rep ID,Sentiment,Channel,Intent
 41,52014828-a05b-4c5c-ad00-9b7483e22d75,2025-03-31,PIN RST,2025-03-31 | PIN RST | Rep: REP300,REP300,Positive,Chat,Reset PIN
 42,c78b79e7-7e1a-4f7f-aaee-a7facfdfa03c,2024-10-23,ECS RVS,2024-10-23 | ECS RVS | Rep: REP863,REP863,Positive,Chat,Reversal Request
 43,dbd63405-051c-4136-bd17-3a7c8e99c31a,2025-03-02,TXN,2025-03-02 | TXN | Rep: REP685,REP685,Negative,Voice,Transaction Issue
-44,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-04-06,OTP,2025-04-06 | OTP | Rep: REP807 | Note: Requested urgent update to mailing address.,REP807,Positive,Email,Authentication Help
+44,1fe9d4bc-18e2-46c6-9241-92f1d6a12512,2025-04-06,OTP,2025-04-06 | OTP | Rep: REP807 | Note: rqstd urgent update to mailing address.,REP807,Positive,Email,Authentication Help
 45,443c0160-bac5-4733-86d5-9c423bf3d008,2025-04-16,COLL,2025-04-16 | COLL | Rep: REP823,REP823,Neutral,Chat,Collections Call
 46,60fdd689-f9f7-4959-a65a-78190fcf80c1,2024-11-11,FEE WVR,2024-11-11 | FEE WVR | Rep: REP243 | Note: Customer satisfied with resolution.,REP243,Negative,Voice,Fee Waiver Request
 47,60fdd689-f9f7-4959-a65a-78190fcf80c1,2025-02-13,ECS RVS,2025-02-13 | ECS RVS | Rep: REP497,REP497,Positive,Chat,Reversal Request

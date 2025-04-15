@@ -28,3 +28,11 @@ STMT,Statement,Refers to account statement
 QRY,Query,General inquiry or question
 BAL,Balance,Refers to account balance
 BLK,Block,Refers to blocking a card or account
+rqstd,Requested,Refers to a request made by the customer
+rqst,Request,Refers to a request made by the customer
+CC,Credit Card,Refers to a credit card
+INC,Increase,Refers to increasing a limit or amount
+DISP,Dispute,Refers to a dispute regarding a transaction
+DC,Debit Card,Refers to a debit card
+WVR,Waiver,Refers to waiving a fee or charge
+ECS,Electronic Clearing Service,Refers to electronic payment service
