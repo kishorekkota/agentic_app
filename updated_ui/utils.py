@@ -12,7 +12,7 @@ def end_chat():
     st.session_state.history = []
     st.session_state.new_chat = True
     st.session_state.client_industry = ""
-    st.session_state.client_state = ""
+    st.session_state.client_state = ""a
     st.session_state.client_id = ""
     
 

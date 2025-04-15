@@ -2,17 +2,16 @@ import streamlit as st
 import os
 import requests
 import logging
-from environment_variables import EnvironmentVariables
+import env_loader 
 
 # Load environment variables
 hosted = os.getenv("HOSTED")
 profile = os.getenv("PROFILE")
-env = EnvironmentVariables.create_instance(hosted, profile)
+# env = EnvironmentVariables.create_instance(hosted, profile)
 
-from assistant_api import chatbot_request,validate_client_id
-from utils import end_chat, load_sidebar, user_feedback
+from assistant_api import chatbot_request
+from utils import end_chat, load_sidebar
 from langsmith import Client
-from validations import is_valid_us_state
 from display_chat_history import display_chat_history
 from streamlit_extras.stylable_container import stylable_container
 
@@ -20,10 +19,10 @@ from streamlit_extras.stylable_container import stylable_container
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
-langsmith_client = Client(api_key=env.langchain_api_key)
+langsmith_client = Client(api_key=os.environ.get('langchain_api_key'))
 # st.set_page_config(page_title="HR ChatBot")
 st.title("HR ChatBot")
-st.logo("logo-paychex.svg", size="medium", link=None, icon_image=None)
+#st.logo("logo-paychex.svg", size="medium", link=None, icon_image=None)
 
 
 logger.debug(" st.query_params %s ", st.query_params)

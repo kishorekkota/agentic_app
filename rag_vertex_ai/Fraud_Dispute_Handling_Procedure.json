@@ -1,0 +1,12 @@
+{
+  "documents": [
+  {
+    "id": "chunk_0",
+    "data": "[Page 1] Fraud Dispute Handling Procedure Effective Date: Jan 1, 2025\nDepartment: Customer Support / Fraud Department Overview: - This document\ndetails how to handle customer reports of unauthorized transactions or suspected\nfraud on their accounts. Procedure: 1. Intake & Verification - Collect dispute\ndetails (date/time, transaction type, amount). - Confirm the caller?s identity\nusing security questions. 2. Account Freeze & Investigation - If fraud is\nongoing, temporarily freeze the account to block further unauthorized activity.\n- Create a fraud case in the CRM system and assign a unique reference number. 3.\nEvidence Collection - Instruct the customer to provide any supporting\ndocumentation (receipts, emails, etc.). - Gather internal transaction logs for\nfurther review. 4. Fraud Analysis - Collaborate with the Fraud Department to\nevaluate patterns (IP addresses, merchant codes). - Determine if the dispute is\nlegitimate or if additional info is needed. 5. Provisional Credit & Resolution -\nIf the fraud claim is validated, issue a provisional credit within the regulated\ntimeframe. - Notify the customer of the final resolution and provide any\nnecessary next steps (e.g., new debit card issuance). Additional Notes: - Always\nfollow Reg E or relevant local regulations regarding timelines for provisional\ncredits. - Record all customer interactions in the fraud investigation log.",
+    "metadata": {
+      "source_pdf": "Fraud_Dispute_Handling_Procedure.pdf",
+      "chunk_index": 0
+    }
+  }
+]
+}

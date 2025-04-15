@@ -1,0 +1,12 @@
+{
+  "documents": [
+  {
+    "id": "chunk_0",
+    "data": "[Page 1] New Checking Account Opening Procedure Effective Date: Jan 1, 2025\nDepartment: Retail Banking Overview: - This procedure details how to open a new\npersonal checking account for a retail customer. Procedure: 1. Customer\nIdentification - Request valid government- issued ID (passport, driver?s\nlicense, or national ID). - Collect proof of address (utility bill, lease\nagreement, etc.). 2. Compliance Checks - Perform a Know Your Customer (KYC)\nscreening. - Run Anti-Money Laundering (AML) checks using the bank?s internal\nsystem. 3. Application Form - Gather personal details (full name, date of birth,\nsocial security/national ID number). - Obtain signatures on the account\napplication form and terms & conditions. 4. Account Setup - Enter customer\ninformation into the core banking system. - Assign account number and issue\ntemporary debit card if applicable. 5. Confirmation & Welcome Kit - Provide\naccount disclosure, fee schedule, and account usage details. - Hand over or mail\nthe welcome kit with checkbook (if requested). Additional Notes: - Minimum\ninitial deposit may apply depending on the account type. - KYC records must be\nretained for at least five years.",
+    "metadata": {
+      "source_pdf": "New_Checking_Account_Opening_Procedure.pdf",
+      "chunk_index": 0
+    }
+  }
+]
+}

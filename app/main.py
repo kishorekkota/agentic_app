@@ -41,5 +41,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 app = FastAPI(lifespan=lifespan)
 
 # Include the router
+app.include_router(router)
 app.include_router(router, dependencies=[Depends(verify_jwt_token)])
+
 app.add_exception_handler(RequestValidationError, validation_exception_handler)

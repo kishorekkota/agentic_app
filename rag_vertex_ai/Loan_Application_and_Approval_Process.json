@@ -1,0 +1,12 @@
+{
+  "documents": [
+    {
+    "id": "chunk_0",
+    "data": "[Page 1] Loan Application & Approval Process Effective Date: Jan 1, 2025\nDepartment: Consumer Lending Overview: - This covers consumer loan applications\n(personal loans, auto loans). - The policy outlines how agents should guide\ncustomers through the loan process. Procedure: 1. Initial Inquiry - Gather basic\ncustomer info (employment status, monthly income, loan purpose). - Conduct a\npreliminary eligibility check based on credit score threshold. 2. Application\nSubmission - Provide a formal loan application form. - Request supporting\ndocuments (income proof, ID, address proof). 3. Underwriting - Verify credit\nscore using the credit bureau. - Assess debt-to-income ratio, job stability, and\nother risk factors. 4. Decision & Terms - If approved, prepare a loan offer with\ninterest rate, tenure, and repayment terms. - If declined, notify the customer\nwith a brief explanation and alternative suggestions. 5. Loan Disbursement -\nHave the customer sign the final agreement. - Disburse funds into the designated\naccount or via check. Additional Notes: - Loan terms and maximum amounts vary\nbased on credit grade. - All rejections must be documented with reasons for\ncompliance audits.",
+    "metadata": {
+      "source_pdf": "Loan_Application_and_Approval_Process.pdf",
+      "chunk_index": 0
+    }
+  }
+]
+}

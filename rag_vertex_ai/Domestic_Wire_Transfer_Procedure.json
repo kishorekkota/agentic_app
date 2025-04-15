@@ -1,0 +1,12 @@
+{
+  "documents": [
+  {
+    "id": "chunk_0",
+    "data": "[Page 1] Domestic Wire Transfer Procedure Effective Date: Jan 1, 2025\nDepartment: Operations / Funds Transfer Overview: - This document describes how\nto initiate and process a domestic wire transfer request on behalf of a\ncustomer. Procedure: 1. Verify Account Holder - Confirm the requesting\ncustomer?s identity (photo ID or phone authentication if remote). - Ensure the\nsource account has sufficient funds. 2. Collect Transfer Details - Recipient\nbank?s name, routing number (ABA), and address. - Beneficiary name and account\nnumber. - Amount to be transferred and any reference details (e.g., invoice\nnumber). 3. Transaction Authorization - Obtain a signed or securely\nauthenticated wire instruction from the account holder. - Follow dual-control\npolicy: one staff member initiates, another approves. 4. Execute Transfer - Use\nthe bank?s wire processing system to send the wire. - Confirm successful\ntransmission via the internal messaging platform. 5. Notify Customer - Provide\nconfirmation or reference number by email/SMS. - If the wire fails or is\nrejected, contact the customer immediately to resolve. Additional Notes: -\nTransfer cut-off time is 3:00 PM local time for same-day processing. - Any\namount exceeding $50,000 requires additional compliance approval.",
+    "metadata": {
+      "source_pdf": "Domestic_Wire_Transfer_Procedure.pdf",
+      "chunk_index": 0
+    }
+  }
+]
+}
