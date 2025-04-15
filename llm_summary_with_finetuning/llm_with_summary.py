@@ -71,7 +71,14 @@ Write a plain-English call summary for the account representative.
 - Respond with "Call Summary:" and then the summary based on recent information with respective dates with call intent.
 """
     summarizer = GenerativeModel(model_name="gemini-2.0-flash-001")
-    return summarizer.generate_content(prompt).text
+    print("LLM Prompt:", prompt)
+    response = summarizer.generate_content(prompt)
+    
+    # Print the LLM response metadata
+    print("LLM Response Metadata:")
+    print(f"Response: {response}")
+    
+    return response.text
 
 # Main execution
 if __name__ == "__main__":
