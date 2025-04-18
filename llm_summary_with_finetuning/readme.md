@@ -76,10 +76,4 @@ A dataset containing call memos with details such as account ID, date, shortcode
 
 ## Future Enhancements
 
-- Add support for multilingual summaries.
-- Integrate with a database for dynamic glossary updates.
-- Enable real-time summarization via an API.
-
-## License
-
-This module is licensed under the MIT License. See the LICENSE file for details.
+- Finetuning with RAG and retrieval tool
