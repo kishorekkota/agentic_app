@@ -40,7 +40,7 @@ langchain-core==0.3.15
 langchain-openai==0.2.2
 langchain-text-splitters==0.3.0
 langgraph==0.2.35
-langgraph-checkpoint==2.0.1
+langgraph-checkpoint==3.0.0
 langsmith==0.1.133
 marshmallow==3.22.0
 msgpack==1.1.0
