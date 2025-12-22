@@ -42,7 +42,7 @@ langchain-text-splitters==0.3.0
 langgraph==0.2.35
 langgraph-checkpoint==2.0.1
 langsmith==0.1.133
-marshmallow==3.22.0
+marshmallow==3.26.2
 msgpack==1.1.0
 multidict==6.1.0
 mypy-extensions==1.0.0
