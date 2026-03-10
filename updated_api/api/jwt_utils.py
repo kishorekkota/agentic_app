@@ -1,7 +1,6 @@
 # jwt_utils.py
 import jwt
 from fastapi import HTTPException, Security
-from fastapi.security import HTTPBearer
 from jwt import PyJWTError
 import os
 import logging
@@ -44,8 +43,6 @@ def create_jwt_token(data: dict):
 def verify_jwt_token(credentials: HTTPAuthorizationCredentials = Security(security)):
     token = credentials.credentials
     try:
-        # Replace 'your-secret-key' with your actual secret key
-        print(SECRET_KEY)
         payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
         return payload
     except jwt.ExpiredSignatureError:

@@ -10,9 +10,6 @@ os.environ["AZURESEARCH_FIELDS_CONTENT_VECTOR"] = "text_vector"
 from langchain_community.vectorstores.azuresearch import AzureSearch
 from langchain_openai import AzureOpenAIEmbeddings
 from langchain.tools.retriever import create_retriever_tool
-from azure.identity import DefaultAzureCredential
-from langchain_core.tools import tool
-from azure.search.documents.indexes.models import SimpleField
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -43,7 +40,11 @@ def create_vector_store() -> AzureSearch:
     embedding_model_name = os.getenv('EMBEDDING_MODEL_NAME', 'text-embedding-3-large')
 
 
-    print(azure_openai_api_version, azure_openai_api_key, azure_openai_endpoint, azure_openai_embedding_deployment)
+    logger.debug(
+        "Azure embedding config loaded (api_version=%s, deployment=%s)",
+        azure_openai_api_version,
+        azure_openai_embedding_deployment,
+    )
 
     if not all([azure_search_endpoint, azure_search_key, search_index_name,
                 azure_openai_api_key, azure_openai_endpoint, azure_openai_embedding_deployment]):
@@ -52,7 +53,10 @@ def create_vector_store() -> AzureSearch:
 
     try:
 
-        embeddings = AzureOpenAIEmbeddings(model=embedding_model_name,azure_deployment="text-embedding-3-large")
+        embeddings = AzureOpenAIEmbeddings(
+            model=embedding_model_name,
+            azure_deployment=azure_openai_embedding_deployment,
+        )
 
         # Create the vector store
         vector_store = AzureSearch(
@@ -117,9 +121,7 @@ def test_retriever_tool():
         # Use the retriever tool to retrieve relevant documents
         results = retriever_tool.run(test_query)
 
-        # Print the results
-        print("Retriever Tool Results:")
-        print(results)
+        logger.info("Retriever tool test completed with %s result(s)", len(results) if hasattr(results, "__len__") else "unknown")
 
     except Exception as e:
         logger.error(f"An error occurred during the retriever tool test: {e}")

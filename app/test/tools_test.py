@@ -1,12 +1,33 @@
 import unittest
 from unittest.mock import patch, MagicMock
 import requests
+import sys
+import types
 
-from tools import search_google, get_weather_by_zip, get_lat_lon
+try:
+    from app.tools import search_google, get_weather_by_zip, get_lat_lon
+except ModuleNotFoundError as exc:
+    if exc.name != "langchain_core":
+        raise
+
+    # Provide a minimal @tool decorator fallback for environments without langchain_core.
+    fake_langchain_core = types.ModuleType("langchain_core")
+    fake_tools_mod = types.ModuleType("langchain_core.tools")
+
+    def tool(fn):
+        fn.func = fn
+        return fn
+
+    fake_tools_mod.tool = tool
+    fake_langchain_core.tools = fake_tools_mod
+    sys.modules["langchain_core"] = fake_langchain_core
+    sys.modules["langchain_core.tools"] = fake_tools_mod
+
+    from app.tools import search_google, get_weather_by_zip, get_lat_lon
 
 class TestTools(unittest.TestCase):
 
-    @patch('tools.TavilyClient')
+    @patch('app.tools.TavilyClient')
     def test_search_google_success(self, MockTavilyClient):
         mock_client = MockTavilyClient.return_value
         mock_client.search.return_value = {"result": "test result"}
@@ -15,7 +36,7 @@ class TestTools(unittest.TestCase):
         self.assertEqual(result, {"result": "test result"})
         mock_client.search.assert_called_once_with("test query")
 
-    @patch('tools.TavilyClient')
+    @patch('app.tools.TavilyClient')
     def test_search_google_failure(self, MockTavilyClient):
         mock_client = MockTavilyClient.return_value
         mock_client.search.side_effect = Exception("Test error")
@@ -24,8 +45,8 @@ class TestTools(unittest.TestCase):
         self.assertIn("Tavily Search Error", result)
         mock_client.search.assert_called_once_with("test query")
 
-    @patch("tools.requests.get")
-    @patch("tools.get_lat_lon")
+    @patch("app.tools.requests.get")
+    @patch("app.tools.get_lat_lon")
     def test_get_weather_by_zip_success(self, mock_get_lat_lon, mock_requests_get):
         mock_get_lat_lon.return_value = (40.7128, -74.0060)
 
@@ -48,8 +69,8 @@ class TestTools(unittest.TestCase):
         mock_get_lat_lon.assert_called_once_with("10001")
         self.assertEqual(mock_requests_get.call_count, 2)
 
-    @patch("tools.requests.get")
-    @patch("tools.get_lat_lon")
+    @patch("app.tools.requests.get")
+    @patch("app.tools.get_lat_lon")
     def test_get_weather_by_zip_failure(self, mock_get_lat_lon, mock_requests_get):
         mock_get_lat_lon.return_value = (40.7128, -74.0060)
         mock_requests_get.side_effect = requests.RequestException("Test error")
@@ -59,7 +80,7 @@ class TestTools(unittest.TestCase):
         mock_get_lat_lon.assert_called_once_with("10001")
         mock_requests_get.assert_called()
 
-    @patch("tools.OpenCageGeocode")
+    @patch("app.tools.OpenCageGeocode")
     def test_get_lat_lon_success(self, MockOpenCageGeocode):
         mock_geocoder = MockOpenCageGeocode.return_value
         mock_geocoder.geocode.return_value = [{
@@ -71,7 +92,7 @@ class TestTools(unittest.TestCase):
         self.assertEqual(lon, -74.0060)
         mock_geocoder.geocode.assert_called_once_with("10001")
 
-    @patch("tools.OpenCageGeocode")
+    @patch("app.tools.OpenCageGeocode")
     def test_get_lat_lon_failure(self, MockOpenCageGeocode):
         mock_geocoder = MockOpenCageGeocode.return_value
         mock_geocoder.geocode.side_effect = Exception("Test error")

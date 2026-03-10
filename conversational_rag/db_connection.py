@@ -2,40 +2,53 @@
 
 import logging
 import urllib.parse
+from typing import Optional
+
 from psycopg_pool import ConnectionPool  # psycopg is a PostgreSQL adapter
 from environment_variables import EnvironmentVariables
 
 logger = logging.getLogger(__name__)
 
-# Instantiate EnvironmentVariables
-# Set use_key_vault=True and provide key_vault_name if you want to load variables from Azure Key Vault
-env_vars = EnvironmentVariables()
+# Instantiate EnvironmentVariables in non-strict mode to avoid import-time failures.
+env_vars = EnvironmentVariables(strict=False)
 
 def get_connection_uri():
     # Retrieve database connection parameters from EnvironmentVariables instance
     dbhost = env_vars.db_host
     dbname = env_vars.db_name
-    dbuser = urllib.parse.quote(env_vars.db_user)
-    password = urllib.parse.quote(env_vars.password)
+    dbuser = env_vars.db_user
+    password = env_vars.password
     sslmode = env_vars.sslmode
 
-    # Construct the connection URI
-    db_uri = f"host={dbhost} dbname={dbname} user={dbuser} password={password} sslmode={sslmode}"
-    return db_uri
+    if not all([dbhost, dbname, dbuser, password]):
+        logger.warning("Postgres settings are incomplete; checkpointer persistence is disabled.")
+        return None
 
-# Get the connection URI
-DB_URI = get_connection_uri()
+    encoded_user = urllib.parse.quote(dbuser)
+    encoded_password = urllib.parse.quote(password)
+
+    # Construct the connection URI
+    db_uri = f"host={dbhost} dbname={dbname} user={encoded_user} password={encoded_password} sslmode={sslmode or 'require'}"
+    return db_uri
 
 connection_kwargs = {
     "autocommit": True,
     "prepare_threshold": 0,
 }
 
-# Create a connection pool
-pool = ConnectionPool(
-    conninfo=DB_URI,  # conninfo is the connection information string
-    max_size=20,
-    kwargs=connection_kwargs,
-)
+def create_connection_pool() -> Optional[ConnectionPool]:
+    db_uri = get_connection_uri()
+    if db_uri is None:
+        return None
 
-logger.info("Database connection pool created")
+    return ConnectionPool(
+        conninfo=db_uri,
+        max_size=20,
+        kwargs=connection_kwargs,
+    )
+
+pool = create_connection_pool()
+if pool is None:
+    logger.warning("Database connection pool not created.")
+else:
+    logger.info("Database connection pool created")

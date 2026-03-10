@@ -2,11 +2,18 @@ from typing import Union
 import requests
 import os
 from requests.exceptions import RequestException
-from opencage.geocoder import OpenCageGeocode
-from tavily import TavilyClient
 from langchain_core.tools import tool
 import logging
-from azure_search import create_vector_store
+
+try:
+    from opencage.geocoder import OpenCageGeocode
+except ImportError:  # pragma: no cover - optional dependency for weather tool
+    OpenCageGeocode = None
+
+try:
+    from tavily import TavilyClient
+except ImportError:  # pragma: no cover - optional dependency for search tool
+    TavilyClient = None
 
 tavily_api_key = os.environ.get("TAVILY_API_KEY")
 opencage_api_key = os.environ.get("OPENCAGE_API_KEY")
@@ -19,6 +26,7 @@ _search = None
 def _get_vector_search_client():
     global _search
     if _search is None:
+        from app.azure_search import create_vector_store
         _search = create_vector_store()
     return _search
 
@@ -38,9 +46,7 @@ def search_azure_rag(query: str) -> Union[str, dict]:
     try:
         search_client = _get_vector_search_client()
         documents = search_client.search(query, search_type="similarity")
-
-        for doc in documents:
-            print(doc)
+        logger.debug("search_azure_rag returned %s document(s)", len(documents) if hasattr(documents, "__len__") else "unknown")
 
         response = {
             "query": query,
@@ -68,6 +74,8 @@ def search_google(query: str) -> Union[str, dict]:
     """
     logger.info("search_google called with query: %s", query)
     try:
+        if TavilyClient is None:
+            return "Tavily Search Error: tavily package is not installed"
         
         tavily_client = TavilyClient(tavily_api_key)
         response = tavily_client.search(query)
@@ -110,6 +118,9 @@ def get_lat_lon(zip_code: str):
     """Gets latitude and longitude from a zip code using OpenCage API."""
     logger.info("get_lat_lon called for zip code: %s", zip_code)
     try:
+        if OpenCageGeocode is None:
+            logger.error("OpenCage package is not installed")
+            return None, None
         geocoder = OpenCageGeocode(opencage_api_key)
         results = geocoder.geocode(zip_code)
         if results:

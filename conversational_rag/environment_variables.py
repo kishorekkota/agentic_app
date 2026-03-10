@@ -7,7 +7,13 @@ from azure.identity import ManagedIdentityCredential
 from azure.keyvault.secrets import SecretClient
 
 class EnvironmentVariables:
-    def __init__(self, use_key_vault: bool = False, key_vault_name: Optional[str] = None, profile: Optional[str] = None):
+    def __init__(
+        self,
+        use_key_vault: bool = False,
+        key_vault_name: Optional[str] = None,
+        profile: Optional[str] = None,
+        strict: bool = False,
+    ):
         if use_key_vault:
             if not key_vault_name:
                 raise ValueError("Key Vault name must be provided when use_key_vault is True.")
@@ -18,8 +24,8 @@ class EnvironmentVariables:
             load_dotenv(env_file)
             self._load_variables_from_env()
 
-        # Validate that all required variables are set
-        self._validate_variables()
+        if strict:
+            self._validate_variables()
 
     def _load_variables_from_env(self):
         # Azure OpenAI Service Variables

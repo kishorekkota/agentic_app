@@ -7,7 +7,6 @@ os.environ["AZURESEARCH_FIELDS_CONTENT_VECTOR"] = "text_vector"
 
 import logging
 from typing import Sequence, TypedDict, Annotated
-from typing_extensions import Annotated
 
 from langchain.chains import (
     create_history_aware_retriever,
@@ -27,10 +26,10 @@ from environment_variables import EnvironmentVariables
 from db_connection import pool
 
 # Set up logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-env_vars = EnvironmentVariables()
+env_vars = EnvironmentVariables(strict=False)
 
 # Define the state schema
 class State(TypedDict):
@@ -60,6 +59,7 @@ class ConversationalRAGAssistant:
     def __init__(self):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.logger.info("Initializing Conversational RAG Assistant...")
+        self._validate_required_settings()
         self.llm = self.initialize_llm()
         self.embeddings = self.initialize_embeddings()
         self.vector_store = self.create_vector_store(self.embeddings)
@@ -68,9 +68,29 @@ class ConversationalRAGAssistant:
         self.question_answer_chain = self.create_question_answer_chain(self.llm)
         self.rag_chain = self.build_rag_chain(self.history_aware_retriever, self.question_answer_chain)
         self.workflow = self.build_workflow()
-        self.app = self.workflow.compile(checkpointer=PostgresSaver(pool))
+        if pool is None:
+            self.logger.warning("Postgres pool unavailable; compiling workflow without persistence.")
+            self.app = self.workflow.compile()
+        else:
+            checkpointer = PostgresSaver(pool)
+            checkpointer.setup()
+            self.app = self.workflow.compile(checkpointer=checkpointer)
         self.chat_history = []
         self.logger.info("Conversational RAG Assistant initialized.")
+
+    def _validate_required_settings(self):
+        required_fields = {
+            "AZURE_OPENAI_API_KEY": env_vars.azure_openai_api_key,
+            "AZURE_OPENAI_ENDPOINT": env_vars.azure_openai_endpoint,
+            "AZURE_OPENAI_DEPLOYMENT_NAME": env_vars.azure_openai_deployment_name,
+            "AZURE_OPENAI_EMBEDDING_DEPLOYMENT": env_vars.azure_openai_embedding_deployment,
+            "AZURE_SEARCH_ENDPOINT": env_vars.azure_search_endpoint,
+            "AZURE_SEARCH_KEY": env_vars.azure_search_key,
+            "AZURE_SEARCH_INDEX_NAME": env_vars.azure_search_index_name,
+        }
+        missing = [name for name, value in required_fields.items() if not value]
+        if missing:
+            raise EnvironmentError(f"Missing required variables for conversational RAG: {', '.join(missing)}")
 
     def initialize_llm(self):
         self.logger.info("Initializing LLM...")
@@ -192,7 +212,7 @@ Do not exceed 5 bullets.
         self.logger.info(f"Received question: {question}")
         input_model = InputModel(question, self.chat_history)
         state = input_model.to_state()
-        response = self.app(state)
+        response = self.app.invoke(state)
         self.chat_history = response["chat_history"]
         answer = response["answer"]
         self.logger.info(f"Assistant's answer: {answer}")

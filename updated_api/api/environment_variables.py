@@ -5,6 +5,14 @@ from typing import Optional
 from dotenv import load_dotenv
 import logging
 
+
+def _to_bool(value) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
 class EnvironmentVariables:
 
     _instance = None
@@ -18,7 +26,7 @@ class EnvironmentVariables:
     def __init__(self, hosted: bool = False, profile: Optional[str] = None):
         if not self._initialized:
             self._initialized = True
-            if hosted == True:
+            if _to_bool(hosted):
                 logging.info("Not loading from ENV as the environment variables are sourced via Vault into the App.")
                 self._load_variables_from_env()
             else:
@@ -54,26 +62,7 @@ class EnvironmentVariables:
         self.db_user = os.getenv("DB_USER")
         self.db_password = os.getenv("DB_PASSWORD")
         self.db_sslmode = os.getenv("DB_SSLMODE")
-        print(os.getenv('LANGCHAIN_TRACING_V2'))
-        print(os.getenv('LANGCHAIN_ENDPOINT'))
-        print(os.getenv('LANGCHAIN_PROJECT'))
-        print("self.key_vault",self.key_vault)
-        
-        # Print all variables
-        print(f"AZURE_KEY_VAULT_ENDPOINT: {self.key_vault}")
-        print(f"CONFIG_PATH: {self.config_path}")
-        print(f"OPENAI_API_VERSION: {self.openai_api_version}")
-        print(f"OPENAI_ENDPOINT: {self.openai_api_endpoint}")
-        print(f"AZURE_OPENAI_EMBEDDING_DEPLOYMENT_SMALL: {self.embedding_model}")
-        print(f"AZURE_SEARCH_SERVICE_ENDPOINT: {self.azure_search_endpoint}")
-        print(f"AZURE_OPENAI_GPT4_MODEL_NAME: {self.openai_gpt_4o_model_name}")
-        print(f"INTERNAL_GUIDELINES_INDEX_NAME: {self.internal_guidelines_index_name}")
-        print(f"EXTERNAL_REGULATIONS_INDEX_NAME: {self.external_regulations_index_name}")
-        print(f"AZURE_STORAGEBLOB_RESOURCEENDPOINT: {self.account_url}")
-        print(f"CLIENT_DEMOGRAPHICS_CONTAINER_NAME: {self.container_name}")
-        print(f"INDUSTRY_CATEGORIES_BLOB_PATH: {self.industry_categories_blob_path}")
-        print(f"CLIENT_DEMOGRAPHICS_BLOB_PATH: {self.client_demographics_blob_path}")
-        print(f"JOB_DESCRIPTION_SAMPLE_BLOB_PATH: {self.job_description_sample_blob_path}")
+        logging.debug("Environment variables loaded for updated_api runtime.")
 
 
 
@@ -119,5 +108,5 @@ class EnvironmentVariables:
         profile = os.getenv("PROFILE")
 
         if cls._instance is None:
-            cls._instance = cls(hosted, profile)
+            cls._instance = cls(_to_bool(hosted), profile)
         return cls._instance
