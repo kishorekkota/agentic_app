@@ -1,27 +1,24 @@
-# main.py
-from fastapi import FastAPI,Request, status,Depends
 from contextlib import asynccontextmanager
-from startup import Startup
-from routes import router
+import logging
+
+from fastapi import Depends, FastAPI, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-import logging
+
 from jwt_utils import verify_jwt_token
+from routes import router
+from startup import Startup
 
 logger = logging.getLogger(__name__)
-
-app = FastAPI()
 
 startup = Startup()
 
 # Lifespan context manager for startup and shutdown tasks
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup tasks
     startup.connect_to_mongodb()
     startup.configure_environment()
     yield
-    # Shutdown tasks
     startup.close_mongodb_connection()
 
 @app.exception_handler(RequestValidationError)
@@ -39,9 +36,6 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 app = FastAPI(lifespan=lifespan)
-
-# Include the router
-app.include_router(router)
 app.include_router(router, dependencies=[Depends(verify_jwt_token)])
 
 app.add_exception_handler(RequestValidationError, validation_exception_handler)

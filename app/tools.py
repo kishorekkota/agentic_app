@@ -13,7 +13,14 @@ opencage_api_key = os.environ.get("OPENCAGE_API_KEY")
 
 logger = logging.getLogger(__name__)
 
-search = create_vector_store()
+_search = None
+
+
+def _get_vector_search_client():
+    global _search
+    if _search is None:
+        _search = create_vector_store()
+    return _search
 
 @tool
 def search_azure_rag(query: str) -> Union[str, dict]:
@@ -27,9 +34,10 @@ def search_azure_rag(query: str) -> Union[str, dict]:
     Union[str, dict]: If the search is successful, it returns a dictionary containing the search results.
                       If there is an error during the search, it returns a string describing the error.
     """
-    logger.info("search_azure_rag calling model..." + query)
+    logger.info("search_azure_rag called with query: %s", query)
     try:
-        documents = search.search(query,search_type="similarity")
+        search_client = _get_vector_search_client()
+        documents = search_client.search(query, search_type="similarity")
 
         for doc in documents:
             print(doc)
@@ -58,7 +66,7 @@ def search_google(query: str) -> Union[str, dict]:
     Union[str, dict]: If the search is successful, it returns a dictionary containing the search results.
                       If there is an error during the search, it returns a string describing the error.
     """
-    logger.info("search_google calling model..." + query)
+    logger.info("search_google called with query: %s", query)
     try:
         
         tavily_client = TavilyClient(tavily_api_key)
@@ -81,7 +89,7 @@ def get_weather_by_zip(zip_code: str):
     list: A list of dictionaries containing weather forecast periods if successful.
     str: An error message if there is an issue fetching the weather data.
     """
-    logger.info("get_weather_by_zip calling model..." + zip_code)
+    logger.info("get_weather_by_zip called for zip code: %s", zip_code)
     try:
         lat, lon = get_lat_lon(zip_code)
         logger.debug(f"get_weather_by_zip: {lat}, {lon}")  # For debugging purposes, print the coordinates received.
@@ -100,7 +108,7 @@ def get_weather_by_zip(zip_code: str):
 
 def get_lat_lon(zip_code: str):
     """Gets latitude and longitude from a zip code using OpenCage API."""
-    logger.info("get_lat_lon calling model..." + zip_code)
+    logger.info("get_lat_lon called for zip code: %s", zip_code)
     try:
         geocoder = OpenCageGeocode(opencage_api_key)
         results = geocoder.geocode(zip_code)

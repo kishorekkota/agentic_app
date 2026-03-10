@@ -3,7 +3,6 @@ import logging
 import config
 import os
 from pymongo import MongoClient
-import getpass
 
 class Startup:
     def __init__(self):

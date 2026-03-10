@@ -6,9 +6,8 @@ langchain_openai
 langgraph
 langgraph-checkpoint
 psycopg 
-psycopg-pool  
+psycopg-pool
 langgraph-checkpoint-postgres
-psycog
 pyjwt
 numpy==1.26.4
 #Wont be needed later
